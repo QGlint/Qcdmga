@@ -25,6 +25,13 @@ function updateRoundAndSet() {
     document.getElementById("player1-wins").textContent = `胜利次数: ${player1Wins}`;
 }
 
+// 更新手牌数量显示
+function updateHandCount(playerId) {
+    const handCountElement = document.getElementById(`${playerId}-hand-count`);
+    const handCount = document.getElementById(`${playerId}-hand`).children.length;
+    handCountElement.textContent = `手牌数：${handCount}`;
+}
+
 // 玩家抽卡函数
 function drawCard(playerId) {
     const playerHandElement = document.getElementById(`${playerId}-hand`);
@@ -49,8 +56,10 @@ function drawCard(playerId) {
     
     // 添加到玩家的手牌区
     playerHandElement.appendChild(cardElement);
+    
+    // 更新手牌数量显示
+    updateHandCount(playerId);
 }
-
 // 使用卡牌函数
 function useCard(cardElement, playerId, cardType, duration) {
     if (cardType === "buff") {
@@ -67,6 +76,9 @@ function useCard(cardElement, playerId, cardType, duration) {
         const globalBuffElement = document.getElementById(`global-buff`);
         globalBuffElement.appendChild(cardElement);
     }
+    
+    // 更新手牌数量显示
+    updateHandCount(playerId);
 }
 
 // 下一回合函数
@@ -139,6 +151,9 @@ function clearLoserAreas(playerId) {
     
     // 清除所有持续时间不为0的牌（除了赢家的手牌区）
     clearNonZeroDurationCardsExceptWinnerHand(playerId === "player1" ? "player2" : "player1");
+    
+    // 更新手牌数量显示
+    updateHandCount(playerId);
 }
 
 // 将赢家的区域移动到擂主区域
@@ -154,6 +169,9 @@ function moveWinnerAreas(fromPlayerId, toPlayerId) {
     const toBuff = document.getElementById(`${toPlayerId}-buff`);
     toBuff.innerHTML += fromBuff.innerHTML;
     fromBuff.innerHTML = "";
+    
+    // 更新手牌数量显示
+    updateHandCount(toPlayerId);
 }
 
 // 清除所有持续时间不为0的牌（除了赢家的手牌区）
@@ -180,6 +198,9 @@ function clearNonZeroDurationCardsExceptWinnerHand(winnerId) {
             }
         }
     });
+    
+    // 更新手牌数量显示
+    updateHandCount(winnerId === "player1" ? "player2" : "player1");
 }
 
 // 清除所有持续时间为1的牌

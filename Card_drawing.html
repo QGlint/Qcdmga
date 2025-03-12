@@ -32,6 +32,7 @@
                 <div class="button-container">
                     <button id="player1-draw">抽卡</button>
                     <button id="player1-show-hand" onclick="showHandDialog('player1')">显示手牌</button>
+                    <span id="player1-hand-count">手牌数 : 0</span>
                 </div>
             </div>
             
@@ -44,6 +45,7 @@
                 <div class="button-container">
                     <button id="player2-draw">抽卡</button>
                     <button id="player2-show-hand" onclick="showHandDialog('player2')">显示手牌</button>
+                    <span id="player2-hand-count">手牌数 : 0</span>
                 </div>
             </div>
         </div>
@@ -72,7 +74,7 @@
         <div class="hand-dialog-content">
             <div class="hand-dialog-header">
                 <h3 class="hand-dialog-title">擂主手牌区</h3>
-                <button class="hand-dialog-close" onclick="hideHandDialog('player1')">×</button>
+                <button class="hand-dialog-close" onclick="hideHandDialog('player1')">完成</button>
             </div>
             <div class="hand-dialog-body">
                 <div class="cards-display" id="player1-hand"></div>
@@ -84,7 +86,7 @@
         <div class="hand-dialog-content">
             <div class="hand-dialog-header">
                 <h3 class="hand-dialog-title">挑战者手牌区</h3>
-                <button class="hand-dialog-close" onclick="hideHandDialog('player2')">×</button>
+                <button class="hand-dialog-close" onclick="hideHandDialog('player2')">完成</button>
             </div>
             <div class="hand-dialog-body">
                 <div class="cards-display" id="player2-hand"></div>
