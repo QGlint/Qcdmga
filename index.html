@@ -1,75 +1,21 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>音游社抽卡</title>
-    <link rel="stylesheet" href="css/Card_drawing.css">
 </head>
 <body>
     <div class="container">
-        <h1>Arcaea擂台赛抽卡</h1>
+        <h1>欢迎来到我的网站</h1>
         
-        <div class="game-info">
-            <div class="round-info">
-                <span>回合: <span id="round">0</span></span>
-                <span>局: <span id="set">0</span></span>
-            </div>
-            <button id="next-round">下一回合</button>
+        <!-- 添加抽卡入口 -->
+        <div class="card-drawing-entry">
+            <h2>抽卡游戏</h2>
+            <a href="card_drawing.html" class="draw-button">开始抽卡</a>
         </div>
         
-        <div class="global-buff">
-            <h2>全局Buff区</h2>
-            <div class="cards-display" id="global-buff"></div>
-        </div>
-        
-        <div class="game-area">
-            <div class="player-area" id="player1-area">
-                <h2>擂主</h2>
-                <div class="section">
-                    <h3>Buff区</h3>
-                    <div class="cards-display" id="player1-buff"></div>
-                </div>
-                <div class="section">
-                    <h3>手牌区</h3>
-                    <div class="cards-display" id="player1-hand"></div>
-                </div>
-                <button id="player1-draw">抽卡</button>
-            </div>
-            
-            <div class="player-area" id="player2-area">
-                <h2>挑战者</h2>
-                <div class="section">
-                    <h3>Buff区</h3>
-                    <div class="cards-display" id="player2-buff"></div>
-                </div>
-                <div class="section">
-                    <h3>手牌区</h3>
-                    <div class="cards-display" id="player2-hand"></div>
-                </div>
-                <button id="player2-draw">抽卡</button>
-            </div>
+        <!-- 其他内容 -->
+        <div class="other-content">
+            <h2>其他内容</h2>
+            <p>这里是首页的其他内容。</p>
         </div>
     </div>
     
-    <!-- 弹窗选择胜利者 -->
-    <div class="judgment-dialog" id="judgment-dialog">
-        <div class="dialog-content">
-            <h2>判定</h2>
-            <p>请选择胜利者：</p>
-            <button class="judgment-button" data-result="player1">擂主胜利</button>
-            <button class="judgment-button" data-result="player2">挑战者胜利</button>
-        </div>
-    </div>
-    
-    <!-- 全屏弹窗显示结果 -->
-    <div class="result-dialog" id="result-dialog">
-        <div class="dialog-content">
-            <h2 id="result-title">擂主守擂成功</h2>
-            <button id="back-to-game">返回游戏</button>
-        </div>
-    </div>
-    
-    <script src="js/Card_drawing.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
