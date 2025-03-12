@@ -3,30 +3,36 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     background-color: transparent;
     padding: 20px;
-}
-
-h1 {
     text-align: center;
-    color: #333;
 }
 
-.game-info {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .round-info {
     font-size: 18px;
     font-weight: bold;
+}
+
+h1 {
+    margin: 0;
+    color: #333;
 }
 
 button {
@@ -47,12 +53,12 @@ button:hover {
 }
 
 .global-buff {
-    width: 96.7%;
+    width: 100%;
     background-color: #f8f8f8;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,10 +83,14 @@ h2 {
     text-align: center;
     color: #333;
     margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .section {
     margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 h3 {
@@ -179,9 +189,8 @@ h3 {
     padding: 30px;
     border-radius: 10px;
     text-align: center;
-    max-width: 600px;
+    max-width: 400px;
     width: 80%;
-    height: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -199,28 +208,31 @@ h3 {
 }
 
 .result-dialog .dialog-content {
-    background-color: rgb(255, 219, 254);
+    background-color: white;
     padding: 40px;
     border-radius: 10px;
     text-align: center;
-    max-width: 1500px;
+    max-width: 800px;
     width: 90%;
-    height: 600px;
+    height: 500px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #result-title {
-    margin-top: 180px;
-    font-size: 90px;
+    font-size: 32px;
     margin-bottom: 30px;
     color: #333;
 }
 
 #back-to-game {
-    margin-top: 200px;
+    margin-top: 20px;
     width: 120px;
-    padding: 6px;
-    font-size: 18px;
+    padding: 8px;
+    font-size: 16px;
     background-color: #4CAF50;
     color: white;
     border: none;
