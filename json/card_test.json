@@ -1,0 +1,86 @@
+[
+    {
+        "name": "卡牌1",
+        "type": "buff",
+        "rarity": "common",
+        "duration": 0,
+        "probability": 10
+    },
+    {
+        "name": "卡牌2",
+        "type": "debuff",
+        "rarity": "common",
+        "duration": 0,
+        "probability": 10
+    },
+    {
+        "name": "卡牌3",
+        "type": "global",
+        "rarity": "common",
+        "duration": 0,
+        "probability": 10
+    },
+    {
+        "name": "卡牌4",
+        "type": "buff",
+        "rarity": "rare",
+        "duration": 1,
+        "probability": 8
+    },
+    {
+        "name": "卡牌5",
+        "type": "debuff",
+        "rarity": "rare",
+        "duration": 1,
+        "probability": 8
+    },
+    {
+        "name": "卡牌6",
+        "type": "global",
+        "rarity": "rare",
+        "duration": 1,
+        "probability": 8
+    },
+    {
+        "name": "卡牌7",
+        "type": "buff",
+        "rarity": "epic",
+        "duration": 2,
+        "probability": 5
+    },
+    {
+        "name": "卡牌8",
+        "type": "debuff",
+        "rarity": "epic",
+        "duration": 2,
+        "probability": 5
+    },
+    {
+        "name": "卡牌9",
+        "type": "global",
+        "rarity": "epic",
+        "duration": 2,
+        "probability": 5
+    },
+    {
+        "name": "卡牌10",
+        "type": "buff",
+        "rarity": "legendary",
+        "duration": 0,
+        "probability": 2
+    },
+    {
+        "name": "卡牌11",
+        "type": "debuff",
+        "rarity": "legendary",
+        "duration": 0,
+        "probability": 2
+    },
+    {
+        "name": "卡牌12",
+        "type": "global",
+        "rarity": "legendary",
+        "duration": 0,
+        "probability": 2
+    }
+]

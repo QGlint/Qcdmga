@@ -1,18 +1,52 @@
 // 卡牌数据
-const cards = [
-    { name: "卡牌1", type: "buff", rarity: "common", duration: 0 },
-    { name: "卡牌2", type: "debuff", rarity: "common", duration: 0 },
-    { name: "卡牌3", type: "global", rarity: "common", duration: 0 },
-    { name: "卡牌4", type: "buff", rarity: "rare", duration: 1 },
-    { name: "卡牌5", type: "debuff", rarity: "rare", duration: 1 },
-    { name: "卡牌6", type: "global", rarity: "rare", duration: 1 },
-    { name: "卡牌7", type: "buff", rarity: "epic", duration: 2 },
-    { name: "卡牌8", type: "debuff", rarity: "epic", duration: 2 },
-    { name: "卡牌9", type: "global", rarity: "epic", duration: 2 },
-    { name: "卡牌10", type: "buff", rarity: "legendary", duration: 0 },
-    { name: "卡牌11", type: "debuff", rarity: "legendary", duration: 0 },
-    { name: "卡牌12", type: "global", rarity: "legendary", duration: 0 }
-];
+// 从外部文件加载卡片数据
+let cards = [];
+let totalProbability = 0;
+
+// 加载卡片数据
+async function loadCards() {
+    try {
+        const response = await fetch('../json/card_test.json');
+        cards = await response.json();
+        
+        // 计算总概率
+        totalProbability = cards.reduce((sum, card) => sum + card.probability, 0);
+        
+        // 初始化游戏
+        initGame();
+    } catch (error) {
+        console.error('加载卡片数据失败:', error);
+    }
+}
+
+// 初始化游戏
+function initGame() {
+    // 绑定抽卡按钮事件
+    document.getElementById("player1-draw").addEventListener("click", () => {
+        drawCard("player1");
+    });
+
+    document.getElementById("player2-draw").addEventListener("click", () => {
+        drawCard("player2");
+    });
+
+    // 绑定下一回合按钮事件
+    document.getElementById("next-round").addEventListener("click", nextRound);
+
+    // 绑定判定按钮事件
+    document.querySelectorAll(".judgment-button").forEach(button => {
+        button.addEventListener("click", function() {
+            const result = this.getAttribute("data-result");
+            handleJudgmentResult(result);
+        });
+    });
+
+    // 绑定返回游戏按钮事件
+    document.getElementById("back-to-game").addEventListener("click", backToGame);
+
+    // 初始化回合和局数
+    updateRoundAndSet();
+}
 
 let round = 0;
 let set = 0;
@@ -33,12 +67,26 @@ function updateHandCount(playerId) {
 }
 
 // 玩家抽卡函数
+// 根据概率抽卡
 function drawCard(playerId) {
     const playerHandElement = document.getElementById(`${playerId}-hand`);
     
-    // 随机选择一张卡牌
-    const randomIndex = Math.floor(Math.random() * cards.length);
-    const selectedCard = cards[randomIndex];
+    // 根据概率随机选择一张卡牌
+    const randomValue = Math.random() * totalProbability;
+    let cumulativeProbability = 0;
+    let selectedCard = null;
+    
+    for (const card of cards) {
+        cumulativeProbability += card.probability;
+        if (randomValue < cumulativeProbability) {
+            selectedCard = card;
+            break;
+        }
+    }
+    
+    if (!selectedCard) {
+        selectedCard = cards[cards.length - 1]; // 默认选择最后一张卡
+    }
     
     // 创建卡牌元素
     const cardElement = document.createElement("div");
@@ -60,6 +108,7 @@ function drawCard(playerId) {
     // 更新手牌数量显示
     updateHandCount(playerId);
 }
+
 // 使用卡牌函数
 function useCard(cardElement, playerId, cardType, duration) {
     if (cardType === "buff") {
@@ -172,6 +221,7 @@ function moveWinnerAreas(fromPlayerId, toPlayerId) {
     
     // 更新手牌数量显示
     updateHandCount(toPlayerId);
+    updateHandCount(fromPlayerId); 
 }
 
 // 清除所有持续时间不为0的牌（除了赢家的手牌区）
@@ -223,31 +273,9 @@ function clearDuration1Cards() {
     });
 }
 
-// 绑定抽卡按钮事件
-document.getElementById("player1-draw").addEventListener("click", () => {
-    drawCard("player1");
-});
 
-document.getElementById("player2-draw").addEventListener("click", () => {
-    drawCard("player2");
-});
 
-// 绑定下一回合按钮事件
-document.getElementById("next-round").addEventListener("click", nextRound);
 
-// 绑定判定按钮事件
-document.querySelectorAll(".judgment-button").forEach(button => {
-    button.addEventListener("click", function() {
-        const result = this.getAttribute("data-result");
-        handleJudgmentResult(result);
-    });
-});
-
-// 绑定返回游戏按钮事件
-document.getElementById("back-to-game").addEventListener("click", backToGame);
-
-// 初始化回合和局数
-updateRoundAndSet();
 
 // 显示手牌区弹窗
 function showHandDialog(playerId) {
