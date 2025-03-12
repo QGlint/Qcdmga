@@ -8,10 +8,8 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    background-color: white;
+    background-color: transparent;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -19,29 +17,21 @@ h1 {
     color: #333;
 }
 
-.players {
+.game-info {
     display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.player {
-    width: 45%;
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    text-align: center;
-    color: #333;
-    margin-top: 0;
+.round-info {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 button {
     display: block;
-    width: 100px;
+    width: 120px;
     margin: 20px auto;
     padding: 10px;
     background-color: #4CAF50;
@@ -56,12 +46,55 @@ button:hover {
     background-color: #45a049;
 }
 
+.global-buff {
+    width: 96.7%;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-area {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.player-area {
+    width: 45%;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #555;
+}
+
 .cards-display {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    min-height: 200px;
+    min-height: 100px;
 }
 
 .card {
@@ -76,6 +109,8 @@ button:hover {
     align-items: center;
     padding: 10px;
     text-align: center;
+    cursor: pointer;
+    position: relative;
 }
 
 .card-name {
@@ -84,13 +119,26 @@ button:hover {
     color: #333;
 }
 
-.card-rarity {
+.card-type {
     position: absolute;
-    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.card-duration {
+    position: absolute;
+    bottom: 5px;
     right: 5px;
     font-size: 12px;
     padding: 2px 5px;
     border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
 }
 
 .common {
@@ -110,4 +158,77 @@ button:hover {
 .legendary {
     border: 2px solid #ffa500;
     background-color: rgba(255, 165, 0, 0.1);
+}
+
+/* 弹窗样式 */
+.judgment-dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    width: 80%;
+    height: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.result-dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-dialog .dialog-content {
+    background-color: rgb(255, 219, 254);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 1500px;
+    width: 90%;
+    height: 600px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+#result-title {
+    margin-top: 180px;
+    font-size: 90px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+#back-to-game {
+    margin-top: 200px;
+    width: 120px;
+    padding: 6px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#back-to-game:hover {
+    background-color: #45a049;
 }
