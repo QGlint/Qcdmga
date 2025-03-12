@@ -156,24 +156,6 @@ function moveWinnerAreas(fromPlayerId, toPlayerId) {
     fromBuff.innerHTML = "";
 }
 
-// 显示手牌区弹窗
-function showHandDialog(playerId) {
-    const handDialog = document.getElementById(`${playerId}-hand-dialog`);
-    const handDisplay = document.getElementById(`${playerId}-hand`);
-    
-    // 将手牌区的内容复制到弹窗中
-    const dialogHandDisplay = handDialog.querySelector(".cards-display");
-    dialogHandDisplay.innerHTML = handDisplay.innerHTML;
-    
-    handDialog.style.display = "flex";
-}
-
-// 隐藏手牌区弹窗
-function hideHandDialog(playerId) {
-    const handDialog = document.getElementById(`${playerId}-hand-dialog`);
-    handDialog.style.display = "none";
-}
-
 // 清除所有持续时间不为0的牌（除了赢家的手牌区）
 function clearNonZeroDurationCardsExceptWinnerHand(winnerId) {
     const allCardDisplays = [
@@ -245,3 +227,15 @@ document.getElementById("back-to-game").addEventListener("click", backToGame);
 
 // 初始化回合和局数
 updateRoundAndSet();
+
+// 显示手牌区弹窗
+function showHandDialog(playerId) {
+    const handDialog = document.getElementById(`${playerId}-hand-dialog`);
+    handDialog.style.display = "flex";
+}
+
+// 隐藏手牌区弹窗
+function hideHandDialog(playerId) {
+    const handDialog = document.getElementById(`${playerId}-hand-dialog`);
+    handDialog.style.display = "none";
+}
