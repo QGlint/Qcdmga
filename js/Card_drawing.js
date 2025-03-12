@@ -6,7 +6,7 @@ let totalProbability = 0;
 // 加载卡片数据
 async function loadCards() {
     try {
-        const response = await fetch('json/card_test.json');
+        const response = await fetch('Qcdmga/json/card_test.json');
         cards = await response.json();
         
         // 计算总概率
