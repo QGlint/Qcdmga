@@ -33,7 +33,10 @@
                     <h3>手牌区</h3>
                     <div class="cards-display" id="player1-hand"></div>
                 </div>
-                <button id="player1-draw">抽卡</button>
+                <div class="button-container">
+                    <button id="player1-draw">抽卡</button>
+                    <button id="player1-show-hand" onclick="showHandDialog('player1')">显示手牌</button>
+                </div>
             </div>
             
             <div class="player-area" id="player2-area">
@@ -46,7 +49,10 @@
                     <h3>手牌区</h3>
                     <div class="cards-display" id="player2-hand"></div>
                 </div>
-                <button id="player2-draw">抽卡</button>
+                <div class="button-container">
+                    <button id="player2-draw">抽卡</button>
+                    <button id="player2-show-hand" onclick="showHandDialog('player2')">显示手牌</button>
+                </div>
             </div>
         </div>
     </div>
@@ -66,6 +72,31 @@
         <div class="dialog-content">
             <h2 id="result-title">擂主守擂成功</h2>
             <button id="back-to-game">返回游戏</button>
+        </div>
+    </div>
+    
+    <!-- 手牌区弹窗 -->
+    <div class="hand-dialog" id="player1-hand-dialog">
+        <div class="hand-dialog-content">
+            <div class="hand-dialog-header">
+                <h3 class="hand-dialog-title">擂主手牌区</h3>
+                <button class="hand-dialog-close" onclick="hideHandDialog('player1')">×</button>
+            </div>
+            <div class="hand-dialog-body">
+                <div class="cards-display"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hand-dialog" id="player2-hand-dialog">
+        <div class="hand-dialog-content">
+            <div class="hand-dialog-header">
+                <h3 class="hand-dialog-title">挑战者手牌区</h3>
+                <button class="hand-dialog-close" onclick="hideHandDialog('player2')">×</button>
+            </div>
+            <div class="hand-dialog-body">
+                <div class="cards-display"></div>
+            </div>
         </div>
     </div>
     

@@ -28,6 +28,12 @@ body {
 .round-info {
     font-size: 18px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.round-info span {
+    margin-right: 15px;
 }
 
 h1 {
@@ -36,9 +42,9 @@ h1 {
 }
 
 button {
-    display: block;
+    display: inline-block;
     width: 120px;
-    margin: 20px auto;
+    margin: 10px;
     padding: 10px;
     background-color: #4CAF50;
     color: white;
@@ -243,4 +249,72 @@ h3 {
 
 #back-to-game:hover {
     background-color: #45a049;
+}
+
+/* 手牌区弹窗样式 */
+.hand-dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1500;
+    justify-content: center;
+    align-items: center;
+}
+
+.hand-dialog-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hand-dialog-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.hand-dialog-title {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.hand-dialog-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #999;
+}
+
+.hand-dialog-body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* 隐藏主界面的手牌区 */
+#player1-hand, #player2-hand {
+    display: none;
+}
+
+/* 按钮容器样式 */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
 }
