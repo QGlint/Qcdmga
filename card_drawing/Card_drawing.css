@@ -533,12 +533,16 @@ h3 {
     bottom: 10px;
     left: 10px;
     right: 10px;
-    height: 20px;
-    overflow: hidden;
-    white-space: nowrap;
+    height: 40px; /* 调整高度以适应多行文本 */
+    overflow: hidden; /* 隐藏超出内容 */
+    word-wrap: break-word; /* 确保长单词换行 */
+    white-space: normal; /* 允许换行 */
 }
 
 .song-card-text marquee {
     display: block;
     width: 100%;
+    white-space: normal; /* 允许换行 */
+    word-wrap: break-word; /* 确保长单词换行 */
+    overflow: hidden; /* 隐藏超出内容 */
 }

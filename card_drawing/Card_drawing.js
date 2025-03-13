@@ -286,6 +286,7 @@ function initializeSongSelection() {
         
         songSelection.appendChild(songBox);
     }
+    updateRoundStyles();
 }
 
 function showSongSearchDialog(boxIndex) {
