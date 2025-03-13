@@ -67,14 +67,12 @@ button:hover {
     line-height: 40px;
 }
 
-/* 全局容器样式 */
 .global-container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
 }
 
-/* 全局Buff区和挑战歌曲的公共样式 */
 .global-buff, .challenge-songs {
     width: 45%;
     background-color: #f8f8f8;
@@ -83,19 +81,18 @@ button:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* 调整全局Buff区高度 */
 .global-buff {
     height: 170px;
 }
 
-/* 标题和卡牌容器样式 */
 .title-card-container {
     display: flex;
     align-items: flex-start;
-    gap: 10px; /* 添加标题和卡牌之间的间距 */
+    gap: 0px;
+    padding-left: 0px; /* 调整左边留白 */
+    padding-right: 0; /* 右边不留白 */
 }
 
-/* 竖排标题样式 */
 .vertical-title {
     writing-mode: vertical-rl;
     text-orientation: upright;
@@ -107,7 +104,6 @@ button:hover {
     margin-bottom: 0;
 }
 
-/* 卡片显示区域样式 */
 .cards-display {
     flex-grow: 1;
     border: none;
@@ -116,20 +112,19 @@ button:hover {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    overflow-y: auto; /* 添加垂直滚动条 */
+    overflow-y: auto;
 }
 
-/* 歌曲选择区域样式 */
 .song-selection {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 0px;
+    width: 100%;
 }
 
-/* 歌曲卡片样式 */
 .song-card {
-    width: 70px;
-    height: 70px;
+    width: 100%;
+    height: 100%;
     background-color: #f0f0f0;
     border-radius: 5px;
     display: flex;
@@ -147,32 +142,38 @@ button:hover {
     color: #999;
 }
 
+.song-card.selected {
+    background-color: white; /* 背景颜色为白色 */
+    border-radius: 5px; /* 圆角边框 */
+    overflow: hidden; /* 隐藏溢出内容 */
+}
+
 .song-card.selected .song-image {
-    width: 70px;
-    height: 70px;
+    width: 100%; /* 图片宽度占满 */
+    height: calc(100% - 30px); /* 图片高度为卡片高度减去名称部分的高度 */
     background-color: white;
-    border-radius: 5px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    border-radius: 5px 5px 0 0; /* 上部圆角 */
+    object-fit: cover; /* 确保图片覆盖整个区域 */
 }
 
 .song-card.selected .song-name {
     font-size: 12px;
     text-align: center;
     color: #333;
-    margin-top: 70px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 70px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px; /* 名称部分高度 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
 }
 
-.song-card.selected:before {
-    content: "";
-}
-
-/* 游戏区域样式 */
 .game-area {
     display: flex;
     justify-content: space-between;
@@ -207,7 +208,6 @@ h3 {
     margin-bottom: 10px;
     color: #555;
 }
-
 
 .card {
     width: 100px;
@@ -272,7 +272,6 @@ h3 {
     background-color: rgba(255, 165, 0, 0.1);
 }
 
-/* 弹窗样式 */
 .judgment-dialog {
     display: none;
     position: fixed;
@@ -347,7 +346,6 @@ h3 {
     background-color: #45a049;
 }
 
-/* 手牌区弹窗样式 */
 .hand-dialog {
     display: none;
     position: fixed;
@@ -402,7 +400,6 @@ h3 {
     justify-content: center;
 }
 
-/* 歌曲搜索弹窗样式 */
 .song-search-dialog {
     display: none;
     position: fixed;
@@ -457,8 +454,6 @@ h3 {
     background-color: #e0f7ff;
 }
 
-
-/* Buff区标题和卡牌容器样式 */
 .buff-section {
     display: flex;
     align-items: flex-start;
@@ -467,3 +462,83 @@ h3 {
 }
 
 
+
+.song-card-container {
+    display: flex;
+    margin-left: auto;
+    width: calc(100% - 100px);
+}
+
+.song-card {
+    flex: 1;
+    margin: 0 10px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    height: 150px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #90ee90;
+}
+
+.song-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.song-card-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #999;
+}
+
+.song-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.song-card.selected .song-card-content {
+    white-space: normal;
+    overflow: auto;
+}
+
+.song-card-inner {
+    position: absolute;
+    /* top: 10px; */
+
+    width: 90%;
+    aspect-ratio: 1 / 1; 
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+}
+
+.song-card-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.song-card-text marquee {
+    display: block;
+    width: 100%;
+}
