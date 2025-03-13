@@ -70,43 +70,63 @@ button:hover {
 /* 全局容器样式 */
 .global-container {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 30px;
 }
 
-/* 全局Buff区样式 */
-.global-buff {
-    width: 45%;
+/* 全局Buff区和挑战歌曲的公共样式 */
+.global-buff, .challenge-songs {
+    width: 48%;
     background-color: #f8f8f8;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    margin-right: 10px;
 }
 
-/* 挑战歌曲区域样式 */
-.challenge-songs {
-    width: 45%;
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+/* 标题和卡牌容器样式 */
+.title-card-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* 竖排标题样式 */
+.vertical-title {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding-right: 10px;
+    font-size: 16px;
+    color: #555;
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* 卡片显示区域样式 */
+.cards-display {
+    flex-grow: 1;
+    border: none;
+    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 /* 歌曲搜索区域样式 */
 .song-search {
     margin-bottom: 20px;
     display: flex;
+    flex-direction: column;
 }
 
 .song-search input {
-    flex-grow: 1;
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 .song-search button {
-    margin-left: 10px;
     padding: 8px 15px;
     background-color: #4CAF50;
     color: white;
@@ -150,29 +170,7 @@ button:hover {
     color: #333;
 }
 
-/* Buff区标题竖排样式 */
-.buff-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.vertical-title {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    padding-right: 10px;
-    font-size: 16px;
-    color: #555;
-}
-
-.cards-display {
-    flex-grow: 1;
-}
-
-/* 玩家区域样式 */
+/* 游戏区域样式 */
 .game-area {
     display: flex;
     justify-content: space-between;

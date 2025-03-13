@@ -7,8 +7,8 @@ from urllib.parse import urljoin
 # 目标页面URL
 url = "https://arcwiki.mcd.blue/%E6%9B%B2%E7%9B%AE%E5%88%97%E8%A1%A8"
 
-# 创建存储目录（多级目录自动创建）
-base_dir = "../card_drawing"
+# 创建存储目录
+base_dir = "./card_drawing"
 img_dir = os.path.join(base_dir, "images")
 os.makedirs(img_dir, exist_ok=True)
 
@@ -20,38 +20,42 @@ headers = {
 # 存储结果的列表
 song_list = []
 
+def get_original_image_url(img_src):
+    """处理缩略图URL转换为原始高清图URL"""
+    original_path = img_src.replace("/thumb", "", 1)
+    original_path = original_path.rsplit("/", 1)[0]  # 分割最后一个斜杠后的内容
+    return original_path
+
 try:
-    # 获取页面内容
     response = requests.get(url, headers=headers)
     response.raise_for_status()
     
-    # 解析HTML
     soup = BeautifulSoup(response.text, 'html.parser')
     
-    # 定位主表格（假设是页面中的第一个表格）
-    table = soup.find('table')
-    
-    # 遍历表格行（跳过表头）
+    # 定位第二个表格
+    tables = soup.find_all('table')
+    if len(tables) < 2:
+        raise ValueError("页面中不足两个表格")
+    table = tables[1]
+
     for row in table.find_all('tr')[1:]:
         columns = row.find_all('td')
         
-        # 确保有足够的列
         if len(columns) >= 3:
-            # 提取封面图片URL（第二列）
             img_tag = columns[1].find('img')
             if img_tag and 'src' in img_tag.attrs:
-                img_url = urljoin(url, img_tag['src'])
+                # 获取处理后的高清图URL
+                original_path = get_original_image_url(img_tag['src'])
+                img_url = urljoin(url, original_path)
                 
-                # 提取歌曲标题（第三列）
+                # 提取歌曲标题
                 song_name = columns[2].get_text(strip=True)
                 
-                # 清理文件名中的非法字符
-                safe_name = "".join(c for c in song_name if c not in r'\/:*?"<>|').strip()
-                if not safe_name:
-                    continue
+                # 获取原始图片文件名
+                img_filename = os.path.basename(original_path)
                 
                 # 下载图片
-                img_path = os.path.join(img_dir, f'{safe_name}.jpg')
+                img_path = os.path.join(img_dir, img_filename)
                 try:
                     img_response = requests.get(img_url, headers=headers)
                     img_response.raise_for_status()
@@ -60,16 +64,15 @@ try:
                     with open(img_path, 'wb') as f:
                         f.write(img_response.content)
                     
-                    # 添加到结果列表（使用相对路径存储）
+                    # 添加到结果列表
                     song_list.append({
                         "song_name": song_name,
-                        "image_path": os.path.normpath(os.path.join("images", f'{safe_name}.jpg'))
+                        "image_path": os.path.normpath(os.path.join("images", img_filename))
                     })
-                    print(f'下载成功: {song_name}')
+                    print(f'下载成功: {song_name} ({img_filename})')
                     
                 except Exception as img_e:
                     print(f'下载失败 {song_name}: {str(img_e)}')
-                    continue
 
 except Exception as e:
     print(f'发生错误: {str(e)}')
