@@ -76,17 +76,23 @@ button:hover {
 
 /* 全局Buff区和挑战歌曲的公共样式 */
 .global-buff, .challenge-songs {
-    width: 48%;
+    width: 45%;
     background-color: #f8f8f8;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+/* 调整全局Buff区高度 */
+.global-buff {
+    height: 170px;
+}
+
 /* 标题和卡牌容器样式 */
 .title-card-container {
     display: flex;
     align-items: flex-start;
+    gap: 10px; /* 添加标题和卡牌之间的间距 */
 }
 
 /* 竖排标题样式 */
@@ -110,64 +116,60 @@ button:hover {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-}
-
-/* 歌曲搜索区域样式 */
-.song-search {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.song-search input {
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-.song-search button {
-    padding: 8px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    overflow-y: auto; /* 添加垂直滚动条 */
 }
 
 /* 歌曲选择区域样式 */
 .song-selection {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
 }
 
 /* 歌曲卡片样式 */
 .song-card {
-    width: 100px;
-    height: 120px;
-    background-color: white;
+    width: 70px;
+    height: 70px;
+    background-color: #f0f0f0;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px;
+    justify-content: center;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
-.song-image {
-    width: 80px;
-    height: 80px;
-    background-color: #eee;
-    margin-bottom: 5px;
+.song-card:before {
+    content: "?";
+    font-size: 24px;
+    color: #999;
 }
 
-.song-name {
-    font-size: 14px;
+.song-card.selected .song-image {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.song-card.selected .song-name {
+    font-size: 12px;
     text-align: center;
     color: #333;
+    margin-top: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 70px;
+}
+
+.song-card.selected:before {
+    content: "";
 }
 
 /* 游戏区域样式 */
@@ -206,13 +208,6 @@ h3 {
     color: #555;
 }
 
-.cards-display {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    min-height: 100px;
-}
 
 .card {
     width: 100px;
@@ -406,3 +401,69 @@ h3 {
     display: flex;
     justify-content: center;
 }
+
+/* 歌曲搜索弹窗样式 */
+.song-search-dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2500;
+    justify-content: center;
+    align-items: center;
+}
+
+.song-search-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#song-search-input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+#search-button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.song-results {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.song-result {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.song-result:hover {
+    background-color: #f8f8f8;
+}
+
+.song-result.selected {
+    background-color: #e0f7ff;
+}
+
+
+/* Buff区标题和卡牌容器样式 */
+.buff-section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    height: 160px;
+}
+
+

@@ -28,12 +28,8 @@
             <div class="challenge-songs">
                 <div class="title-card-container">
                     <h3 class="vertical-title">挑战歌曲</h3>
-                    <div class="song-search">
-                        <input type="text" id="song-search-input" placeholder="搜索歌曲...">
-                        <button id="search-button">搜索</button>
-                    </div>
                     <div class="song-selection" id="song-selection">
-                        <!-- 歌曲将在这里动态生成 -->
+                        <!-- 歌曲卡片将在这里动态生成 -->
                     </div>
                 </div>
             </div>
@@ -43,8 +39,10 @@
             <div class="player-area" id="player1-area">
                 <h2>擂主 <span id="player1-wins">胜利次数: 0</span></h2>
                 <div class="buff-section">
-                    <h3 class="vertical-title">Buff区</h3>
-                    <div class="cards-display" id="player1-buff"></div>
+                    <div class="title-card-container">
+                        <h3 class="vertical-title">Buff区</h3>
+                        <div class="cards-display" id="player1-buff"></div>
+                    </div>
                 </div>
                 <div class="button-container">
                     <button id="player1-draw">抽卡</button>
@@ -56,8 +54,10 @@
             <div class="player-area" id="player2-area">
                 <h2>挑战者</h2>
                 <div class="buff-section">
-                    <h3 class="vertical-title">Buff区</h3>
-                    <div class="cards-display" id="player2-buff"></div>
+                    <div class="title-card-container">
+                        <h3 class="vertical-title">Buff区</h3>
+                        <div class="cards-display" id="player2-buff"></div>
+                    </div>
                 </div>
                 <div class="button-container">
                     <button id="player2-draw">抽卡</button>
@@ -107,6 +107,20 @@
             </div>
             <div class="hand-dialog-body">
                 <div class="cards-display" id="player2-hand"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 歌曲搜索弹窗 -->
+    <div class="song-search-dialog" id="song-search-dialog">
+        <div class="dialog-content">
+            <h2>搜索歌曲</h2>
+            <div class="song-search-container">
+                <input type="text" id="song-search-input" placeholder="输入歌曲名搜索...">
+                <button id="search-button">搜索</button>
+            </div>
+            <div class="song-results" id="song-results">
+                <!-- 搜索结果将在这里动态生成 -->
             </div>
         </div>
     </div>

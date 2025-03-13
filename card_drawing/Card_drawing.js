@@ -5,6 +5,9 @@ let totalProbability = 0;
 // 歌曲数据
 let songs = [];
 
+// 当前选中的歌曲框索引
+let selectedSongBoxIndex = null;
+
 // 加载卡片数据
 async function loadCards() {
     try {
@@ -24,9 +27,9 @@ async function loadCards() {
 // 加载歌曲数据
 async function loadSongs() {
     try {
-        const response = await fetch('arcaea.json');
+        const response = await fetch('arcaea_online.json');
         songs = await response.json();
-        displaySongs(songs);
+        initializeSongSelection();
     } catch (error) {
         console.error('加载歌曲数据失败:', error);
     }
@@ -305,60 +308,75 @@ function hideHandDialog(playerId) {
     handDialog.style.display = "none";
 }
 
-// 显示所有歌曲
-function displaySongs(songList) {
+// 初始化歌曲选择框
+function initializeSongSelection() {
     const songSelection = document.getElementById('song-selection');
     songSelection.innerHTML = '';
     
-    songList.forEach(song => {
-        const songCard = document.createElement('div');
-        songCard.className = 'song-card';
-        songCard.dataset.songId = song.song_name;
-        
-        songCard.innerHTML = `
-            <div class="song-image" style="background-image: url('${song.image_path}'); background-size: cover;"></div>
-            <div class="song-name">${song.song_name}</div>
-        `;
-        
-        songCard.addEventListener('click', () => selectSong(song.song_name));
-        songSelection.appendChild(songCard);
-    });
+    // 创建三个空的歌曲选择框
+    for (let i = 0; i < 3; i++) {
+        const songBox = document.createElement('div');
+        songBox.className = 'song-card';
+        songBox.dataset.index = i;
+        songBox.addEventListener('click', () => showSongSearchDialog(i));
+        songSelection.appendChild(songBox);
+    }
+}
+
+// 显示歌曲搜索弹窗
+function showSongSearchDialog(boxIndex) {
+    selectedSongBoxIndex = boxIndex;
+    document.getElementById('song-search-dialog').style.display = 'flex';
+    document.getElementById('song-search-input').value = '';
+    document.getElementById('song-results').innerHTML = '';
 }
 
 // 搜索歌曲
 function searchSongs() {
     const searchTerm = document.getElementById('song-search-input').value.toLowerCase();
     const filteredSongs = songs.filter(song => 
-        song.song_name.toLowerCase().includes(searchTerm)
+        song.song_name.toLowerCase().startsWith(searchTerm)
     );
-    displaySongs(filteredSongs);
+    displaySongSearchResults(filteredSongs);
 }
 
-// 根据回合数选择歌曲
-function selectSongBasedOnRound() {
-    const songCards = document.querySelectorAll('.song-card');
-    if (songCards.length === 0) return;
+// 显示歌曲搜索结果
+function displaySongSearchResults(songList) {
+    const songResults = document.getElementById('song-results');
+    songResults.innerHTML = '';
     
-    let index = 0;
-    if (round === 0) {
-        index = 0; // 最左边
-    } else if (round === 1) {
-        index = Math.floor(songCards.length / 2); // 中间
-    } else if (round === 2) {
-        index = songCards.length - 1; // 最右边
-    }
-    
-    const selectedSongCard = songCards[index];
-    selectedSongCard.click();
+    songList.forEach(song => {
+        const songResult = document.createElement('div');
+        songResult.className = 'song-result';
+        songResult.textContent = song.song_name;
+        songResult.addEventListener('click', () => selectSongForBox(song));
+        songResults.appendChild(songResult);
+    });
 }
 
-// 选择歌曲
-function selectSong(songName) {
-    const selectedSong = songs.find(song => song.song_name === songName);
-    if (selectedSong) {
-        console.log('选择了歌曲:', selectedSong.song_name);
-        // 这里可以添加将歌曲信息传递给游戏逻辑的代码
-    }
+// 为框选择歌曲
+function selectSongForBox(song) {
+    // 更新对应的歌曲选择框
+    const songBox = document.querySelector(`.song-card[data-index="${selectedSongBoxIndex}"]`);
+    songBox.className = 'song-card selected';
+    
+    // 创建歌曲图片和名称
+    const songImage = document.createElement('div');
+    songImage.className = 'song-image';
+    songImage.style.backgroundImage = `url('${song.image_path}')`;
+    songImage.style.backgroundSize = 'cover';
+    
+    const songName = document.createElement('div');
+    songName.className = 'song-name';
+    songName.textContent = song.song_name;
+    
+    songBox.appendChild(songImage);
+    songBox.appendChild(songName);
+    
+    // 隐藏弹窗
+    document.getElementById('song-search-dialog').style.display = 'none';
+    
+    console.log('为框选择歌曲:', song, '框索引:', selectedSongBoxIndex);
 }
 
 // 初始化时加载卡片和歌曲
