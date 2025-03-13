@@ -17,16 +17,30 @@
             <button id="next-round">下一回合</button>
         </div>
         
-        <div class="global-buff">
-            <h2>全局Buff区</h2>
-            <div class="cards-display" id="global-buff"></div>
+        <!-- 全局Buff区调整到最左边 -->
+        <div class="global-container">
+            <div class="global-buff">
+                <h2>全局Buff区</h2>
+                <div class="cards-display" id="global-buff"></div>
+            </div>
+            
+            <div class="challenge-songs">
+                <h3>挑战歌曲</h3>
+                <div class="song-search">
+                    <input type="text" id="song-search-input" placeholder="搜索歌曲...">
+                    <button id="search-button">搜索</button>
+                </div>
+                <div class="song-selection" id="song-selection">
+                    <!-- 歌曲将在这里动态生成 -->
+                </div>
+            </div>
         </div>
         
         <div class="game-area">
             <div class="player-area" id="player1-area">
                 <h2>擂主 <span id="player1-wins">胜利次数: 0</span></h2>
-                <div class="section">
-                    <h3>Buff区</h3>
+                <div class="buff-section">
+                    <h3 class="vertical-title">Buff区</h3>
                     <div class="cards-display" id="player1-buff"></div>
                 </div>
                 <div class="button-container">
@@ -38,8 +52,8 @@
             
             <div class="player-area" id="player2-area">
                 <h2>挑战者</h2>
-                <div class="section">
-                    <h3>Buff区</h3>
+                <div class="buff-section">
+                    <h3 class="vertical-title">Buff区</h3>
                     <div class="cards-display" id="player2-buff"></div>
                 </div>
                 <div class="button-container">
@@ -95,9 +109,5 @@
     </div>
     
     <script src="Card_drawing.js"></script>
-    <script>
-        // 页面加载时加载卡片数据
-        window.onload = loadCards;
-    </script>
 </body>
 </html>

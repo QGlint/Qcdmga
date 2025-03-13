@@ -1,12 +1,14 @@
 // 卡牌数据
-// 从外部文件加载卡片数据
 let cards = [];
 let totalProbability = 0;
+
+// 歌曲数据
+let songs = [];
 
 // 加载卡片数据
 async function loadCards() {
     try {
-        const response = await fetch('card_test.json'); ///Qcdmga/json/card_test.json
+        const response = await fetch('card_test.json');
         cards = await response.json();
         
         // 计算总概率
@@ -16,6 +18,17 @@ async function loadCards() {
         initGame();
     } catch (error) {
         console.error('加载卡片数据失败:', error);
+    }
+}
+
+// 加载歌曲数据
+async function loadSongs() {
+    try {
+        const response = await fetch('arcaea.json');
+        songs = await response.json();
+        displaySongs(songs);
+    } catch (error) {
+        console.error('加载歌曲数据失败:', error);
     }
 }
 
@@ -44,6 +57,14 @@ function initGame() {
     // 绑定返回游戏按钮事件
     document.getElementById("back-to-game").addEventListener("click", backToGame);
 
+    // 绑定搜索按钮事件
+    document.getElementById('search-button').addEventListener('click', searchSongs);
+    document.getElementById('song-search-input').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            searchSongs();
+        }
+    });
+
     // 初始化回合和局数
     updateRoundAndSet();
 }
@@ -67,7 +88,6 @@ function updateHandCount(playerId) {
 }
 
 // 玩家抽卡函数
-// 根据概率抽卡
 function drawCard(playerId) {
     const playerHandElement = document.getElementById(`${playerId}-hand`);
     
@@ -273,10 +293,6 @@ function clearDuration1Cards() {
     });
 }
 
-
-
-
-
 // 显示手牌区弹窗
 function showHandDialog(playerId) {
     const handDialog = document.getElementById(`${playerId}-hand-dialog`);
@@ -288,3 +304,65 @@ function hideHandDialog(playerId) {
     const handDialog = document.getElementById(`${playerId}-hand-dialog`);
     handDialog.style.display = "none";
 }
+
+// 显示所有歌曲
+function displaySongs(songList) {
+    const songSelection = document.getElementById('song-selection');
+    songSelection.innerHTML = '';
+    
+    songList.forEach(song => {
+        const songCard = document.createElement('div');
+        songCard.className = 'song-card';
+        songCard.dataset.songId = song.song_name;
+        
+        songCard.innerHTML = `
+            <div class="song-image" style="background-image: url('${song.image_path}'); background-size: cover;"></div>
+            <div class="song-name">${song.song_name}</div>
+        `;
+        
+        songCard.addEventListener('click', () => selectSong(song.song_name));
+        songSelection.appendChild(songCard);
+    });
+}
+
+// 搜索歌曲
+function searchSongs() {
+    const searchTerm = document.getElementById('song-search-input').value.toLowerCase();
+    const filteredSongs = songs.filter(song => 
+        song.song_name.toLowerCase().includes(searchTerm)
+    );
+    displaySongs(filteredSongs);
+}
+
+// 根据回合数选择歌曲
+function selectSongBasedOnRound() {
+    const songCards = document.querySelectorAll('.song-card');
+    if (songCards.length === 0) return;
+    
+    let index = 0;
+    if (round === 0) {
+        index = 0; // 最左边
+    } else if (round === 1) {
+        index = Math.floor(songCards.length / 2); // 中间
+    } else if (round === 2) {
+        index = songCards.length - 1; // 最右边
+    }
+    
+    const selectedSongCard = songCards[index];
+    selectedSongCard.click();
+}
+
+// 选择歌曲
+function selectSong(songName) {
+    const selectedSong = songs.find(song => song.song_name === songName);
+    if (selectedSong) {
+        console.log('选择了歌曲:', selectedSong.song_name);
+        // 这里可以添加将歌曲信息传递给游戏逻辑的代码
+    }
+}
+
+// 初始化时加载卡片和歌曲
+window.onload = () => {
+    loadCards();
+    loadSongs();
+};
