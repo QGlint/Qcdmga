@@ -550,8 +550,6 @@ h3 {
 
 .play-button {
     position: absolute;
-    /* top: 0;
-    left: 0; */
     margin-top: 10px;
     height: 20px;
     background-color: #4CAF50;
@@ -560,10 +558,10 @@ h3 {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
-    position: absolute;
     bottom: 140px;
     line-height: 20px; /* 设置行高与按钮高度相同，确保文字垂直居中 */
     text-align: center; /* 确保文字水平居中 */
+    display: block; /* 确保按钮初始是可见的 */
 }
 
 

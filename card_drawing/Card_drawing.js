@@ -134,6 +134,8 @@ function togglePlayCard(button, playerId, cardType, duration) {
                 action.cardType !== cardType || action.duration !== duration
             );
         }
+        // 显示按钮
+        button.style.display = 'block';
     } else {
         button.classList.add('played');
         button.style.backgroundColor = '#999';
@@ -148,6 +150,8 @@ function togglePlayCard(button, playerId, cardType, duration) {
         } else if (playerId === "player2") {
             player2Actions.push(action);
         }
+        // 隐藏按钮
+        button.style.display = 'none';
     }
 }
 
