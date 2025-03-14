@@ -107,62 +107,96 @@ function drawCard(playerId) {
         <div class="card-name">${selectedCard.name}</div>
         <div class="card-type">${selectedCard.type}</div>
         <div class="card-duration">${selectedCard.duration}</div>
+        <button class="play-button">出牌</button>
     `;
 
-    // 绑定双击事件，记录操作
-    cardElement.addEventListener('dblclick', function() {
-        recordCardAction(this, playerId, selectedCard.type, selectedCard.duration);
+    // 绑定出牌按钮点击事件
+    const playButton = cardElement.querySelector('.play-button');
+    playButton.addEventListener('click', function() {
+        togglePlayCard(this, playerId, selectedCard.type, selectedCard.duration);
     });
 
     playerHandElement.appendChild(cardElement);
     updateHandCount(playerId);
 }
 
-function recordCardAction(cardElement, playerId, cardType, duration) {
-    const action = {
-        cardElement: cardElement,
-        playerId: playerId,
-        cardType: cardType,
-        duration: duration
-    };
-
-    if (playerId === "player1") {
-        player1Actions.push(action);
-    } else if (playerId === "player2") {
-        player2Actions.push(action);
+function togglePlayCard(button, playerId, cardType, duration) {
+    if (button.classList.contains('played')) {
+        button.classList.remove('played');
+        button.style.backgroundColor = '#4CAF50';
+        // 移除记录的操作
+        if (playerId === "player1") {
+            player1Actions = player1Actions.filter(action => 
+                action.cardType !== cardType || action.duration !== duration
+            );
+        } else if (playerId === "player2") {
+            player2Actions = player2Actions.filter(action => 
+                action.cardType !== cardType || action.duration !== duration
+            );
+        }
+    } else {
+        button.classList.add('played');
+        button.style.backgroundColor = '#999';
+        // 记录操作
+        const action = {
+            playerId: playerId,
+            cardType: cardType,
+            duration: duration
+        };
+        if (playerId === "player1") {
+            player1Actions.push(action);
+        } else if (playerId === "player2") {
+            player2Actions.push(action);
+        }
     }
-
-    // 调试信息，确保双击事件被触发
-    console.log(`记录操作: 玩家${playerId} 双击了 ${cardType} 卡牌`);
 }
 
 function useCard(action) {
-    const { cardElement, playerId, cardType, duration } = action;
+    const { playerId, cardType, duration } = action;
 
-    if (cardType === "buff") {
-        const playerBuffElement = document.getElementById(`${playerId}-buff`);
-        playerBuffElement.appendChild(cardElement);
-    } else if (cardType === "debuff") {
-        const opponentId = playerId === "player1" ? "player2" : "player1";
-        const opponentBuffElement = document.getElementById(`${opponentId}-buff`);
-        opponentBuffElement.appendChild(cardElement);
-    } else if (cardType === "global") {
-        const globalBuffElement = document.getElementById(`global-buff`);
-        globalBuffElement.appendChild(cardElement);
-    }
-    
+    const playerHandElement = document.getElementById(`${playerId}-hand`);
+    const cardElements = playerHandElement.querySelectorAll(`.card`);
+    let cardFound = false;
+
+    cardElements.forEach(cardElement => {
+        const type = cardElement.querySelector('.card-type').textContent;
+        const dur = parseInt(cardElement.querySelector('.card-duration').textContent);
+        if (type === cardType && dur === duration && !cardFound) {
+            if (cardType === "buff") {
+                const playerBuffElement = document.getElementById(`${playerId}-buff`);
+                playerBuffElement.appendChild(cardElement);
+            } else if (cardType === "debuff") {
+                const opponentId = playerId === "player1" ? "player2" : "player1";
+                const opponentBuffElement = document.getElementById(`${opponentId}-buff`);
+                opponentBuffElement.appendChild(cardElement);
+            } else if (cardType === "global") {
+                const globalBuffElement = document.getElementById(`global-buff`);
+                globalBuffElement.appendChild(cardElement);
+            }
+            cardFound = true;
+        }
+    });
+
     updateHandCount(playerId);
 }
 
 function nextRound() {
-    clearDuration1Cards();
-    round++;
-    if (round >= 3) {
-        round = 0;
-        set++;
-        showJudgmentDialog();
+    if (isPlayer1Ready && isPlayer2Ready) {
+        clearDuration1Cards();
+        round++;
+        if (round >= 3) {
+            round = 0;
+            set++;
+            showJudgmentDialog();
+        }
+        updateRoundAndSet();
+        isPlayer1Ready = false;
+        isPlayer2Ready = false;
+        player1Actions = [];
+        player2Actions = [];
+    } else {
+        alert("双方都未完成操作，无法进入下一回合！");
     }
-    updateRoundAndSet();
 }
 
 function showJudgmentDialog() {
@@ -214,10 +248,11 @@ function moveWinnerAreas(fromPlayerId, toPlayerId) {
     
     Array.from(fromHand.children).forEach(card => {
         toHand.appendChild(card);
-        card.addEventListener('dblclick', function() {
+        const playButton = card.querySelector('.play-button');
+        playButton.addEventListener('click', function() {
             const cardType = card.querySelector('.card-type').textContent;
             const cardDuration = card.querySelector('.card-duration').textContent;
-            recordCardAction(this, toPlayerId, cardType, cardDuration);
+            togglePlayCard(this, toPlayerId, cardType, cardDuration);
         });
     });
     
@@ -391,10 +426,6 @@ function finishRound(playerId) {
         console.log("双方都已完成，开始执行操作");
         executeRecordedActions();
         showCardsOnField();
-        isPlayer1Ready = false;
-        isPlayer2Ready = false;
-        player1Actions = [];
-        player2Actions = [];
     }
 }
 
@@ -414,33 +445,38 @@ function showCardsOnField() {
     const player1Hand = document.getElementById("player1-hand");
     const player1Buff = document.getElementById("player1-buff");
     Array.from(player1Hand.children).forEach(card => {
-        player1Buff.appendChild(card);
-        // 重新绑定双击事件
-        card.addEventListener('dblclick', function() {
+        const playButton = card.querySelector('.play-button');
+        if (playButton.classList.contains('played')) {
             const cardType = card.querySelector('.card-type').textContent;
-            const cardDuration = card.querySelector('.card-duration').textContent;
-            recordCardAction(this, "player1", cardType, cardDuration);
-        });
+            const duration = parseInt(card.querySelector('.card-duration').textContent);
+            const action = {
+                playerId: "player1",
+                cardType: cardType,
+                duration: duration
+            };
+            useCard(action);
+        }
     });
-    player1Hand.innerHTML = "";
     updateHandCount("player1");
 
     const player2Hand = document.getElementById("player2-hand");
     const player2Buff = document.getElementById("player2-buff");
     Array.from(player2Hand.children).forEach(card => {
-        player2Buff.appendChild(card);
-        // 重新绑定双击事件
-        card.addEventListener('dblclick', function() {
+        const playButton = card.querySelector('.play-button');
+        if (playButton.classList.contains('played')) {
             const cardType = card.querySelector('.card-type').textContent;
-            const cardDuration = card.querySelector('.card-duration').textContent;
-            recordCardAction(this, "player2", cardType, cardDuration);
-        });
+            const duration = parseInt(card.querySelector('.card-duration').textContent);
+            const action = {
+                playerId: "player2",
+                cardType: cardType,
+                duration: duration
+            };
+            useCard(action);
+        }
     });
-    player2Hand.innerHTML = "";
     updateHandCount("player2");
 
     console.log("更新场上显示完成");
-    nextRound();
 }
 
 window.onload = () => {

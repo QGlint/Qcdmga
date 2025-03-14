@@ -546,3 +546,29 @@ h3 {
     word-wrap: break-word; /* 确保长单词换行 */
     overflow: hidden; /* 隐藏超出内容 */
 }
+
+
+.play-button {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    margin-top: 10px;
+    height: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: absolute;
+    bottom: 140px;
+    line-height: 20px; /* 设置行高与按钮高度相同，确保文字垂直居中 */
+    text-align: center; /* 确保文字水平居中 */
+}
+
+
+
+
+.play-button.played {
+    background-color: #999;
+}
