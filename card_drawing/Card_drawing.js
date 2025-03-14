@@ -5,6 +5,10 @@ let selectedSongBoxIndex = null;
 let round = 0;
 let set = 0;
 let player1Wins = 0;
+let isPlayer1Ready = false;
+let isPlayer2Ready = false;
+let player1Actions = [];
+let player2Actions = [];
 
 async function loadCards() {
     try {
@@ -54,6 +58,15 @@ function initGame() {
         }
     });
 
+    // 绑定手牌弹窗的“完成”按钮事件
+    document.getElementById("player1-show-hand").addEventListener("click", () => {
+        showHandDialog("player1");
+    });
+
+    document.getElementById("player2-show-hand").addEventListener("click", () => {
+        showHandDialog("player2");
+    });
+
     updateRoundAndSet();
 }
 
@@ -96,15 +109,36 @@ function drawCard(playerId) {
         <div class="card-duration">${selectedCard.duration}</div>
     `;
 
+    // 绑定双击事件，记录操作
     cardElement.addEventListener('dblclick', function() {
-        useCard(this, playerId, selectedCard.type, selectedCard.duration);
+        recordCardAction(this, playerId, selectedCard.type, selectedCard.duration);
     });
 
     playerHandElement.appendChild(cardElement);
     updateHandCount(playerId);
 }
 
-function useCard(cardElement, playerId, cardType, duration) {
+function recordCardAction(cardElement, playerId, cardType, duration) {
+    const action = {
+        cardElement: cardElement,
+        playerId: playerId,
+        cardType: cardType,
+        duration: duration
+    };
+
+    if (playerId === "player1") {
+        player1Actions.push(action);
+    } else if (playerId === "player2") {
+        player2Actions.push(action);
+    }
+
+    // 调试信息，确保双击事件被触发
+    console.log(`记录操作: 玩家${playerId} 双击了 ${cardType} 卡牌`);
+}
+
+function useCard(action) {
+    const { cardElement, playerId, cardType, duration } = action;
+
     if (cardType === "buff") {
         const playerBuffElement = document.getElementById(`${playerId}-buff`);
         playerBuffElement.appendChild(cardElement);
@@ -178,20 +212,17 @@ function moveWinnerAreas(fromPlayerId, toPlayerId) {
     const fromHand = document.getElementById(`${fromPlayerId}-hand`);
     const toHand = document.getElementById(`${toPlayerId}-hand`);
     
-    // 移动手牌区的卡牌
     Array.from(fromHand.children).forEach(card => {
         toHand.appendChild(card);
-        // 重新绑定双击事件监听器
         card.addEventListener('dblclick', function() {
             const cardType = card.querySelector('.card-type').textContent;
             const cardDuration = card.querySelector('.card-duration').textContent;
-            useCard(this, toPlayerId, cardType, cardDuration);
+            recordCardAction(this, toPlayerId, cardType, cardDuration);
         });
     });
     
     fromHand.innerHTML = "";
     
-    // 移动Buff区的卡牌
     const fromBuff = document.getElementById(`${fromPlayerId}-buff`);
     const toBuff = document.getElementById(`${toPlayerId}-buff`);
     Array.from(fromBuff.children).forEach(card => {
@@ -199,7 +230,6 @@ function moveWinnerAreas(fromPlayerId, toPlayerId) {
     });
     fromBuff.innerHTML = "";
     
-    // 更新手牌数量显示
     updateHandCount(toPlayerId);
     updateHandCount(fromPlayerId); 
 }
@@ -258,6 +288,7 @@ function showHandDialog(playerId) {
 function hideHandDialog(playerId) {
     const handDialog = document.getElementById(`${playerId}-hand-dialog`);
     handDialog.style.display = "none";
+    finishRound(playerId); // 玩家点击完成按钮后调用 finishRound
 }
 
 function initializeSongSelection() {
@@ -345,6 +376,71 @@ function updateRoundStyles() {
             card.style.backgroundColor = '#90ee90';
         }
     });
+}
+
+function finishRound(playerId) {
+    if (playerId === "player1") {
+        isPlayer1Ready = true;
+        console.log("玩家1已完成");
+    } else if (playerId === "player2") {
+        isPlayer2Ready = true;
+        console.log("玩家2已完成");
+    }
+
+    if (isPlayer1Ready && isPlayer2Ready) {
+        console.log("双方都已完成，开始执行操作");
+        executeRecordedActions();
+        showCardsOnField();
+        isPlayer1Ready = false;
+        isPlayer2Ready = false;
+        player1Actions = [];
+        player2Actions = [];
+    }
+}
+
+function executeRecordedActions() {
+    // 执行玩家1记录的操作
+    player1Actions.forEach(action => {
+        useCard(action);
+    });
+
+    // 执行玩家2记录的操作
+    player2Actions.forEach(action => {
+        useCard(action);
+    });
+}
+
+function showCardsOnField() {
+    const player1Hand = document.getElementById("player1-hand");
+    const player1Buff = document.getElementById("player1-buff");
+    Array.from(player1Hand.children).forEach(card => {
+        player1Buff.appendChild(card);
+        // 重新绑定双击事件
+        card.addEventListener('dblclick', function() {
+            const cardType = card.querySelector('.card-type').textContent;
+            const cardDuration = card.querySelector('.card-duration').textContent;
+            recordCardAction(this, "player1", cardType, cardDuration);
+        });
+    });
+    player1Hand.innerHTML = "";
+    updateHandCount("player1");
+
+    const player2Hand = document.getElementById("player2-hand");
+    const player2Buff = document.getElementById("player2-buff");
+    Array.from(player2Hand.children).forEach(card => {
+        player2Buff.appendChild(card);
+        // 重新绑定双击事件
+        card.addEventListener('dblclick', function() {
+            const cardType = card.querySelector('.card-type').textContent;
+            const cardDuration = card.querySelector('.card-duration').textContent;
+            recordCardAction(this, "player2", cardType, cardDuration);
+        });
+    });
+    player2Hand.innerHTML = "";
+    updateHandCount("player2");
+
+    console.log("更新场上显示完成");
+    nextRound();
 }
 
 window.onload = () => {
