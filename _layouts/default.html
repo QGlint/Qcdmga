@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <style>
         body {
@@ -152,22 +154,40 @@
     <div class="container">
         <div class="toc">
             <h3>目录</h3>
-            <ul>
-                {% assign headings = content | split: '<h2' | size | minus: 1 %}
-                {% if headings > 0 %}
-                    {% for i in (1..headings) %}
-                        {% capture heading %}{% endcapture %}
-                        {% capture temp %}{{ content | split: '<h2' | slice: i | split: '>' | first | split: '</h2' | first }}{% endcapture %}
-                        {% assign heading = heading | append: temp %}
-                        {% assign heading_id = heading | slugify %}
-                        <li><a href="#{{ heading_id }}">{{ heading }}</a></li>
-                    {% endfor %}
-                {% endif %}
+            <ul id="toc-list">
+                <!-- 目录项将通过JavaScript动态生成 -->
             </ul>
         </div>
         <div class="content">
             {{ content }}
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 获取所有h2标题
+            const headings = document.querySelectorAll('.content h2');
+            
+            // 获取目录列表
+            const tocList = document.getElementById('toc-list');
+            
+            // 生成目录
+            headings.forEach(heading => {
+                // 创建列表项
+                const listItem = document.createElement('li');
+                
+                // 创建链接
+                const link = document.createElement('a');
+                link.textContent = heading.textContent;
+                link.href = `#${heading.id}`;
+                
+                // 将链接添加到列表项
+                listItem.appendChild(link);
+                
+                // 将列表项添加到目录
+                tocList.appendChild(listItem);
+            });
+        });
+    </script>
 </body>
 </html>
