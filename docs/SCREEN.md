@@ -150,4 +150,4 @@ PS：笔者曾经在尝试用投屏打开摄像机的时候不小心打开了win
 
 ---
 
-QGlint(稚幺)
+<div style="text-align: right;">QGlint(稚幺)</div>
