@@ -24,14 +24,10 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .content {
-            flex: 1;
-        }
-
         .toc {
-            width: 250px;
-            padding-left: 20px;
-            border-left: 1px solid #eee;
+            width: 200px;
+            position: fixed;
+            padding-right: 20px;
         }
 
         .toc h3 {
@@ -58,16 +54,16 @@
             text-decoration: underline;
         }
 
-        h1 {
+        .content {
+            flex: 1;
+            margin-left: 220px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
             color: #2c3e50;
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
             font-weight: 600;
-        }
-
-        h2 {
-            color: #34495e;
-            font-weight: 500;
         }
 
         p {
