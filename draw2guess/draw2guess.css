@@ -103,3 +103,27 @@ button:disabled {
 #next-button {
     margin-left: 10px;
 }
+
+/* 添加题库选择按钮样式 */
+.mode-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.mode-btn {
+    padding: 8px 20px;
+    font-size: 16px;
+    background-color: #ffc0cb; /* 淡粉色 */
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.mode-btn.active {
+    background-color: #ffff00; /* 荧光黄 */
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+}

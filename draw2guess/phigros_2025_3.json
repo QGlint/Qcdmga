@@ -1,0 +1,26 @@
+[
+    {
+        "song_name": "Introduction",
+        "local_path": "../images/phigros_images/Introduction.avif"
+    },
+    {
+        "song_name": "Glaciaxion",
+        "local_path": "../images/phigros_images/Glaciaxion.avif"
+    },
+    {
+        "song_name": "Eradication Catastrophe",
+        "local_path": "../images/phigros_images/Eradication Catastrophe.avif"
+    },
+    {
+        "song_name": "Credits",
+        "local_path": "../images/phigros_images/Credits.avif"
+    },
+    {
+        "song_name": "Dlyrotz",
+        "local_path": "../images/phigros_images/Dlyrotz.avif"
+    },
+    {
+        "song_name": "Engine x Start!! (melody mix)",
+        "local_path": "../images/phigros_images/Engine x Start!! (melody mix).avif"
+    }
+]
