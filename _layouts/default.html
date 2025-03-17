@@ -157,9 +157,16 @@
         <div class="toc">
             <h3>目录</h3>
             <ul>
-                {% for heading in page.headings %}
-                <li><a href="#{{ heading | slugify }}">{{ heading }}</a></li>
-                {% endfor %}
+                {% assign headings = content | split: '<h2' | size | minus: 1 %}
+                {% if headings > 0 %}
+                    {% for i in (1..headings) %}
+                        {% capture heading %}{% endcapture %}
+                        {% capture temp %}{{ content | split: '<h2' | slice: i | split: '>' | first | split: '</h2' | first }}{% endcapture %}
+                        {% assign heading = heading | append: temp %}
+                        {% assign heading_id = heading | slugify %}
+                        <li><a href="#{{ heading_id }}">{{ heading }}</a></li>
+                    {% endfor %}
+                {% endif %}
             </ul>
         </div>
         <div class="content">
