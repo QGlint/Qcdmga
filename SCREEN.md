@@ -140,7 +140,7 @@ PS：笔者曾经在尝试用投屏打开摄像机的时候不小心打开了win
 
 #### 软件本体目录
 
-默认安装下为**C:\Program Files\MI\XiaomiPCManager\[版本号]**
+默认安装下为**C:\Program Files\MI\XiaomiPCManager\\[版本号]**
 
 #### 图文教程
 
