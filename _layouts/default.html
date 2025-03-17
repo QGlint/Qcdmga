@@ -165,27 +165,45 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // 获取所有h2标题
-            const headings = document.querySelectorAll('.content h2');
+            // 获取所有h2和h3标题
+            const headings = document.querySelectorAll('.content h2, .content h3');
             
             // 获取目录列表
             const tocList = document.getElementById('toc-list');
             
+            // 用于跟踪当前的二级标题
+            let currentH2 = null;
+            
             // 生成目录
             headings.forEach(heading => {
-                // 创建列表项
-                const listItem = document.createElement('li');
-                
-                // 创建链接
-                const link = document.createElement('a');
-                link.textContent = heading.textContent;
-                link.href = `#${heading.id}`;
-                
-                // 将链接添加到列表项
-                listItem.appendChild(link);
-                
-                // 将列表项添加到目录
-                tocList.appendChild(listItem);
+                if (heading.tagName === 'H2') {
+                    // 创建二级标题列表项
+                    const h2ListItem = document.createElement('li');
+                    const h2Link = document.createElement('a');
+                    h2Link.textContent = heading.textContent;
+                    h2Link.href = `#${heading.id}`;
+                    h2ListItem.appendChild(h2Link);
+                    
+                    // 将二级标题列表项添加到目录
+                    tocList.appendChild(h2ListItem);
+                    
+                    // 更新当前的二级标题
+                    currentH2 = h2ListItem;
+                } else if (heading.tagName === 'H3' && currentH2) {
+                    // 创建三级标题列表项
+                    const h3ListItem = document.createElement('li');
+                    const h3Link = document.createElement('a');
+                    h3Link.textContent = heading.textContent;
+                    h3Link.href = `#${heading.id}`;
+                    h3ListItem.appendChild(h3Link);
+                    
+                    // 创建一个子列表并添加三级标题
+                    if (!currentH2.querySelector('ul')) {
+                        const subList = document.createElement('ul');
+                        currentH2.appendChild(subList);
+                    }
+                    currentH2.querySelector('ul').appendChild(h3ListItem);
+                }
             });
         });
     </script>
