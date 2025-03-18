@@ -1,26 +1,246 @@
 [
-    {
-      "song_name": "Sayonara Hatsukoi",
-      "image_url": "https://arcwiki.mcd.blue/images/f/fd/Songs_sayonarahatsukoi.jpg"
-    },
-    {
-      "song_name": "Fairytale",
-      "image_url": "https://arcwiki.mcd.blue/images/8/8f/Songs_fairytale.jpg"
-    },
-    {
-      "song_name": "Vexaria",
-      "image_url": "https://arcwiki.mcd.blue/images/e/ef/Songs_vexaria.jpg"
-    },
-    {
-      "song_name": "Rise",
-      "image_url": "https://arcwiki.mcd.blue/images/a/a4/Songs_rise.jpg"
-    },
-    {
-      "song_name": "Lucifer",
-      "image_url": "https://arcwiki.mcd.blue/images/0/04/Songs_lucifer.jpg"
-    },
-    {
-      "song_name": "Snow White",
-      "image_url": "https://arcwiki.mcd.blue/images/8/8d/Songs_snowwhite.jpg"
-    }
+  {
+    "song_name": "Heartache心の痛み",
+    "image_url": "https://arcwiki.mcd.blue/images/8/8d/Songs_heartache.jpg"
+  },
+  {
+    "song_name": "Death By Glamour華麗なる死闘",
+    "image_url": "https://arcwiki.mcd.blue/images/a/a4/Songs_deathbyglamour.jpg"
+  },
+  {
+    "song_name": "Your Best Nightmare最高の悪夢",
+    "image_url": "https://arcwiki.mcd.blue/images/a/a9/Songs_yourbestnightmare.jpg"
+  },
+  {
+    "song_name": "Last Goodbyeこれでホントにサヨナラ",
+    "image_url": "https://arcwiki.mcd.blue/images/9/9a/Songs_lastgoodbye.jpg"
+  },
+  {
+    "song_name": "MEGALOVANIA",
+    "image_url": "https://arcwiki.mcd.blue/images/0/0c/Songs_megalovania.jpg"
+  },
+  {
+    "song_name": "Infinity Heaven",
+    "image_url": "https://arcwiki.mcd.blue/images/4/41/Songs_infinityheaven.jpg"
+  },
+  {
+    "song_name": "Chronostasis",
+    "image_url": "https://arcwiki.mcd.blue/images/0/04/Songs_chronostasis.jpg"
+  },
+  {
+    "song_name": "Dialnoteだいあるのーと",
+    "image_url": "https://arcwiki.mcd.blue/images/f/ff/Songs_dialnote.jpg"
+  },
+  {
+    "song_name": "ENERGY SYNERGY MATRIX",
+    "image_url": "https://arcwiki.mcd.blue/images/a/a5/Songs_energysynergymatrix.jpg"
+  },
+  {
+    "song_name": "Final Step!",
+    "image_url": "https://arcwiki.mcd.blue/images/5/59/Songs_finalstep.jpg"
+  },
+  {
+    "song_name": "Good bye, Merry-Go-Round.",
+    "image_url": "https://arcwiki.mcd.blue/images/4/41/Songs_goodbyemerry.jpg"
+  },
+  {
+    "song_name": "GOODTEK (Arcaea Edit)",
+    "image_url": "https://arcwiki.mcd.blue/images/5/53/Songs_goodtek.jpg"
+  },
+  {
+    "song_name": "Last",
+    "image_url": "https://arcwiki.mcd.blue/images/a/a2/Songs_last.jpg"
+  },
+  {
+    "song_name": "Red and Blue",
+    "image_url": "https://arcwiki.mcd.blue/images/a/ac/Songs_redandblue.jpg"
+  },
+  {
+    "song_name": "Sakura Fubuki",
+    "image_url": "https://arcwiki.mcd.blue/images/d/d3/Songs_sakurafubuki.jpg"
+  },
+  {
+    "song_name": "Third Sun",
+    "image_url": "https://arcwiki.mcd.blue/images/8/8b/Songs_thirdsun.jpg"
+  },
+  {
+    "song_name": "astral.exe",
+    "image_url": "https://arcwiki.mcd.blue/images/1/11/Songs_astralexe.jpg"
+  },
+  {
+    "song_name": "Altale",
+    "image_url": "https://arcwiki.mcd.blue/images/7/73/Songs_altale.jpg"
+  },
+  {
+    "song_name": "Heavensdoor",
+    "image_url": "https://arcwiki.mcd.blue/images/7/7e/Songs_heavensdoor.jpg"
+  },
+  {
+    "song_name": "Bamboo竹",
+    "image_url": "https://arcwiki.mcd.blue/images/2/26/Songs_take.jpg"
+  },
+  {
+    "song_name": "Breach of Faith",
+    "image_url": "https://arcwiki.mcd.blue/images/6/6c/Songs_breachoffaith.jpg"
+  },
+  {
+    "song_name": "Ether Strike",
+    "image_url": "https://arcwiki.mcd.blue/images/b/b2/Songs_etherstrike.jpg"
+  },
+  {
+    "song_name": "Good bye, Merry-Go-Round.",
+    "image_url": "https://arcwiki.mcd.blue/images/4/41/Songs_goodbyemerry.jpg"
+  },
+  {
+    "song_name": "Halcyon",
+    "image_url": "https://arcwiki.mcd.blue/images/b/ba/Songs_halcyon.jpg"
+  },
+  {
+    "song_name": "Ikazuchi怒槌",
+    "image_url": "https://arcwiki.mcd.blue/images/6/6d/Songs_ikazuchi.jpg"
+  },
+  {
+    "song_name": "MVURBD",
+    "image_url": "https://arcwiki.mcd.blue/images/e/e0/Songs_mvurbd.jpg"
+  },
+  {
+    "song_name": "Pentiment",
+    "image_url": "https://arcwiki.mcd.blue/images/2/2d/Songs_pentiment.jpg"
+  },
+  {
+    "song_name": "PUPA",
+    "image_url": "https://arcwiki.mcd.blue/images/e/e2/Songs_pupa.jpg"
+  },
+  {
+    "song_name": "CHAOS",
+    "image_url": "https://arcwiki.mcd.blue/images/8/88/Songs_chaos.jpg"
+  },
+  {
+    "song_name": "Dantalion",
+    "image_url": "https://arcwiki.mcd.blue/images/8/89/Songs_dantalion.jpg"
+  },
+  {
+    "song_name": "Designant.",
+    "image_url": "https://arcwiki.mcd.blue/images/e/ef/Songs_designant.jpg"
+  },
+  {
+    "song_name": "GENOCIDER",
+    "image_url": "https://arcwiki.mcd.blue/images/4/42/Songs_genocider.jpg"
+  },
+  {
+    "song_name": "ouroboros -twin stroke of the end-",
+    "image_url": "https://arcwiki.mcd.blue/images/5/54/Songs_ouroboros.jpg"
+  },
+  {
+    "song_name": "PRIMITIVE LIGHTS",
+    "image_url": "https://arcwiki.mcd.blue/images/c/c2/Songs_primitivelights.jpg"
+  },
+  {
+    "song_name": "Stasis",
+    "image_url": "https://arcwiki.mcd.blue/images/d/dd/Songs_stasis.jpg"
+  },
+  {
+    "song_name": "Testify",
+    "image_url": "https://arcwiki.mcd.blue/images/2/22/Songs_testify.jpg"
+  },
+  {
+    "song_name": "World Vanquisher",
+    "image_url": "https://arcwiki.mcd.blue/images/c/c4/Songs_worldvanquisher.jpg"
+  },
+  {
+    "song_name": "Abstruse Dilemma",
+    "image_url": "https://arcwiki.mcd.blue/images/5/5a/Songs_abstrusedilemma.jpg"
+  },
+  {
+    "song_name": "Aegleseeker",
+    "image_url": "https://arcwiki.mcd.blue/images/5/5a/Songs_aegleseeker.jpg"
+  },
+  {
+    "song_name": "Grievous Lady",
+    "image_url": "https://arcwiki.mcd.blue/images/7/7b/Songs_grievouslady.jpg"
+  },
+  {
+    "song_name": "Antithese",
+    "image_url": "https://arcwiki.mcd.blue/images/1/18/Songs_antithese.jpg"
+  },
+  {
+    "song_name": "Antagonism",
+    "image_url": "https://arcwiki.mcd.blue/images/e/e5/Songs_antagonism.jpg"
+  },
+  {
+    "song_name": "B.B.K.K.B.K.K.",
+    "image_url": "https://arcwiki.mcd.blue/images/5/5f/Songs_bbkkbkk.jpg"
+  },
+  {
+    "song_name": "MAXRAGE",
+    "image_url": "https://arcwiki.mcd.blue/images/b/b9/Songs_maxrage.jpg"
+  },
+  {
+    "song_name": "Modelista",
+    "image_url": "https://arcwiki.mcd.blue/images/7/7c/Songs_modelista.jpg"
+  },
+  {
+    "song_name": "Sulfur",
+    "image_url": "https://arcwiki.mcd.blue/images/0/00/Songs_sulfur.jpg"
+  },
+  {
+    "song_name": "[X]",
+    "image_url": "https://arcwiki.mcd.blue/images/9/90/Songs_infinity.jpg"
+  },
+  {
+    "song_name": "Aether Crest: Astral",
+    "image_url": "https://arcwiki.mcd.blue/images/5/5c/Songs_aethercrest.jpg"
+  },
+  {
+    "song_name": "ALTER EGO",
+    "image_url": "https://arcwiki.mcd.blue/images/b/b1/Songs_alterego.jpg"
+  },
+  {
+    "song_name": "Arcana Eden",
+    "image_url": "https://arcwiki.mcd.blue/images/5/5a/Songs_arcanaeden.jpg"
+  },
+  {
+    "song_name": "Back to Basics",
+    "image_url": "https://arcwiki.mcd.blue/images/f/fe/Songs_backtobasics.jpg"
+  },
+  {
+    "song_name": "Climax",
+    "image_url": "https://arcwiki.mcd.blue/images/b/b5/Songs_climax.jpg"
+  },
+  {
+    "song_name": "Oshama Scramble!",
+    "image_url": "https://arcwiki.mcd.blue/images/f/f4/Songs_oshamascramble.jpg"
+  },
+  {
+    "song_name": "Scarlet Lance",
+    "image_url": "https://arcwiki.mcd.blue/images/e/e0/Songs_scarletlance.jpg"
+  },
+  {
+    "song_name": "Sheriruth (Laur Remix)",
+    "image_url": "https://arcwiki.mcd.blue/images/9/9b/Songs_sheriruthrmx.jpg"
+  },
+  {
+    "song_name": "Viyella's Tears",
+    "image_url": "https://arcwiki.mcd.blue/images/8/8e/Songs_viyellastears.jpg"
+  },
+  {
+    "song_name": "AMAZING MIGHTYYYY!!!!",
+    "image_url": "https://arcwiki.mcd.blue/images/1/16/Songs_amazingmightyyyy.jpg"
+  },
+  {
+    "song_name": "KYOREN ROMANCE狂恋ROMANCE",
+    "image_url": "https://arcwiki.mcd.blue/images/5/50/Songs_kyorenromance.jpg"
+  },
+  {
+    "song_name": "Tempestissimo",
+    "image_url": "https://arcwiki.mcd.blue/images/c/c8/Songs_tempestissimo.jpg"
+  },
+  {
+    "song_name": "TEmPTaTiON",
+    "image_url": "https://arcwiki.mcd.blue/images/c/c5/Songs_temptation.jpg"
+  },
+  {
+    "song_name": "LAMIA",
+    "image_url": "https://arcwiki.mcd.blue/images/8/86/Songs_lamia.jpg"
+  }
 ]

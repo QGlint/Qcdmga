@@ -1,26 +1,294 @@
 [
     {
-        "song_name": "Introduction",
-        "local_path": "../images/phigros_images/Introduction.avif"
+        "song_name": "GOODWORLD",
+        "local_path": "../images/phigros_images/GOODWORLD.avif"
     },
     {
-        "song_name": "Glaciaxion",
-        "local_path": "../images/phigros_images/Glaciaxion.avif"
+        "song_name": "月下缭乱",
+        "local_path": "../images/phigros_images/月下缭乱.avif"
     },
     {
-        "song_name": "Eradication Catastrophe",
-        "local_path": "../images/phigros_images/Eradication Catastrophe.avif"
+        "song_name": "Break Over",
+        "local_path": "../images/phigros_images/Break Over.avif"
+    },
+    {
+        "song_name": "INFiNiTE ENERZY -Overdoze-",
+        "local_path": "../images/phigros_images/INFiNiTE ENERZY -Overdoze-.avif"
+    },
+    {
+        "song_name": "volcanic",
+        "local_path": "../images/phigros_images/volcanic.avif"
+    },
+    {
+        "song_name": "Nick of Time",
+        "local_path": "../images/phigros_images/Nick of Time.avif"
+    },
+    {
+        "song_name": "micro.wav",
+        "local_path": "../images/phigros_images/micro.wav.avif"
+    },
+    {
+        "song_name": "996",
+        "local_path": "../images/phigros_images/996.avif"
+    },
+    {
+        "song_name": "DataErr0r",
+        "local_path": "../images/phigros_images/DataErr0r.avif"
+    },
+    {
+        "song_name": "Shadow",
+        "local_path": "../images/phigros_images/Shadow.avif"
+    },
+    {
+        "song_name": "Luminescence",
+        "local_path": "../images/phigros_images/Luminescence.avif"
+    },
+    {
+        "song_name": "重生",
+        "local_path": "../images/phigros_images/重生.avif"
+    },
+    {
+        "song_name": "ENERGY SYNERGY MATRIX",
+        "local_path": "../images/phigros_images/ENERGY SYNERGY MATRIX.avif"
+    },
+    {
+        "song_name": "S.A.T.E.L.L.I.T.E.",
+        "local_path": "../images/phigros_images/S.A.T.E.L.L.I.T.E..avif"
+    },
+    {
+        "song_name": "狂喜蘭舞",
+        "local_path": "../images/phigros_images/狂喜蘭舞.avif"
+    },
+    {
+        "song_name": "GOODTEK",
+        "local_path": "../images/phigros_images/GOODTEK.avif"
+    },
+    {
+        "song_name": "TECHNOPOLIS 2085",
+        "local_path": "../images/phigros_images/TECHNOPOLIS 2085.avif"
+    },
+    {
+        "song_name": "明鏡烈火",
+        "local_path": "../images/phigros_images/明鏡烈火.avif"
+    },
+    {
+        "song_name": "ReEnd of a Dream",
+        "local_path": "../images/phigros_images/ReEnd of a Dream.avif"
+    },
+    {
+        "song_name": "c.s.q.n",
+        "local_path": "../images/phigros_images/c.s.q.n.avif"
+    },
+    {
+        "song_name": "SIGMA",
+        "local_path": "../images/phigros_images/SIGMA.avif"
+    },
+    {
+        "song_name": "ぱぴぷぴぷぴぱ",
+        "local_path": "../images/phigros_images/ぱぴぷぴぷぴぱ.avif"
+    },
+    {
+        "song_name": "GOODFORTUNE",
+        "local_path": "../images/phigros_images/GOODFORTUNE.avif"
+    },
+    {
+        "song_name": "iL-Artifact",
+        "local_path": "../images/phigros_images/iL-Artifact.avif"
     },
     {
         "song_name": "Credits",
         "local_path": "../images/phigros_images/Credits.avif"
     },
     {
-        "song_name": "Dlyrotz",
-        "local_path": "../images/phigros_images/Dlyrotz.avif"
+        "song_name": "千紫万紅",
+        "local_path": "../images/phigros_images/千紫万紅.avif"
+    },
+    {
+        "song_name": "Nhelv",
+        "local_path": "../images/phigros_images/Nhelv.avif"
+    },
+    {
+        "song_name": "Concvssion",
+        "local_path": "../images/phigros_images/Concvssion.avif"
+    },
+    {
+        "song_name": "Silence is Golden, Speech is Golden",
+        "local_path": "../images/phigros_images/Silence is Golden, Speech is Golden.avif"
+    },
+    {
+        "song_name": "Don't Never Around",
+        "local_path": "../images/phigros_images/Don't Never Around.avif"
+    },
+    {
+        "song_name": "NO ONE YES MAN",
+        "local_path": "../images/phigros_images/NO ONE YES MAN.avif"
+    },
+    {
+        "song_name": "Spasmodic(Haocore Mix)",
+        "local_path": "../images/phigros_images/Spasmodic(Haocore Mix).avif"
+    },
+    {
+        "song_name": "Protoflicker",
+        "local_path": "../images/phigros_images/Protoflicker.avif"
+    },
+    {
+        "song_name": "Chronomia",
+        "local_path": "../images/phigros_images/Chronomia.avif"
+    },
+    {
+        "song_name": "もぺもぺ",
+        "local_path": "../images/phigros_images/もぺもぺ.avif"
+    },
+    {
+        "song_name": "雪降り、メリクリ",
+        "local_path": "../images/phigros_images/雪降り、メリクリ.avif"
+    },
+    {
+        "song_name": "Stasis",
+        "local_path": "../images/phigros_images/Stasis.avif"
+    },
+    {
+        "song_name": "Better Graphic Animation",
+        "local_path": "../images/phigros_images/Better Graphic Animation.avif"
+    },
+    {
+        "song_name": "Starduster",
+        "local_path": "../images/phigros_images/Starduster.avif"
+    },
+    {
+        "song_name": "CROSS†SOUL",
+        "local_path": "../images/phigros_images/CROSS†SOUL.avif"
+    },
+    {
+        "song_name": "Ad astra per aspera",
+        "local_path": "../images/phigros_images/Ad astra per aspera.avif"
+    },
+    {
+        "song_name": "+ERABY+E CONNEC+10N",
+        "local_path": "../images/phigros_images/+ERABY+E CONNEC+10N.avif"
+    },
+    {
+        "song_name": "Distorted Fate",
+        "local_path": "../images/phigros_images/Distorted Fate.avif"
+    },
+    {
+        "song_name": "DESTRUCTION 3,2,1",
+        "local_path": "../images/phigros_images/DESTRUCTION 3,2,1.avif"
+    },
+    {
+        "song_name": "Chronos Collapse - La Campanella",
+        "local_path": "../images/phigros_images/Chronos Collapse - La Campanella.avif"
+    },
+    {
+        "song_name": "Fractured Angel",
+        "local_path": "../images/phigros_images/Fractured Angel.avif"
+    },
+    {
+        "song_name": "Lyrith -迷宮リリス-",
+        "local_path": "../images/phigros_images/Lyrith -迷宮リリス-.avif"
+    },
+    {
+        "song_name": "Igallta",
+        "local_path": "../images/phigros_images/Igallta.avif"
+    },
+    {
+        "song_name": "Rrhar'il",
+        "local_path": "../images/phigros_images/Rrhar'il.avif"
+    },
+    {
+        "song_name": "Non-Melodic Ragez (MUG Edit)",
+        "local_path": "../images/phigros_images/Non-Melodic Ragez (MUG Edit).avif"
+    },
+    {
+        "song_name": "Chronostasis",
+        "local_path": "../images/phigros_images/Chronostasis.avif"
+    },
+    {
+        "song_name": "GOODRAGE",
+        "local_path": "../images/phigros_images/GOODRAGE.avif"
+    },
+    {
+        "song_name": "Aleph-0",
+        "local_path": "../images/phigros_images/Aleph-0.avif"
+    }
+    {
+        "song_name": "Poison AND÷OR Affection",
+        "local_path": "../images/phigros_images/Poison AND÷OR Affection.avif"
+    },
+    {
+        "song_name": "蝎虎天体 -Lacertid-",
+        "local_path": "../images/phigros_images/蝎虎天体 -Lacertid-.avif"
+    },
+    {
+        "song_name": "Pixel Rebelz",
+        "local_path": "../images/phigros_images/Pixel Rebelz.avif"
+    },
+    {
+        "song_name": "After Dawn",
+        "local_path": "../images/phigros_images/After Dawn.avif"
+    },
+    {
+        "song_name": "Reimei",
+        "local_path": "../images/phigros_images/Reimei.avif"
+    },
+    {
+        "song_name": "いざ、参ります",
+        "local_path": "../images/phigros_images/いざ、参ります.avif"
+    },
+    {
+        "song_name": "MOBILYS",
+        "local_path": "../images/phigros_images/MOBILYS.avif"
+    },
+    {
+        "song_name": "君往何处 (Quo Vadis)",
+        "local_path": "../images/phigros_images/君往何处 (Quo Vadis).avif"
+    }，
+    {
+        "song_name": "MARENOL",
+        "local_path": "../images/phigros_images/MARENOL.avif"
+    },
+    {
+        "song_name": "Cuvism³",
+        "local_path": "../images/phigros_images/Cuvism³.avif"
+    },
+    {
+        "song_name": "Class Memories",
+        "local_path": "../images/phigros_images/Class Memories.avif"
+    },
+    {
+        "song_name": "Rubbish Sorting",
+        "local_path": "../images/phigros_images/Rubbish Sorting.avif"
     },
     {
         "song_name": "Engine x Start!! (melody mix)",
         "local_path": "../images/phigros_images/Engine x Start!! (melody mix).avif"
+    },
+    {
+        "song_name": "Wavetapper",
+        "local_path": "../images/phigros_images/Wavetapper.avif"
+    },
+    {
+        "song_name": "Cereris",
+        "local_path": "../images/phigros_images/Cereris.avif"
+    },
+    {
+        "song_name": "HAZARD",
+        "local_path": "../images/phigros_images/HAZARD.avif"
+    },
+    {
+        "song_name": "テリトリーバトル",
+        "local_path": "../images/phigros_images/テリトリーバトル.avif"
+    },
+    {
+        "song_name": "Burn",
+        "local_path": "../images/phigros_images/Burn.avif"
+    },
+    {
+        "song_name": "Bonus Time",
+        "local_path": "../images/phigros_images/Bonus Time.avif"
+    },
+    {
+        "song_name": "祈 -我ら神祖と共に歩む者なり-",
+        "local_path": "../images/phigros_images/祈 -我ら神祖と共に歩む者なり-.avif"
     }
 ]
