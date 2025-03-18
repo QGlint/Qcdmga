@@ -76,19 +76,32 @@ document.addEventListener('DOMContentLoaded', function() {
             currentDrawnIndices = drawnIndices.mixed;
         }
         
-        if (currentDrawnIndices.length >= currentQuestions.length) {
+        // 计算剩余可抽取的题目数量
+        const remainingQuestions = currentQuestions.length - currentDrawnIndices.length;
+        
+        if (remainingQuestions === 0) {
             alert('题目已抽完！');
             drawButton.disabled = true;
             return;
         }
         
-        // 随机选择3个不同的题目
+        // 如果剩余题目不足3个，显示剩余题目和问号
+        const needed = Math.min(3, remainingQuestions);
         let selected = [];
-        while (selected.length < 3) {
+        let counter = 0;
+        const MAX_ITERATIONS = 1000;
+        
+        while (selected.length < needed) {
+            if (counter >= MAX_ITERATIONS) {
+                console.error("死循环检测：循环迭代次数过多，强制终止。");
+                break;
+            }
+            
             let index = Math.floor(Math.random() * currentQuestions.length);
             if (!currentDrawnIndices.includes(index) && !selected.includes(index)) {
                 selected.push(index);
             }
+            counter++;
         }
         
         // 更新已抽取的题目索引
@@ -100,20 +113,31 @@ document.addEventListener('DOMContentLoaded', function() {
             drawnIndices.mixed = [...drawnIndices.mixed, ...selected];
         }
         
-        // 显示题目
+        // 显示题目，不足的部分显示问号
         for (let i = 0; i < 3; i++) {
-            const question = currentQuestions[selected[i]];
-            // 检查是否有本地路径，如果有则优先使用本地路径
-            if (question.local_path) {
-                imageBoxes[i].innerHTML = `<img src="${question.local_path}" alt="${question.song_name}">`;
+            if (i < selected.length) {
+                const question = currentQuestions[selected[i]];
+                if (question.local_path) {
+                    imageBoxes[i].innerHTML = `<img src="${question.local_path}" alt="${question.song_name}">`;
+                } else {
+                    imageBoxes[i].innerHTML = `<img src="${question.image_url}" alt="${question.song_name}">`;
+                }
+                titleBoxes[i].textContent = question.song_name;
             } else {
-                imageBoxes[i].innerHTML = `<img src="${question.image_url}" alt="${question.song_name}">`;
+                imageBoxes[i].innerHTML = '<span class="question-mark">?</span>';
+                titleBoxes[i].textContent = '';
             }
-            titleBoxes[i].textContent = question.song_name;
+        }
+        
+        // 如果题目已抽完，提示用户
+        if (remainingQuestions === needed) {
+            alert('题目已抽完！');
+            drawButton.disabled = true;
         }
         
         // 显示下一位按钮
         nextButton.style.display = 'inline-block';
+        drawButton.style.display = 'none';
     }
     
     // 下一位函数
@@ -126,7 +150,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // 隐藏下一位按钮
         nextButton.style.display = 'none';
-        
+        drawButton.style.display = 'inline-block';
+
         // 如果还有剩余题目，可以继续抽取
         let currentQuestions = [];
         let currentDrawnIndices = [];
