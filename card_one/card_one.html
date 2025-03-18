@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音游社抽卡</title>
+    <link rel="stylesheet" href="card_one.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="round-info">
+                <span>局: <span id="set">0</span></span>
+            </div>
+            <h1>Arcaea擂台赛抽卡</h1>
+            <button id="next-set">下一局</button>
+        </div>
+        
+        <div class="global-container">
+            <div class="global-buff">
+                <div class="title-card-container">
+                    <h3 class="vertical-title">全局Buff区</h3>
+                    <div class="cards-display" id="global-buff"></div>
+                </div>
+            </div>
+            
+            <div class="challenge-songs">
+                <div class="title-card-container">
+                    <h3 class="vertical-title">挑战歌曲</h3>
+                    <div class="song-selection" id="song-selection">
+                        <!-- 歌曲卡片将在这里动态生成 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <div class="player-area" id="player1-area">
+                <h2>擂主 <span id="player1-wins">胜利次数: 0</span></h2>
+                <div class="buff-section">
+                    <div class="buff-area">
+                        <div class="buff-marker">1</div>
+                        <div class="cards-display" id="player1-buff1"></div>
+                    </div>
+                    <div class="buff-area">
+                        <div class="buff-marker">2</div>
+                        <div class="cards-display" id="player1-buff2"></div>
+                    </div>
+                    <div class="buff-area">
+                        <div class="buff-marker">3</div>
+                        <div class="cards-display" id="player1-buff3"></div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button id="player1-draw">抽卡</button>
+                    <button id="player1-show-hand" onclick="showHandDialog('player1')">显示手牌</button>
+                    <span id="player1-hand-count">手牌数 : 0</span>
+                </div>
+            </div>
+            
+            <div class="player-area" id="player2-area">
+                <h2>挑战者</h2>
+                <div class="buff-section">
+                    <div class="buff-area">
+                        <div class="buff-marker">1</div>
+                        <div class="cards-display" id="player2-buff1"></div>
+                    </div>
+                    <div class="buff-area">
+                        <div class="buff-marker">2</div>
+                        <div class="cards-display" id="player2-buff2"></div>
+                    </div>
+                    <div class="buff-area">
+                        <div class="buff-marker">3</div>
+                        <div class="cards-display" id="player2-buff3"></div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button id="player2-draw">抽卡</button>
+                    <button id="player2-show-hand" onclick="showHandDialog('player2')">显示手牌</button>
+                    <span id="player2-hand-count">手牌数 : 0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="judgment-dialog" id="judgment-dialog">
+        <div class="dialog-content">
+            <h2>判定</h2>
+            <p>请选择胜利者：</p>
+            <button class="judgment-button" data-result="player1">擂主胜利</button>
+            <button class="judgment-button" data-result="player2">挑战者胜利</button>
+        </div>
+    </div>
+    
+    <div class="result-dialog" id="result-dialog">
+        <div class="dialog-content">
+            <h2 id="result-title">擂主守擂成功</h2>
+            <button id="back-to-game">返回游戏</button>
+        </div>
+    </div>
+    
+    <div class="hand-dialog" id="player1-hand-dialog">
+        <div class="hand-dialog-content">
+            <div class="hand-dialog-header">
+                <h3 class="hand-dialog-title">擂主手牌区</h3>
+                <button class="hand-dialog-close" onclick="hideHandDialog('player1')">完成</button>
+            </div>
+            <div class="hand-dialog-body">
+                <div class="cards-display" id="player1-hand"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hand-dialog" id="player2-hand-dialog">
+        <div class="hand-dialog-content">
+            <div class="hand-dialog-header">
+                <h3 class="hand-dialog-title">挑战者手牌区</h3>
+                <button class="hand-dialog-close" onclick="hideHandDialog('player2')">完成</button>
+            </div>
+            <div class="hand-dialog-body">
+                <div class="cards-display" id="player2-hand"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="song-search-dialog" id="song-search-dialog">
+        <div class="dialog-content">
+            <h2>搜索歌曲</h2>
+            <div class="song-search-container">
+                <input type="text" id="song-search-input" placeholder="输入歌曲名搜索...">
+                <button id="search-button">搜索</button>
+            </div>
+            <div class="song-results" id="song-results">
+                <!-- 搜索结果将在这里动态生成 -->
+            </div>
+        </div>
+    </div>
+    
+    <div class="song-selection-dialog" id="song-selection-dialog">
+        <div class="dialog-content">
+            <h2>选择歌曲</h2>
+            <div class="song-areas">
+                <div class="song-area" data-index="0">
+                    <div class="song-card">
+                        <div class="song-card-placeholder">?</div>
+                        <div class="song-card-inner"></div>
+                        <div class="song-card-content">歌曲名称</div>
+                    </div>
+                </div>
+                <div class="song-area" data-index="1">
+                    <div class="song-card">
+                        <div class="song-card-placeholder">?</div>
+                        <div class="song-card-inner"></div>
+                        <div class="song-card-content">歌曲名称</div>
+                    </div>
+                </div>
+                <div class="song-area" data-index="2">
+                    <div class="song-card">
+                        <div class="song-card-placeholder">?</div>
+                        <div class="song-card-inner"></div>
+                        <div class="song-card-content">歌曲名称</div>
+                    </div>
+                </div>
+            </div>
+            <button id="start-round">开始本轮比赛</button>
+        </div>
+    </div>
+    
+    <script src="card_one.js"></script>
+</body>
+</html>
