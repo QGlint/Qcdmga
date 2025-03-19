@@ -9,6 +9,7 @@ let isPlayer2Ready = false;
 let player1Actions = [];
 let player2Actions = [];
 let selectedSongs = [];
+let songsSelected = false;
 
 async function loadCards() {
     try {
@@ -32,10 +33,18 @@ async function loadSongs() {
 
 function initGame() {
     document.getElementById("player1-draw").addEventListener("click", () => {
+        if (!songsSelected) {
+            alert("请先选择歌曲并开始本轮比赛！");
+            return;
+        }
         drawCard("player1");
     });
 
     document.getElementById("player2-draw").addEventListener("click", () => {
+        if (!songsSelected) {
+            alert("请先选择歌曲并开始本轮比赛！");
+            return;
+        }
         drawCard("player2");
     });
 
@@ -57,18 +66,26 @@ function initGame() {
         }
     });
 
-    // 绑定手牌弹窗的“完成”按钮事件
     document.getElementById("player1-show-hand").addEventListener("click", () => {
+        if (!songsSelected) {
+            alert("请先选择歌曲并开始本轮比赛！");
+            return;
+        }
         showHandDialog("player1");
     });
 
     document.getElementById("player2-show-hand").addEventListener("click", () => {
+        if (!songsSelected) {
+            alert("请先选择歌曲并开始本轮比赛！");
+            return;
+        }
         showHandDialog("player2");
     });
 
     document.getElementById("start-round").addEventListener("click", startRound);
 
     updateSet();
+    // 删除了 initializeSongSelection() 的调用
 }
 
 function updateSet() {
@@ -104,11 +121,8 @@ function drawCard(playerId) {
     cardElement.className = `card ${selectedCard.rarity}`;
     cardElement.innerHTML = `
         <div class="card-name">${selectedCard.name}</div>
-        <div class="card-type">${selectedCard.type}</div>
-        <div class="card-duration">${selectedCard.duration}</div>
     `;
 
-    // 添加出牌按钮区域
     const actionContainer = document.createElement("div");
     actionContainer.className = "card-action";
     actionContainer.innerHTML = `
@@ -117,11 +131,10 @@ function drawCard(playerId) {
         <button class="play-button" data-action="3">出牌3</button>
     `;
 
-    // 绑定出牌按钮点击事件
     const playButtons = actionContainer.querySelectorAll('.play-button');
     playButtons.forEach(button => {
         button.addEventListener('click', function() {
-            togglePlayCard(this, playerId, selectedCard.type, selectedCard.duration, button.getAttribute("data-action"));
+            togglePlayCard(this, playerId, button.getAttribute("data-action"));
         });
     });
 
@@ -131,30 +144,21 @@ function drawCard(playerId) {
     updateHandCount(playerId);
 }
 
-function togglePlayCard(button, playerId, cardType, duration, action) {
+function togglePlayCard(button, playerId, action) {
     if (button.classList.contains('played')) {
         button.classList.remove('played');
         button.style.backgroundColor = '#4CAF50';
-        // 移除记录的操作
         if (playerId === "player1") {
-            player1Actions = player1Actions.filter(act => 
-                act.cardType !== cardType || act.duration !== duration || act.action !== action
-            );
+            player1Actions = player1Actions.filter(act => act.action !== action);
         } else if (playerId === "player2") {
-            player2Actions = player2Actions.filter(act => 
-                act.cardType !== cardType || act.duration !== duration || act.action !== action
-            );
+            player2Actions = player2Actions.filter(act => act.action !== action);
         }
-        // 显示按钮
         button.style.display = 'block';
     } else {
         button.classList.add('played');
         button.style.backgroundColor = '#999';
-        // 记录操作
         const actionObj = {
             playerId: playerId,
-            cardType: cardType,
-            duration: duration,
             action: action
         };
         if (playerId === "player1") {
@@ -162,30 +166,27 @@ function togglePlayCard(button, playerId, cardType, duration, action) {
         } else if (playerId === "player2") {
             player2Actions.push(actionObj);
         }
-        // 隐藏按钮
         button.style.display = 'none';
     }
 }
 
 function useCard(action) {
-    const { playerId, cardType, duration, action: act } = action;
+    const { playerId, action: act } = action;
 
     const playerHandElement = document.getElementById(`${playerId}-hand`);
     const cardElements = playerHandElement.querySelectorAll(`.card`);
     let cardFound = false;
 
     cardElements.forEach(cardElement => {
-        const type = cardElement.querySelector('.card-type').textContent;
-        const dur = parseInt(cardElement.querySelector('.card-duration').textContent);
-        if (type === cardType && dur === duration && !cardFound) {
-            if (cardType === "buff") {
+        if (!cardFound) {
+            if (cardElement.querySelector('.card-type').textContent === "buff") {
                 const playerBuffElement = document.getElementById(`${playerId}-buff${act}`);
                 playerBuffElement.appendChild(cardElement);
-            } else if (cardType === "debuff") {
+            } else if (cardElement.querySelector('.card-type').textContent === "debuff") {
                 const opponentId = playerId === "player1" ? "player2" : "player1";
                 const opponentBuffElement = document.getElementById(`${opponentId}-buff${act}`);
                 opponentBuffElement.appendChild(cardElement);
-            } else if (cardType === "global") {
+            } else if (cardElement.querySelector('.card-type').textContent === "global") {
                 const globalBuffElement = document.getElementById(`global-buff`);
                 globalBuffElement.appendChild(cardElement);
             }
@@ -222,6 +223,10 @@ function backToGame() {
     disableAllButtons(false);
     set = 0;
     updateSet();
+    songsSelected = false;
+    const songSelection = document.getElementById('song-selection');
+    songSelection.innerHTML = '';
+    initializeSongSelection();
 }
 
 function handleJudgmentResult(result) {
@@ -253,10 +258,8 @@ function moveWinnerAreas(fromPlayerId, toPlayerId) {
         const playButtons = card.querySelectorAll('.play-button');
         playButtons.forEach(button => {
             button.addEventListener('click', function() {
-                const cardType = card.querySelector('.card-type').textContent;
-                const cardDuration = card.querySelector('.card-duration').textContent;
                 const action = button.getAttribute("data-action");
-                togglePlayCard(this, toPlayerId, cardType, cardDuration, action);
+                togglePlayCard(this, toPlayerId, action);
             });
         });
     });
@@ -316,7 +319,7 @@ function initializeSongSelection() {
         
         const placeholder = document.createElement('div');
         placeholder.className = 'song-card-placeholder';
-        placeholder.textContent = '?';
+        placeholder.textContent = '点击区域选歌';
         
         const innerBox = document.createElement('div');
         innerBox.className = 'song-card-inner';
@@ -376,29 +379,10 @@ function selectSongForBox(song) {
     content.textContent = song.song_name;
     
     document.getElementById('song-search-dialog').style.display = 'none';
-    
-    console.log('为框选择歌曲:', song, '框索引:', selectedSongBoxIndex);
 }
 
 function showSongSelectionDialog() {
     document.getElementById('song-selection-dialog').style.display = 'flex';
-    initializeSongAreas();
-}
-
-function initializeSongAreas() {
-    const songAreas = document.querySelectorAll('.song-area');
-    songAreas.forEach((area, index) => {
-        const songCard = area.querySelector('.song-card');
-        songCard.dataset.index = index;
-        songCard.addEventListener('click', () => showSongSearchDialogForArea(index));
-    });
-}
-
-function showSongSearchDialogForArea(areaIndex) {
-    selectedSongBoxIndex = areaIndex;
-    document.getElementById('song-search-dialog').style.display = 'flex';
-    document.getElementById('song-search-input').value = '';
-    document.getElementById('song-results').innerHTML = '';
 }
 
 function startRound() {
@@ -417,17 +401,17 @@ function startRound() {
         const songAreas = document.querySelectorAll('.song-area');
         songAreas.forEach(area => {
             const songCard = area.querySelector('.song-card');
-            const songSelection = document.getElementById('song-selection');
             const clonedSongCard = songCard.cloneNode(true);
             clonedSongCard.style.backgroundColor = '#ffc0cb'; // 恢复初始背景色
             clonedSongCard.querySelector('.song-card-inner').style.backgroundImage = 'none'; // 清除图片
             clonedSongCard.querySelector('.song-card-placeholder').style.display = 'block'; // 显示问号
             clonedSongCard.querySelector('.song-card-content').textContent = '歌曲名称'; // 恢复默认文本
-            songSelection.appendChild(clonedSongCard);
+            document.getElementById('song-selection').appendChild(clonedSongCard);
         });
         // 开始新局
         set++;
         updateSet();
+        songsSelected = true;
         // 清空选歌区域
         document.getElementById('song-selection').innerHTML = '';
         // 重新初始化选歌区域
@@ -438,6 +422,10 @@ function startRound() {
 }
 
 function showHandDialog(playerId) {
+    if (!songsSelected) {
+        alert("请先选择歌曲并开始本轮比赛！");
+        return;
+    }
     const handDialog = document.getElementById(`${playerId}-hand-dialog`);
     handDialog.style.display = "flex";
 }
@@ -445,32 +433,27 @@ function showHandDialog(playerId) {
 function hideHandDialog(playerId) {
     const handDialog = document.getElementById(`${playerId}-hand-dialog`);
     handDialog.style.display = "none";
-    finishRound(playerId); // 玩家点击完成按钮后调用 finishRound
+    finishRound(playerId);
 }
 
 function finishRound(playerId) {
     if (playerId === "player1") {
         isPlayer1Ready = true;
-        console.log("玩家1已完成");
     } else if (playerId === "player2") {
         isPlayer2Ready = true;
-        console.log("玩家2已完成");
     }
 
     if (isPlayer1Ready && isPlayer2Ready) {
-        console.log("双方都已完成，开始执行操作");
         executeRecordedActions();
         showCardsOnField();
     }
 }
 
 function executeRecordedActions() {
-    // 执行玩家1记录的操作
     player1Actions.forEach(action => {
         useCard(action);
     });
 
-    // 执行玩家2记录的操作
     player2Actions.forEach(action => {
         useCard(action);
     });
@@ -485,13 +468,9 @@ function showCardsOnField() {
         const playButtons = card.querySelectorAll('.play-button');
         playButtons.forEach(button => {
             if (button.classList.contains('played')) {
-                const cardType = card.querySelector('.card-type').textContent;
-                const duration = parseInt(card.querySelector('.card-duration').textContent);
                 const action = button.getAttribute("data-action");
                 const actionObj = {
                     playerId: "player1",
-                    cardType: cardType,
-                    duration: duration,
                     action: action
                 };
                 useCard(actionObj);
@@ -508,13 +487,9 @@ function showCardsOnField() {
         const playButtons = card.querySelectorAll('.play-button');
         playButtons.forEach(button => {
             if (button.classList.contains('played')) {
-                const cardType = card.querySelector('.card-type').textContent;
-                const duration = parseInt(card.querySelector('.card-duration').textContent);
                 const action = button.getAttribute("data-action");
                 const actionObj = {
                     playerId: "player2",
-                    cardType: cardType,
-                    duration: duration,
                     action: action
                 };
                 useCard(actionObj);
@@ -522,8 +497,6 @@ function showCardsOnField() {
         });
     });
     updateHandCount("player2");
-
-    console.log("更新场上显示完成");
 }
 
 window.onload = () => {

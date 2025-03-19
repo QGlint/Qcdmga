@@ -88,8 +88,8 @@ button:hover {
     display: flex;
     align-items: flex-start;
     gap: 0px;
-    padding-left: 0px; /* 调整左边留白 */
-    padding-right: 0; /* 右边不留白 */
+    padding-left: 0px;
+    padding-right: 0;
 }
 
 .vertical-title {
@@ -142,17 +142,17 @@ button:hover {
 }
 
 .song-card.selected {
-    background-color: white; /* 背景颜色为白色 */
-    border-radius: 5px; /* 圆角边框 */
-    overflow: hidden; /* 隐藏溢出内容 */
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .song-card.selected .song-image {
-    width: 100%; /* 图片宽度占满 */
-    height: calc(100% - 30px); /* 图片高度为卡片高度减去名称部分的高度 */
+    width: 100%;
+    height: calc(100% - 30px);
     background-color: white;
-    border-radius: 5px 5px 0 0; /* 上部圆角 */
-    object-fit: cover; /* 确保图片覆盖整个区域 */
+    border-radius: 5px 5px 0 0;
+    object-fit: cover;
 }
 
 .song-card.selected .song-name {
@@ -166,11 +166,11 @@ button:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 30px; /* 名称部分高度 */
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .game-area {
@@ -234,17 +234,6 @@ h3 {
     position: absolute;
     bottom: 5px;
     left: 5px;
-    font-size: 12px;
-    padding: 2px 5px;
-    border-radius: 3px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-}
-
-.card-duration {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
     font-size: 12px;
     padding: 2px 5px;
     border-radius: 3px;
