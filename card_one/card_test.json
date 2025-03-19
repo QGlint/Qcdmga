@@ -7,88 +7,95 @@
         "description": "可选择歌曲任意难度"
     },
     {
-        "name": "极巨化",
-        "type": "buff",
-        "rarity": "legendary",
-        "probability": 1,
-        "description": "将使用的debuff/buff全队化"
-    },
-    {
         "name": "随机流速",
-        "type": "global",
+        "type": "debuff",
         "rarity": "epic",
         "probability": 2,
-        "description": "随机3.5~6.3流速"
+        "description": "随机4.2~6.2流速"
     },
     {
         "name": "反弹",
         "type": "buff",
         "rarity": "legendary",
         "probability": 2,
-        "description": "反弹针对自己的debuff"
+        "description": "反弹针对该位置的debuff"
     },
     {
         "name": "无中生有",
         "type": "global",
         "rarity": "epic",
         "probability": 2,
-        "description": "摸两张牌，但影响本队分数（debuff）"
+        "description": "我方摸两张牌，但对方也可以摸一张牌"
     },
     {
-        "name": "延迟调整（+）",
+        "name": "延迟调整（+/-）",
         "type": "debuff",
         "rarity": "epic",
-        "probability": 2,
-        "description": "原延迟+150（禁止静音！）"
+        "probability": 3,
+        "description": "原延迟+或-150（禁止静音！）"
     },
     {
         "name": "无效",
         "type": "buff",
         "rarity": "legendary",
         "probability": 3,
-        "description": "无效化针对自己的debuff"
+        "description": "针对该位置的debuff将无效"
     },
     {
         "name": "判定修改（970w）",
         "type": "global",
         "rarity": "epic",
         "probability": 2,
-        "description": "结算方式改为（三个人的分数分别-975w）的和最小（全员）"
-    },
-    {
-        "name": "延迟调整（-）",
-        "type": "debuff",
-        "rarity": "epic",
-        "probability": 2,
-        "description": "原延迟-150"
+        "description": "结算方式改为|三个人的分数分别-970w|的和最小（全员）"
     },
     {
         "name": "更改乐曲",
         "type": "global",
         "rarity": "epic",
         "probability": 2,
-        "description": "将对位选好的乐曲改变（包括三号位随机曲）"
+        "description": "改变某个位置选好的乐曲（包括三号位随机曲）"
     },
     {
         "name": "左/右转",
         "type": "special",
         "rarity": "epic",
-        "probability": 2,
-        "description": "将设备左/右转45°"
+        "probability": 3,
+        "description": "将设备左/右转30°"
     },
     {
-        "name": "判定修改（平衡大师）",
+        "name": "判定恢复",
+        "type": "global",
+        "rarity": "epic",
+        "probability": 3,
+        "description": "正常计分，总分最高的队伍获胜"
+    },
+    {
+        "name": "判定修改（Lost/Far）",
         "type": "global",
         "rarity": "rare",
         "probability": 1,
-        "description": "使early与late差值的绝对值尽量小，计算三个成员差值总和（全员）"
+        "description": "结算改为全队Far数量之和与Lost数量之和的差值，数小者胜"
+    },
+    {
+        "name": "判定修改（E/L）",
+        "type": "global",
+        "rarity": "rare",
+        "probability": 1,
+        "description": "结算改为：计算每队全队两种小p（Early/Late）的差值，差值更小者胜"
+    },
+    {
+        "name": "判定修改（数字x）",
+        "type": "global",
+        "rarity": "rare",
+        "probability": 1,
+        "description": "随机数字x∈[1,9]，结算改为：将每队全队的分数中的x出现次数加和，看哪一队分数中的x更多，x数多者胜"
     },
     {
         "name": "倒打",
         "type": "global",
         "rarity": "rare",
         "probability": 1,
-        "description": "难度下调到prs（全员）"
+        "description": "倒打，难度下调到prs（全员）"
     },
     {
         "name": "仅用中指",
@@ -113,9 +120,9 @@
     },
     {
         "name": "双倍快乐",
-        "type": "global",
+        "type": "debuff",
         "rarity": "rare",
         "probability": 3,
-        "description": "将debuff效果翻倍（加强延迟调整与左右转）或随机两次流速（选择权交给出牌人）"
+        "description": "将debuff效果翻倍：随机2.5~6.5流速\n调整延迟*2\n将设备左右转60°\n仅用无名指"
     }
 ]
