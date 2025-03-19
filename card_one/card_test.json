@@ -91,13 +91,6 @@
         "description": "难度下调到prs（全员）"
     },
     {
-        "name": "齐心协力",
-        "type": "special",
-        "rarity": "epic",
-        "probability": 2,
-        "description": "需要两人一同打歌（一人一只手）"
-    },
-    {
         "name": "仅用中指",
         "type": "debuff",
         "rarity": "epic",
