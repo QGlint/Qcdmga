@@ -196,7 +196,7 @@ button {
 }
 
 /* 弹窗样式 */
-.dialog, .hand-dialog, .song-search-dialog, .song-selection-dialog, .judgment-dialog, .result-dialog {
+.dialog, .hand-dialog, .song-selection-dialog, .judgment-dialog, .result-dialog {
     display: none;
     position: fixed;
     top: 0;

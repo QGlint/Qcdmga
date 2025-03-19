@@ -83,12 +83,19 @@ function setupEventListeners() {
     document.getElementById('back-to-game').addEventListener('click', hideResultDialog);
     
     // 手牌区完成按钮
-    document.querySelectorAll('.hand-dialog-close').forEach(button => {
-        button.addEventListener('click', () => hideHandDialog(button.dataset.player));
+    document.getElementById('player1-hand-dialog').addEventListener('click', (e) => {
+        if (e.target.classList.contains('hand-dialog-close')) {
+            player1Done = true;
+            checkBothDone();
+        }
     });
     
-    // 搜索按钮
-    document.getElementById('search-button').addEventListener('click', searchSongs);
+    document.getElementById('player2-hand-dialog').addEventListener('click', (e) => {
+        if (e.target.classList.contains('hand-dialog-close')) {
+            player2Done = true;
+            checkBothDone();
+        }
+    });
     
     // 选歌弹窗中的小区域点击事件
     document.querySelectorAll('.song-area').forEach(area => {
@@ -188,13 +195,13 @@ function renderHand(player) {
     container.innerHTML = '';
     
     hand.forEach((card, index) => {
-        const cardElement = createCardElement(card, index);
+        const cardElement = createCardElement(card, index, player);
         container.appendChild(cardElement);
     });
 }
 
 // 创建卡牌元素
-function createCardElement(card, index) {
+function createCardElement(card, index, player) {
     const cardElement = document.createElement('div');
     cardElement.className = 'card';
     cardElement.style.backgroundColor = getCardColor(card.type);
@@ -205,9 +212,13 @@ function createCardElement(card, index) {
             <div class="card-description">${card.description}</div>
         </div>
         <div class="card-actions">
-            <button class="action-button" onclick="playCard(${index}, '${card.type}', 1)">1</button>
-            <button class="action-button" onclick="playCard(${index}, '${card.type}', 2)">2</button>
-            <button class="action-button" onclick="playCard(${index}, '${card.type}', 3)">3</button>
+            ${card.type === 'global' ? `
+                <button class="action-button" onclick="playGlobalCard(${index}, '${player}')">出牌</button>
+            ` : `
+                <button class="action-button" onclick="playCard(${index}, '${player}', 1)">1</button>
+                <button class="action-button" onclick="playCard(${index}, '${player}', 2)">2</button>
+                <button class="action-button" onclick="playCard(${index}, '${player}', 3)">3</button>
+            `}
         </div>
     `;
     
@@ -237,7 +248,56 @@ function showSongSelectionDialog() {
 // 显示歌曲搜索弹窗
 function showSongSearchDialog(index) {
     selectedSongIndex = index;
-    document.getElementById('song-search-dialog').style.display = 'flex';
+    const songArea = document.querySelector(`.song-area[data-index="${index}"]`);
+    songArea.innerHTML = `
+        <div class="song-search-container">
+            <input type="text" id="song-search-input-${index}" placeholder="输入歌曲名搜索...">
+        </div>
+        <div class="song-results" id="song-results-${index}">
+            <!-- 搜索结果将在这里动态生成 -->
+        </div>
+    `;
+    document.getElementById(`song-search-input-${index}`).addEventListener('input', (e) => {
+        searchSongs(e.target.value, index);
+    });
+}
+
+// 搜索歌曲
+function searchSongs(searchTerm, index) {
+    const resultsContainer = document.getElementById(`song-results-${index}`);
+    resultsContainer.innerHTML = '';
+    
+    songData.forEach(song => {
+        if (song.song_name.toLowerCase().includes(searchTerm.toLowerCase())) {
+            const resultElement = document.createElement('div');
+            resultElement.className = 'song-result';
+            resultElement.innerHTML = `
+                <div class="song-result-name">${song.song_name}</div>
+            `;
+            resultElement.addEventListener('click', () => selectSong(song, index));
+            resultsContainer.appendChild(resultElement);
+        }
+    });
+}
+
+// 选择歌曲
+function selectSong(song, index) {
+    const songArea = document.querySelector(`.song-area[data-index="${index}"]`);
+    songArea.innerHTML = `
+        <div class="song-card">
+            <div class="song-card-inner" style="background-image: url('${song.image_url}')"></div>
+            <div class="song-card-content">${song.song_name}</div>
+        </div>
+    `;
+    
+    // 检查是否所有歌曲都已选择
+    const allSelected = Array.from(document.querySelectorAll('.song-area')).every(area => {
+        return area.querySelector('.song-card-inner').style.backgroundImage !== '';
+    });
+    
+    if (allSelected) {
+        document.getElementById('start-round').style.display = 'block';
+    }
 }
 
 // 开始本轮比赛
@@ -252,17 +312,14 @@ function updateSongSelection() {
     const songSelection = document.getElementById('song-selection');
     songSelection.innerHTML = '';
     
-    // 这里应该是从选歌弹窗获取选中的歌曲并渲染
-    // 为了示例，我们假设已经从文件中获取了数据
-    for (let i = 0; i < 3; i++) {
-        const songCard = document.createElement('div');
-        songCard.className = 'song-card';
-        songCard.innerHTML = `
-            <div class="song-card-inner" style="background-image: url('${songData[i].image_url}')"></div>
-            <div class="song-card-content">${songData[i].song_name}</div>
-        `;
-        songSelection.appendChild(songCard);
-    }
+    // 从选歌弹窗获取选中的歌曲并渲染
+    const songAreas = document.querySelectorAll('.song-area');
+    songAreas.forEach(area => {
+        const songCard = area.querySelector('.song-card');
+        if (songCard) {
+            songSelection.appendChild(songCard.cloneNode(true));
+        }
+    });
 }
 
 // 重置选歌区域
@@ -292,75 +349,80 @@ function hideResultDialog() {
     document.getElementById('result-dialog').style.display = 'none';
 }
 
-// 搜索歌曲
-function searchSongs() {
-    const searchTerm = document.getElementById('song-search-input').value.toLowerCase();
-    const resultsContainer = document.getElementById('song-results');
-    resultsContainer.innerHTML = '';
-    
-    songData.forEach(song => {
-        if (song.song_name.toLowerCase().includes(searchTerm)) {
-            const resultElement = document.createElement('div');
-            resultElement.className = 'song-result';
-            resultElement.innerHTML = `
-                <div class="song-result-image" style="background-image: url('${song.image_url}')"></div>
-                <div class="song-result-name">${song.song_name}</div>
-            `;
-            resultElement.addEventListener('click', () => selectSong(song));
-            resultsContainer.appendChild(resultElement);
-        }
-    });
-}
-
-// 选择歌曲
-function selectSong(song) {
-    const songArea = document.querySelector(`.song-area[data-index="${selectedSongIndex}"]`);
-    songArea.innerHTML = `
-        <div class="song-card">
-            <div class="song-card-inner" style="background-image: url('${song.image_url}')"></div>
-            <div class="song-card-content">${song.song_name}</div>
-        </div>
-    `;
-    selectedSongIndex++;
-    if (selectedSongIndex >= 3) {
-        document.getElementById('start-round').style.display = 'block';
-    }
-}
-
 // 使用卡牌
-function playCard(index, type, position) {
-    const player = this.id.startsWith('player1') ? 'player1' : 'player2';
+function playCard(index, player, position) {
     const hand = player === 'player1' ? player1Hand : player2Hand;
-    
     const card = hand[index];
     if (!card) return;
     
-    if (type === 'global') {
-        document.getElementById('global-buff').appendChild(createCardElement(card));
-    } else if (type === 'buff') {
-        document.getElementById(`${player}-buff${position}`).appendChild(createCardElement(card));
-    } else if (type === 'debuff') {
+    if (card.type === 'buff') {
+        document.getElementById(`${player}-buff${position}`).appendChild(createCardElement(card, index, player));
+    } else if (card.type === 'debuff') {
         const opponent = player === 'player1' ? 'player2' : 'player1';
-        document.getElementById(`${opponent}-buff${position}`).appendChild(createCardElement(card));
+        document.getElementById(`${opponent}-buff${position}`).appendChild(createCardElement(card, index, player));
     }
+    
+    // 标志卡牌已出
+    markCardAsPlayed(index, player);
+}
+
+// 使用全局卡牌
+function playGlobalCard(index, player) {
+    const hand = player === 'player1' ? player1Hand : player2Hand;
+    const card = hand[index];
+    if (!card) return;
+    
+    document.getElementById('global-buff').appendChild(createCardElement(card, index, player));
+    
+    // 标志卡牌已出
+    markCardAsPlayed(index, player);
+}
+
+// 标志卡牌已出
+function markCardAsPlayed(index, player) {
+    const hand = player === 'player1' ? player1Hand : player2Hand;
+    const cardElement = document.getElementById(`${player}-hand`).querySelectorAll('.card')[index];
+    const actionButtons = cardElement.querySelectorAll('.action-button');
+    
+    actionButtons.forEach(button => {
+        button.disabled = true;
+        button.style.backgroundColor = '#ccc';
+    });
     
     hand.splice(index, 1);
     updateHandCount(player, hand.length);
     
     // 检查是否完成出卡
-    checkDone(player);
+    if (hand.length === 0) {
+        if (player === 'player1') {
+            player1Done = true;
+        } else {
+            player2Done = true;
+        }
+        checkBothDone();
+    }
 }
 
 // 检查是否完成出卡
-function checkDone(player) {
-    if (player === 'player1') {
-        player1Done = player1Hand.length === 0;
-    } else {
-        player2Done = player2Hand.length === 0;
-    }
-    
-    // 如果两边都完成出卡，显示下一局按钮
+function checkBothDone() {
     if (player1Done && player2Done) {
+        // 显示最终出牌位置
         document.getElementById('next-set').disabled = false;
+        triggerPlayCards();
     }
+}
+
+// 触发出牌逻辑
+function triggerPlayCards() {
+    // 这里可以添加自动出牌的逻辑
+    // 例如，自动将所有未出的卡牌出到对应区域
+    // 或者提示玩家手动出牌
+    alert('两边都已完成出卡，请手动出牌！');
+}
+
+// 重置出卡状态
+function resetPlayState() {
+    player1Done = false;
+    player2Done = false;
+    document.getElementById('next-set').disabled = true;
 }
