@@ -133,8 +133,8 @@ function handleJudgment(result) {
         player2Hand = []; // 清除挑战者手牌
     } else {
         document.getElementById('result-title').textContent = '挑战者挑战成功';
-        player1Hand = player2Hand; // 将挑战者手牌移动到擂主手牌
-        player2Hand = [];
+        player1Hand = [...player2Hand]; // 将挑战者手牌复制到擂主手牌
+        player2Hand = []; // 清除挑战者手牌
     }
     
     // 清除全局buff区和1、2、3区域的卡牌
@@ -250,6 +250,10 @@ function showSongSearchDialog(index) {
     selectedSongIndex = index;
     const songArea = document.querySelector(`.song-area[data-index="${index}"]`);
     songArea.innerHTML = `
+        <div class="song-card">
+            <div class="song-card-inner"></div>
+            <div class="song-card-content">歌曲名称</div>
+        </div>
         <div class="song-search-container">
             <input type="text" id="song-search-input-${index}" placeholder="输入歌曲名搜索...">
         </div>
@@ -257,9 +261,12 @@ function showSongSearchDialog(index) {
             <!-- 搜索结果将在这里动态生成 -->
         </div>
     `;
-    document.getElementById(`song-search-input-${index}`).addEventListener('input', (e) => {
+    const searchInput = document.getElementById(`song-search-input-${index}`);
+    searchInput.addEventListener('input', (e) => {
         searchSongs(e.target.value, index);
     });
+    // 确保输入框可以获取焦点
+    searchInput.focus();
 }
 
 // 搜索歌曲
@@ -356,10 +363,14 @@ function playCard(index, player, position) {
     if (!card) return;
     
     if (card.type === 'buff') {
-        document.getElementById(`${player}-buff${position}`).appendChild(createCardElement(card, index, player));
+        const targetArea = document.getElementById(`${player}-buff${position}`);
+        const cardElement = createCardElement(card, index, player);
+        targetArea.appendChild(cardElement);
     } else if (card.type === 'debuff') {
         const opponent = player === 'player1' ? 'player2' : 'player1';
-        document.getElementById(`${opponent}-buff${position}`).appendChild(createCardElement(card, index, player));
+        const targetArea = document.getElementById(`${opponent}-buff${position}`);
+        const cardElement = createCardElement(card, index, player);
+        targetArea.appendChild(cardElement);
     }
     
     // 标志卡牌已出
@@ -372,7 +383,9 @@ function playGlobalCard(index, player) {
     const card = hand[index];
     if (!card) return;
     
-    document.getElementById('global-buff').appendChild(createCardElement(card, index, player));
+    const targetArea = document.getElementById('global-buff');
+    const cardElement = createCardElement(card, index, player);
+    targetArea.appendChild(cardElement);
     
     // 标志卡牌已出
     markCardAsPlayed(index, player);
