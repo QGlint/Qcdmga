@@ -123,6 +123,8 @@ button {
     height: 80px;
     background-color: #f0f0f0;
     border-radius: 50%;
+    background-size: cover;
+    background-position: center;
 }
 
 .song-card-content {
@@ -150,6 +152,11 @@ button {
 .buff-area {
     width: 30%;
     position: relative;
+    border: 1px solid #ddd;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .buff-marker {
@@ -279,4 +286,97 @@ button {
 .action-button.inactive {
     background-color: #ccc;
     cursor: not-allowed;
+}
+
+/* 选歌弹窗 */
+.song-search-dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.song-search-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#song-search-input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.song-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.song-result {
+    width: 150px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.song-result-image {
+    width: 100%;
+    height: 100px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5px;
+}
+
+.song-result-name {
+    font-size: 14px;
+    text-align: center;
+}
+
+.song-selection-dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.song-areas {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.song-area {
+    width: 150px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+}
+
+#start-round {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }

@@ -1,5 +1,7 @@
 // 卡牌数据
 let cardData = [];
+// 歌曲数据
+let songData = [];
 // 当前局数
 let currentSet = 0;
 // 玩家手牌
@@ -14,6 +16,7 @@ let songSelected = false;
 // 初始化
 document.addEventListener('DOMContentLoaded', () => {
     fetchCardData();
+    fetchSongData();
     setupEventListeners();
 });
 
@@ -25,6 +28,17 @@ function fetchCardData() {
         { name: "难度自选", type: "buff", probability: 5, description: "可选择歌曲任意难度" },
         { name: "节奏干扰", type: "debuff", probability: 3, description: "对手节奏识别难度增加" },
         { name: "全局加速", type: "global", probability: 2, description: "所有玩家速度加快20%" }
+    ];
+}
+
+// 获取歌曲数据
+function fetchSongData() {
+    // 这里应该是从arcaea_online.json获取数据的代码
+    // 为了示例，我们直接定义一些测试数据
+    songData = [
+        { song_name: "Sayonara Hatsukoi", image_url: "https://arcwiki.mcd.blue/images/f/fd/Songs_sayonarahatsukoi.jpg" },
+        { song_name: "Alice of the Moon", image_url: "https://arcwiki.mcd.blue/images/4/4a/Songs_aliceofthemoon.jpg" },
+        { song_name: "Brilliant Days", image_url: "https://arcwiki.mcd.blue/images/7/7c/Songs_brilliantdays.jpg" }
     ];
 }
 
@@ -59,6 +73,9 @@ function setupEventListeners() {
     document.querySelectorAll('.hand-dialog-close').forEach(button => {
         button.addEventListener('click', () => hideHandDialog(button.dataset.player));
     });
+    
+    // 搜索按钮
+    document.getElementById('search-button').addEventListener('click', searchSongs);
 }
 
 // 处理下一局
@@ -210,8 +227,8 @@ function updateSongSelection() {
         const songCard = document.createElement('div');
         songCard.className = 'song-card';
         songCard.innerHTML = `
-            <div class="song-card-inner"></div>
-            <div class="song-card-content">歌曲名称 ${i + 1}</div>
+            <div class="song-card-inner" style="background-image: url('${songData[i].image_url}')"></div>
+            <div class="song-card-content">${songData[i].song_name}</div>
         `;
         songSelection.appendChild(songCard);
     }
@@ -242,4 +259,39 @@ function clearBuffAreas() {
 // 隐藏结果弹窗
 function hideResultDialog() {
     document.getElementById('result-dialog').style.display = 'none';
+}
+
+// 搜索歌曲
+function searchSongs() {
+    const searchTerm = document.getElementById('song-search-input').value.toLowerCase();
+    const resultsContainer = document.getElementById('song-results');
+    resultsContainer.innerHTML = '';
+    
+    songData.forEach(song => {
+        if (song.song_name.toLowerCase().includes(searchTerm)) {
+            const resultElement = document.createElement('div');
+            resultElement.className = 'song-result';
+            resultElement.innerHTML = `
+                <div class="song-result-image" style="background-image: url('${song.image_url}')"></div>
+                <div class="song-result-name">${song.song_name}</div>
+            `;
+            resultElement.addEventListener('click', () => selectSong(song));
+            resultsContainer.appendChild(resultElement);
+        }
+    });
+}
+
+// 选择歌曲
+function selectSong(song) {
+    const songArea = document.querySelector(`.song-area[data-index="${selectedSongIndex}"]`);
+    songArea.innerHTML = `
+        <div class="song-card">
+            <div class="song-card-inner" style="background-image: url('${song.image_url}')"></div>
+            <div class="song-card-content">${song.song_name}</div>
+        </div>
+    `;
+    selectedSongIndex++;
+    if (selectedSongIndex >= 3) {
+        document.getElementById('start-round').style.display = 'block';
+    }
 }
