@@ -10,7 +10,7 @@
         "name": "随机流速",
         "type": "debuff",
         "rarity": "epic",
-        "probability": 2,
+        "probability": 3,
         "description": "随机4.2~6.2流速"
     },
     {
@@ -45,7 +45,7 @@
         "name": "判定修改（970w）",
         "type": "global",
         "rarity": "epic",
-        "probability": 2,
+        "probability": 1,
         "description": "结算方式改为|三个人的分数分别-970w|的和最小（全员）"
     },
     {
@@ -57,7 +57,7 @@
     },
     {
         "name": "左/右转",
-        "type": "special",
+        "type": "debuff",
         "rarity": "epic",
         "probability": 3,
         "description": "将设备左/右转30°"
@@ -66,7 +66,7 @@
         "name": "判定恢复",
         "type": "global",
         "rarity": "epic",
-        "probability": 3,
+        "probability": 2,
         "description": "正常计分，总分最高的队伍获胜"
     },
     {
