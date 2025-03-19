@@ -460,16 +460,20 @@ function playGlobalCard(index, player) {
 
 
 // 检查是否完成出卡
+// 在 checkBothDone 函数中添加调试信息
 function checkBothDone() {
+    console.log('Checking if both players are done...');
     if (player1Done && player2Done) {
-        // 显示最终出牌位置
-        document.getElementById('next-set').disabled = false;
+        console.log('Both players are done, triggering play cards...');
         triggerPlayCards();
+    } else {
+        console.log('One or both players are not done yet.');
     }
 }
 
 // 触发出牌逻辑
 function triggerPlayCards() {
+    console.log('Triggering play cards logic...');
     // 处理擂主的出牌
     processPlayedCards('player1');
     // 处理挑战者的出牌
@@ -483,6 +487,9 @@ function triggerPlayCards() {
 function processPlayedCards(player) {
     const hand = player === 'player1' ? player1Hand : player2Hand;
     const handContainer = document.getElementById(`${player}-hand`);
+
+    // 创建一个新的数组来存储未出的卡牌
+    const newHand = [];
 
     hand.forEach((card, index) => {
         if (card.played) {
@@ -500,14 +507,19 @@ function processPlayedCards(player) {
                 const newCardElement = createPlayedCardElement(card); // 创建新的卡牌元素
                 targetArea.appendChild(newCardElement);
             }
-
-            // 从手牌中移除已出的卡牌
-            hand.splice(index, 1);
-            updateHandCount(player, hand.length);
+        } else {
+            // 保留未出的卡牌
+            newHand.push(card);
         }
     });
 
-    // 重新渲染手牌
+    // 更新手牌数组和显示
+    if (player === 'player1') {
+        player1Hand = newHand;
+    } else {
+        player2Hand = newHand;
+    }
+    updateHandCount(player, newHand.length);
     renderHand(player);
 }
 
@@ -515,7 +527,7 @@ function processPlayedCards(player) {
 function resetPlayState() {
     player1Done = false;
     player2Done = false;
-    document.getElementById('next-set').disabled = true;
+    // document.getElementById('next-set').disabled = true;
 
     // 清除卡牌的 played 标记
     player1Hand.forEach(card => delete card.played);
@@ -539,16 +551,6 @@ function markCardAsPlayed(index, player, position) {
         button.disabled = true;
         button.style.backgroundColor = '#ccc';
     });
-
-    // 检查是否完成出卡
-    if (hand.every(card => card.played)) {
-        if (player === 'player1') {
-            player1Done = true;
-        } else {
-            player2Done = true;
-        }
-        checkBothDone();
-    }
 }
 
 // 创建已出牌的卡牌元素
