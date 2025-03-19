@@ -338,6 +338,9 @@ function showSongSearchDialog(index) {
         // 确保输入框可以获取焦点
         searchInput.focus();
     }
+    
+    // 确保结果容器是可见的
+    resultsContainer.style.display = 'block';
 }
 
 // 选择歌曲
@@ -363,11 +366,13 @@ function selectSong(song, index) {
         console.log('Updated song card inner style:', songCardInner.style.backgroundImage); // 调试信息
         console.log('Updated song card content:', songCardContent.textContent); // 调试信息
 
-            document.getElementById('start-round').style.display = 'block';
+        // 隐藏搜索结果
+        const resultsContainer = document.getElementById(`song-results-${index}`);
+        resultsContainer.style.display = 'none';
 
+        document.getElementById('start-round').style.display = 'block';
     };
 }
-
 // 搜索歌曲
 function searchSongs(searchTerm, index) {
     console.log('Searching songs with term:', searchTerm, 'for index:', index); // 调试信息
@@ -375,8 +380,10 @@ function searchSongs(searchTerm, index) {
     const resultsContainer = document.getElementById(`song-results-${index}`);
     resultsContainer.innerHTML = '';
 
+    let hasResults = false;
     songData.forEach(song => {
         if (song.song_name.toLowerCase().includes(searchTerm.toLowerCase())) {
+            hasResults = true;
             const resultElement = document.createElement('div');
             resultElement.className = 'song-result';
             resultElement.innerHTML = `
@@ -391,6 +398,13 @@ function searchSongs(searchTerm, index) {
     });
     
     console.log('Search results count:', resultsContainer.children.length); // 调试信息
+    
+    // 如果没有结果，隐藏结果容器
+    if (!hasResults) {
+        resultsContainer.style.display = 'none';
+    } else {
+        resultsContainer.style.display = 'block';
+    }
 }
 
 // 开始本轮比赛

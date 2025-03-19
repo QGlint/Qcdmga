@@ -104,7 +104,7 @@ button {
 .song-selection {
     position: relative;
     width: 100%;
-    min-height: 210px;
+    min-height: 240px;
     border: 2px dashed #ccc;
     border-radius: 5px;
     padding: 20px;
@@ -124,7 +124,7 @@ button {
 .song-card {
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: #fcb6ef;
     border-radius: 5px;
     /* margin: 10px; */
     display: flex;
@@ -138,7 +138,7 @@ button {
     width: 90%;
     /* height: 100px; */
     aspect-ratio: 1 / 1;
-    background-color: #f0f0f0;
+    background-color: #979797;
     /* border-radius: 5px; */
     background-size: cover; /* 确保图片覆盖整个区域 */
     background-position: center; /* 确保图片居中 */
@@ -146,7 +146,7 @@ button {
 }
 
 .song-card-content {
-    margin-top: 5px;
+    margin-top: 0%;
     font-size: 12px;
 }
 
@@ -379,11 +379,12 @@ button {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    /* height: 120%; */
 }
 
 .song-selection-box {
     flex: 1;
-    max-width: 30%;
+    max-width: 33%;
     display: flex;
     justify-content: center;
     align-items: center;
