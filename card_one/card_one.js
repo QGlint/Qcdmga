@@ -401,16 +401,25 @@ function startRound() {
 }
 
 // 更新选歌区域
+// 更新选歌区域
 function updateSongSelection() {
     const songSelection = document.getElementById('song-selection');
-    songSelection.innerHTML = '';
+    songSelection.innerHTML = '<div class="song-selection-inner"></div>'; // 清空内容并添加内层容器
+    
+    const songSelectionInner = songSelection.querySelector('.song-selection-inner');
     
     // 从选歌弹窗获取选中的歌曲并渲染
     const songAreas = document.querySelectorAll('.song-area');
-    songAreas.forEach(area => {
+    songAreas.forEach((area, index) => {
         const songCard = area.querySelector('.song-card');
         if (songCard) {
-            songSelection.appendChild(songCard.cloneNode(true));
+            const songSelectionBox = document.createElement('div');
+            songSelectionBox.className = 'song-selection-box';
+            
+            const songCardClone = songCard.cloneNode(true);
+            songSelectionBox.appendChild(songCardClone);
+            
+            songSelectionInner.appendChild(songSelectionBox);
         }
     });
 }

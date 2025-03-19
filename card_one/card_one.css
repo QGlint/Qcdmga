@@ -104,7 +104,7 @@ button {
 .song-selection {
     position: relative;
     width: 100%;
-    min-height: 150px;
+    min-height: 210px;
     border: 2px dashed #ccc;
     border-radius: 5px;
     padding: 20px;
@@ -371,4 +371,20 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+/* 三等分的小区域 */
+.song-selection-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.song-selection-box {
+    flex: 1;
+    max-width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
