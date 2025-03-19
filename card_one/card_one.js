@@ -179,11 +179,16 @@ function handleJudgment(result) {
     
     if (result === 'player1') {
         document.getElementById('result-title').textContent = '擂主守擂成功';
-        player2Hand = []; // 清除挑战者手牌
+        // 清除挑战者手牌
+        player2Hand = [];
+        updateHandCount('player2', 0);
     } else {
         document.getElementById('result-title').textContent = '挑战者挑战成功';
-        player1Hand = [...player2Hand]; // 将挑战者手牌复制到擂主手牌
-        player2Hand = []; // 清除挑战者手牌
+        // 清除擂主手牌，并将挑战者手牌移动到擂主区域
+        player1Hand = [...player2Hand];
+        player2Hand = [];
+        updateHandCount('player1', player1Hand.length);
+        updateHandCount('player2', 0);
     }
     
     // 清除全局buff区和1、2、3区域的卡牌
@@ -196,10 +201,11 @@ function handleJudgment(result) {
     // 显示结果弹窗
     document.getElementById('result-dialog').style.display = 'flex';
 }
-
 // 隐藏结果弹窗
 function hideResultDialog() {
     document.getElementById('result-dialog').style.display = 'none';
+    // 重置出卡状态
+    resetPlayState();
 }
 
 // 抽卡
@@ -470,7 +476,7 @@ function triggerPlayCards() {
     processPlayedCards('player2');
 
     // 重置出卡状态
-    resetPlayState();
+    // resetPlayState();
 }
 
 // 处理已标记的出牌
