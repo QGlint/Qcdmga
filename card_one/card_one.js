@@ -242,7 +242,7 @@ function renderHand(player) {
     const hand = player === 'player1' ? player1Hand : player2Hand;
     const container = document.getElementById(`${player}-hand`);
     container.innerHTML = '';
-    
+
     hand.forEach((card, index) => {
         const cardElement = createCardElement(card, index, player);
         container.appendChild(cardElement);
@@ -250,11 +250,17 @@ function renderHand(player) {
 }
 
 // 创建卡牌元素
+// 创建卡牌元素
 function createCardElement(card, index, player) {
     const cardElement = document.createElement('div');
     cardElement.className = 'card';
     cardElement.style.backgroundColor = getCardColor(card.type);
-    
+
+    // 检查卡牌是否已被标记为已出
+    if (card.played) {
+        cardElement.style.opacity = '0.5';
+    }
+
     cardElement.innerHTML = `
         <div class="card-content">
             <div class="card-name">${card.name}</div>
@@ -270,7 +276,7 @@ function createCardElement(card, index, player) {
             `}
         </div>
     `;
-    
+
     return cardElement;
 }
 
@@ -430,60 +436,22 @@ function playCard(index, player, position) {
     const hand = player === 'player1' ? player1Hand : player2Hand;
     const card = hand[index];
     if (!card) return;
-    
-    if (card.type === 'buff') {
-        const targetArea = document.getElementById(`${player}-buff${position}`);
-        const cardElement = createCardElement(card, index, player);
-        targetArea.appendChild(cardElement);
-    } else if (card.type === 'debuff') {
-        const opponent = player === 'player1' ? 'player2' : 'player1';
-        const targetArea = document.getElementById(`${opponent}-buff${position}`);
-        const cardElement = createCardElement(card, index, player);
-        targetArea.appendChild(cardElement);
-    }
-    
-    // 标志卡牌已出
-    markCardAsPlayed(index, player);
+
+    // 标记卡牌为已出
+    markCardAsPlayed(index, player, position);
 }
 
-// 使用全局卡牌
+// 标记全局卡牌为已出，但不立即执行
 function playGlobalCard(index, player) {
     const hand = player === 'player1' ? player1Hand : player2Hand;
     const card = hand[index];
     if (!card) return;
-    
-    const targetArea = document.getElementById('global-buff');
-    const cardElement = createCardElement(card, index, player);
-    targetArea.appendChild(cardElement);
-    
-    // 标志卡牌已出
-    markCardAsPlayed(index, player);
+
+    // 标记卡牌为已出
+    markCardAsPlayed(index, player, 'global');
 }
 
-// 标志卡牌已出
-function markCardAsPlayed(index, player) {
-    const hand = player === 'player1' ? player1Hand : player2Hand;
-    const cardElement = document.getElementById(`${player}-hand`).querySelectorAll('.card')[index];
-    const actionButtons = cardElement.querySelectorAll('.action-button');
-    
-    actionButtons.forEach(button => {
-        button.disabled = true;
-        button.style.backgroundColor = '#ccc';
-    });
-    
-    hand.splice(index, 1);
-    updateHandCount(player, hand.length);
-    
-    // 检查是否完成出卡
-    if (hand.length === 0) {
-        if (player === 'player1') {
-            player1Done = true;
-        } else {
-            player2Done = true;
-        }
-        checkBothDone();
-    }
-}
+
 
 // 检查是否完成出卡
 function checkBothDone() {
@@ -496,10 +464,45 @@ function checkBothDone() {
 
 // 触发出牌逻辑
 function triggerPlayCards() {
-    // 这里可以添加自动出牌的逻辑
-    // 例如，自动将所有未出的卡牌出到对应区域
-    // 或者提示玩家手动出牌
-    alert('两边都已完成出卡，请手动出牌！');
+    // 处理擂主的出牌
+    processPlayedCards('player1');
+    // 处理挑战者的出牌
+    processPlayedCards('player2');
+
+    // 重置出卡状态
+    resetPlayState();
+}
+
+// 处理已标记的出牌
+function processPlayedCards(player) {
+    const hand = player === 'player1' ? player1Hand : player2Hand;
+    const handContainer = document.getElementById(`${player}-hand`);
+
+    hand.forEach((card, index) => {
+        if (card.played) {
+            if (card.type === 'buff' && card.position !== 'global') {
+                const targetArea = document.getElementById(`${player}-buff${card.position}`);
+                const newCardElement = createPlayedCardElement(card); // 创建新的卡牌元素
+                targetArea.appendChild(newCardElement);
+            } else if (card.type === 'debuff' && card.position !== 'global') {
+                const opponent = player === 'player1' ? 'player2' : 'player1';
+                const targetArea = document.getElementById(`${opponent}-buff${card.position}`);
+                const newCardElement = createPlayedCardElement(card); // 创建新的卡牌元素
+                targetArea.appendChild(newCardElement);
+            } else if (card.type === 'global' && card.position === 'global') {
+                const targetArea = document.getElementById('global-buff');
+                const newCardElement = createPlayedCardElement(card); // 创建新的卡牌元素
+                targetArea.appendChild(newCardElement);
+            }
+
+            // 从手牌中移除已出的卡牌
+            hand.splice(index, 1);
+            updateHandCount(player, hand.length);
+        }
+    });
+
+    // 重新渲染手牌
+    renderHand(player);
 }
 
 // 重置出卡状态
@@ -507,4 +510,53 @@ function resetPlayState() {
     player1Done = false;
     player2Done = false;
     document.getElementById('next-set').disabled = true;
+
+    // 清除卡牌的 played 标记
+    player1Hand.forEach(card => delete card.played);
+    player2Hand.forEach(card => delete card.played);
+}
+
+// 标记卡牌为已出
+function markCardAsPlayed(index, player, position) {
+    const hand = player === 'player1' ? player1Hand : player2Hand;
+    const card = hand[index];
+    if (!card) return;
+
+    // 更新手牌数组，标记卡牌为已出
+    card.played = true;
+    card.position = position;
+
+    // 更新界面，按钮变灰
+    const cardElement = document.getElementById(`${player}-hand`).querySelectorAll('.card')[index];
+    const actionButtons = cardElement.querySelectorAll('.action-button');
+    actionButtons.forEach(button => {
+        button.disabled = true;
+        button.style.backgroundColor = '#ccc';
+    });
+
+    // 检查是否完成出卡
+    if (hand.every(card => card.played)) {
+        if (player === 'player1') {
+            player1Done = true;
+        } else {
+            player2Done = true;
+        }
+        checkBothDone();
+    }
+}
+
+// 创建已出牌的卡牌元素
+function createPlayedCardElement(card) {
+    const cardElement = document.createElement('div');
+    cardElement.className = 'card';
+    cardElement.style.backgroundColor = getCardColor(card.type);
+
+    cardElement.innerHTML = `
+        <div class="card-content">
+            <div class="card-name">${card.name}</div>
+            <div class="card-description">${card.description}</div>
+        </div>
+    `;
+
+    return cardElement;
 }
