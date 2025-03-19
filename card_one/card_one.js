@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchCardData();
     fetchSongData();
     setupEventListeners();
+    initializeSongSelection();
 });
 
 // 从文件中获取卡牌数据
@@ -102,6 +103,54 @@ function setupEventListeners() {
         area.addEventListener('click', () => {
             showSongSearchDialog(area.dataset.index);
         });
+    });
+}
+
+// 初始化选歌区域
+function initializeSongSelection() {
+    const songSelectionDialog = document.getElementById('song-selection-dialog');
+    const songAreasContainer = createSongAreas();
+    songSelectionDialog.querySelector('.song-areas').replaceWith(songAreasContainer);
+}
+
+// 创建歌曲区域
+function createSongAreas() {
+    const songAreasContainer = document.createElement('div');
+    songAreasContainer.className = 'song-areas';
+
+    for (let i = 0; i < 3; i++) {
+        const songArea = document.createElement('div');
+        songArea.className = 'song-area';
+        songArea.dataset.index = i;
+
+        const songCard = document.createElement('div');
+        songCard.className = 'song-card';
+
+        const songCardInner = document.createElement('div');
+        songCardInner.className = 'song-card-inner';
+
+        const songCardContent = document.createElement('div');
+        songCardContent.className = 'song-card-content';
+        // songCardContent.textContent = '歌曲名称';
+
+        songCard.appendChild(songCardInner);
+        songCard.appendChild(songCardContent);
+        songArea.appendChild(songCard);
+
+        songArea.addEventListener('click', () => {
+            showSongSearchDialog(songArea.dataset.index);
+        });
+
+        songAreasContainer.appendChild(songArea);
+    }
+    updateRoundStyles();
+    return songAreasContainer;
+}
+
+function updateRoundStyles() {
+    const songCards = document.querySelectorAll('.song-card');
+    songCards.forEach((card, index) => {
+            card.style.backgroundColor = '#ffc0cb';
     });
 }
 
@@ -244,36 +293,76 @@ function updateHandCount(player, count) {
 function showSongSelectionDialog() {
     document.getElementById('song-selection-dialog').style.display = 'flex';
 }
-
 // 显示歌曲搜索弹窗
 function showSongSearchDialog(index) {
     selectedSongIndex = index;
     const songArea = document.querySelector(`.song-area[data-index="${index}"]`);
-    songArea.innerHTML = `
-        <div class="song-card">
-            <div class="song-card-inner"></div>
-            <div class="song-card-content">歌曲名称</div>
-        </div>
-        <div class="song-search-container">
-            <input type="text" id="song-search-input-${index}" placeholder="输入歌曲名搜索...">
-        </div>
-        <div class="song-results" id="song-results-${index}">
-            <!-- 搜索结果将在这里动态生成 -->
-        </div>
-    `;
+    
+    // 获取现有的 song-search-container 和 song-results 元素
+    const searchContainer = songArea.querySelector('.song-search-container');
+    const resultsContainer = songArea.querySelector('.song-results');
+    
+    // 如果没有现有的 song-search-container，则创建一个新的
+    if (!searchContainer) {
+        songArea.insertAdjacentHTML('beforeend', `
+            <div class="song-search-container">
+                <input type="text" id="song-search-input-${index}" placeholder="输入歌曲名搜索...">
+            </div>
+            <div class="song-results" id="song-results-${index}">
+                <!-- 搜索结果将在这里动态生成 -->
+            </div>
+        `);
+    }
+    
+    // 获取输入框元素
     const searchInput = document.getElementById(`song-search-input-${index}`);
-    searchInput.addEventListener('input', (e) => {
-        searchSongs(e.target.value, index);
-    });
-    // 确保输入框可以获取焦点
-    searchInput.focus();
+    
+    // 为输入框绑定事件监听器
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            searchSongs(e.target.value, index);
+        });
+        
+        // 确保输入框可以获取焦点
+        searchInput.focus();
+    }
+}
+
+// 选择歌曲
+function selectSong(song, index) {
+    console.log('Selecting song:', song, 'for index:', index); // 调试信息
+
+    const songArea = document.querySelector(`.song-area[data-index="${index}"]`);
+    console.log('Song area:', songArea); // 调试信息
+
+    const songCardInner = songArea.querySelector('.song-card-inner');
+    const songCardContent = songArea.querySelector('.song-card-content');
+
+    // 使用img标签加载图片
+    const img = new Image();
+    img.src = song.image_url;
+    img.onload = () => {
+        // 图片加载完成后更新背景
+        songCardInner.style.backgroundImage = `url('${song.image_url}')`;
+        songCardInner.style.backgroundSize = 'cover';
+        songCardInner.style.backgroundPosition = 'center';
+        songCardContent.textContent = song.song_name;
+
+        console.log('Updated song card inner style:', songCardInner.style.backgroundImage); // 调试信息
+        console.log('Updated song card content:', songCardContent.textContent); // 调试信息
+
+            document.getElementById('start-round').style.display = 'block';
+
+    };
 }
 
 // 搜索歌曲
 function searchSongs(searchTerm, index) {
+    console.log('Searching songs with term:', searchTerm, 'for index:', index); // 调试信息
+    
     const resultsContainer = document.getElementById(`song-results-${index}`);
     resultsContainer.innerHTML = '';
-    
+
     songData.forEach(song => {
         if (song.song_name.toLowerCase().includes(searchTerm.toLowerCase())) {
             const resultElement = document.createElement('div');
@@ -281,32 +370,15 @@ function searchSongs(searchTerm, index) {
             resultElement.innerHTML = `
                 <div class="song-result-name">${song.song_name}</div>
             `;
-            resultElement.addEventListener('click', () => selectSong(song, index));
+            resultElement.addEventListener('click', () => {
+                console.log('Song result clicked:', song); // 调试信息
+                selectSong(song, index);
+            });
             resultsContainer.appendChild(resultElement);
         }
     });
-}
-
-// 选择歌曲
-// 选择歌曲
-function selectSong(song, index) {
-    const songArea = document.querySelector(`.song-area[data-index="${index}"]`);
-    const songCardInner = songArea.querySelector('.song-card-inner');
-    const songCardContent = songArea.querySelector('.song-card-content');
-
-    // 更新歌曲图片和名称
-    songCardInner.style.backgroundImage = `url('${song.image_url}')`;
-    songCardContent.textContent = song.song_name;
-
-    // 检查是否所有歌曲都已选择
-    const allSelected = Array.from(document.querySelectorAll('.song-area')).every(area => {
-        const inner = area.querySelector('.song-card-inner');
-        return inner.style.backgroundImage !== '';
-    });
-
-    if (allSelected) {
-        document.getElementById('start-round').style.display = 'block';
-    }
+    
+    console.log('Search results count:', resultsContainer.children.length); // 调试信息
 }
 
 // 开始本轮比赛
@@ -351,11 +423,6 @@ function clearBuffAreas() {
     document.getElementById('player2-buff1').innerHTML = '';
     document.getElementById('player2-buff2').innerHTML = '';
     document.getElementById('player2-buff3').innerHTML = '';
-}
-
-// 隐藏结果弹窗
-function hideResultDialog() {
-    document.getElementById('result-dialog').style.display = 'none';
 }
 
 // 使用卡牌
