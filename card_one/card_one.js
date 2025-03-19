@@ -288,20 +288,22 @@ function searchSongs(searchTerm, index) {
 }
 
 // 选择歌曲
+// 选择歌曲
 function selectSong(song, index) {
     const songArea = document.querySelector(`.song-area[data-index="${index}"]`);
-    songArea.innerHTML = `
-        <div class="song-card">
-            <div class="song-card-inner" style="background-image: url('${song.image_url}')"></div>
-            <div class="song-card-content">${song.song_name}</div>
-        </div>
-    `;
-    
+    const songCardInner = songArea.querySelector('.song-card-inner');
+    const songCardContent = songArea.querySelector('.song-card-content');
+
+    // 更新歌曲图片和名称
+    songCardInner.style.backgroundImage = `url('${song.image_url}')`;
+    songCardContent.textContent = song.song_name;
+
     // 检查是否所有歌曲都已选择
     const allSelected = Array.from(document.querySelectorAll('.song-area')).every(area => {
-        return area.querySelector('.song-card-inner').style.backgroundImage !== '';
+        const inner = area.querySelector('.song-card-inner');
+        return inner.style.backgroundImage !== '';
     });
-    
+
     if (allSelected) {
         document.getElementById('start-round').style.display = 'block';
     }

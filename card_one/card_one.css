@@ -365,3 +365,11 @@ button {
     border-radius: 4px;
     cursor: pointer;
 }
+
+.song-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
