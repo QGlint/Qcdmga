@@ -12,6 +12,8 @@ let player1Done = false;
 let player2Done = false;
 // 是否已选歌
 let songSelected = false;
+// 选中的歌曲索引
+let selectedSongIndex = 0;
 
 // 初始化
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,26 +22,37 @@ document.addEventListener('DOMContentLoaded', () => {
     setupEventListeners();
 });
 
-// 获取卡牌数据
-function fetchCardData() {
-    // 这里应该是从card_test.json获取数据的代码
-    // 为了示例，我们直接定义一些测试数据
-    cardData = [
-        { name: "难度自选", type: "buff", probability: 5, description: "可选择歌曲任意难度" },
-        { name: "节奏干扰", type: "debuff", probability: 3, description: "对手节奏识别难度增加" },
-        { name: "全局加速", type: "global", probability: 2, description: "所有玩家速度加快20%" }
-    ];
+// 从文件中获取卡牌数据
+async function fetchCardData() {
+    try {
+        const response = await fetch('card_test.json');
+        cardData = await response.json();
+    } catch (error) {
+        console.error('Failed to fetch card data:', error);
+        // 如果加载失败，使用示例数据
+        cardData = [
+            { name: "难度自选", type: "buff", probability: 5, description: "可选择歌曲任意难度" },
+            { name: "节奏干扰", type: "debuff", probability: 3, description: "对手节奏识别难度增加" },
+            { name: "全局加速", type: "global", probability: 2, description: "所有玩家速度加快20%" },
+            // 更多卡牌数据...
+        ];
+    }
 }
 
-// 获取歌曲数据
-function fetchSongData() {
-    // 这里应该是从arcaea_online.json获取数据的代码
-    // 为了示例，我们直接定义一些测试数据
-    songData = [
-        { song_name: "Sayonara Hatsukoi", image_url: "https://arcwiki.mcd.blue/images/f/fd/Songs_sayonarahatsukoi.jpg" },
-        { song_name: "Alice of the Moon", image_url: "https://arcwiki.mcd.blue/images/4/4a/Songs_aliceofthemoon.jpg" },
-        { song_name: "Brilliant Days", image_url: "https://arcwiki.mcd.blue/images/7/7c/Songs_brilliantdays.jpg" }
-    ];
+// 从文件中获取歌曲数据
+async function fetchSongData() {
+    try {
+        const response = await fetch('arcaea_online.json');
+        songData = await response.json();
+    } catch (error) {
+        console.error('Failed to fetch song data:', error);
+        // 如果加载失败，使用示例数据
+        songData = [
+            { song_name: "Sayonara Hatsukoi", image_url: "https://arcwiki.mcd.blue/images/f/fd/Songs_sayonarahatsukoi.jpg" },
+            { song_name: "Alice of the Moon", image_url: "https://arcwiki.mcd.blue/images/4/4a/Songs_aliceofthemoon.jpg" },
+            { song_name: "Brilliant Days", image_url: "https://arcwiki.mcd.blue/images/7/7c/Songs_brilliantdays.jpg" }
+        ];
+    }
 }
 
 // 设置事件监听器
@@ -76,6 +89,13 @@ function setupEventListeners() {
     
     // 搜索按钮
     document.getElementById('search-button').addEventListener('click', searchSongs);
+    
+    // 选歌弹窗中的小区域点击事件
+    document.querySelectorAll('.song-area').forEach(area => {
+        area.addEventListener('click', () => {
+            showSongSearchDialog(area.dataset.index);
+        });
+    });
 }
 
 // 处理下一局
@@ -94,7 +114,7 @@ function handleNextSet() {
 
 // 显示判定弹窗
 function showJudgmentDialog() {
-    document.getElementById('judgment-dialog').style.display = 'block';
+    document.getElementById('judgment-dialog').style.display = 'flex';
 }
 
 // 处理判定结果
@@ -118,7 +138,7 @@ function handleJudgment(result) {
     resetSongSelection();
     
     // 显示结果弹窗
-    document.getElementById('result-dialog').style.display = 'block';
+    document.getElementById('result-dialog').style.display = 'flex';
 }
 
 // 隐藏结果弹窗
@@ -152,7 +172,7 @@ function getRandomCard() {
 // 显示手牌弹窗
 function showHandDialog(player) {
     const dialog = document.getElementById(`${player}-hand-dialog`);
-    dialog.style.display = 'block';
+    dialog.style.display = 'flex';
     renderHand(player);
 }
 
@@ -184,6 +204,11 @@ function createCardElement(card, index) {
             <div class="card-name">${card.name}</div>
             <div class="card-description">${card.description}</div>
         </div>
+        <div class="card-actions">
+            <button class="action-button" onclick="playCard(${index}, '${card.type}', 1)">1</button>
+            <button class="action-button" onclick="playCard(${index}, '${card.type}', 2)">2</button>
+            <button class="action-button" onclick="playCard(${index}, '${card.type}', 3)">3</button>
+        </div>
     `;
     
     return cardElement;
@@ -206,7 +231,13 @@ function updateHandCount(player, count) {
 
 // 显示选歌弹窗
 function showSongSelectionDialog() {
-    document.getElementById('song-selection-dialog').style.display = 'block';
+    document.getElementById('song-selection-dialog').style.display = 'flex';
+}
+
+// 显示歌曲搜索弹窗
+function showSongSearchDialog(index) {
+    selectedSongIndex = index;
+    document.getElementById('song-search-dialog').style.display = 'flex';
 }
 
 // 开始本轮比赛
@@ -222,7 +253,7 @@ function updateSongSelection() {
     songSelection.innerHTML = '';
     
     // 这里应该是从选歌弹窗获取选中的歌曲并渲染
-    // 为了示例，我们直接创建三个示例歌曲卡片
+    // 为了示例，我们假设已经从文件中获取了数据
     for (let i = 0; i < 3; i++) {
         const songCard = document.createElement('div');
         songCard.className = 'song-card';
@@ -293,5 +324,43 @@ function selectSong(song) {
     selectedSongIndex++;
     if (selectedSongIndex >= 3) {
         document.getElementById('start-round').style.display = 'block';
+    }
+}
+
+// 使用卡牌
+function playCard(index, type, position) {
+    const player = this.id.startsWith('player1') ? 'player1' : 'player2';
+    const hand = player === 'player1' ? player1Hand : player2Hand;
+    
+    const card = hand[index];
+    if (!card) return;
+    
+    if (type === 'global') {
+        document.getElementById('global-buff').appendChild(createCardElement(card));
+    } else if (type === 'buff') {
+        document.getElementById(`${player}-buff${position}`).appendChild(createCardElement(card));
+    } else if (type === 'debuff') {
+        const opponent = player === 'player1' ? 'player2' : 'player1';
+        document.getElementById(`${opponent}-buff${position}`).appendChild(createCardElement(card));
+    }
+    
+    hand.splice(index, 1);
+    updateHandCount(player, hand.length);
+    
+    // 检查是否完成出卡
+    checkDone(player);
+}
+
+// 检查是否完成出卡
+function checkDone(player) {
+    if (player === 'player1') {
+        player1Done = player1Hand.length === 0;
+    } else {
+        player2Done = player2Hand.length === 0;
+    }
+    
+    // 如果两边都完成出卡，显示下一局按钮
+    if (player1Done && player2Done) {
+        document.getElementById('next-set').disabled = false;
     }
 }

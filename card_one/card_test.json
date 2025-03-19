@@ -11,7 +11,7 @@
         "type": "buff",
         "rarity": "legendary",
         "probability": 1,
-        "description": "将使用的debuff/buff全队化（注：仅可加强一张卡，需将加强的卡片一同打出）"
+        "description": "将使用的debuff/buff全队化"
     },
     {
         "name": "随机流速",

@@ -63,24 +63,34 @@ button {
 .global-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.global-buff, .challenge-songs {
+    width: 48%;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .title-card-container {
     display: flex;
-    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+    padding-left: 0px; /* 调整左边留白 */
+    padding-right: 0; /* 右边不留白 */
 }
 
 .vertical-title {
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-    text-align: center;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    margin-right: 10px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding-right: 10px;
     font-size: 16px;
-    font-weight: normal;
+    color: #555;
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .cards-display {
@@ -93,16 +103,22 @@ button {
 /* 挑战歌曲区 */
 .song-selection {
     position: relative;
+    width: 100%;
     min-height: 150px;
     border: 2px dashed #ccc;
     border-radius: 5px;
     padding: 20px;
     cursor: pointer;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .song-placeholder {
     color: #999;
     font-size: 14px;
+    width: 100%;
 }
 
 .song-card {
@@ -122,9 +138,7 @@ button {
     width: 80px;
     height: 80px;
     background-color: #f0f0f0;
-    border-radius: 50%;
-    background-size: cover;
-    background-position: center;
+    border-radius: 5px;
 }
 
 .song-card-content {
@@ -141,6 +155,10 @@ button {
 
 .player-area {
     width: 48%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .buff-section {
@@ -178,7 +196,7 @@ button {
 }
 
 /* 弹窗样式 */
-.dialog {
+.dialog, .hand-dialog, .song-search-dialog, .song-selection-dialog, .judgment-dialog, .result-dialog {
     display: none;
     position: fixed;
     top: 0;
@@ -206,17 +224,6 @@ button {
 .judgment-button {
     background-color: #4CAF50;
     margin: 10px;
-}
-
-.hand-dialog {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 1000;
 }
 
 .hand-dialog-content {
@@ -289,19 +296,6 @@ button {
 }
 
 /* 选歌弹窗 */
-.song-search-dialog {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-}
-
 .song-search-container {
     display: flex;
     margin-bottom: 20px;
@@ -343,17 +337,9 @@ button {
     text-align: center;
 }
 
-.song-selection-dialog {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
+.song-selection-dialog .dialog-content {
+    width: 600px;
+    max-width: 90%;
 }
 
 .song-areas {
@@ -371,7 +357,6 @@ button {
 }
 
 #start-round {
-    display: none;
     width: 100%;
     padding: 10px;
     background-color: #4CAF50;
