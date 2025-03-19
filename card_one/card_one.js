@@ -1,505 +1,245 @@
-let cards = [];
-let totalProbability = 0;
-let songs = [];
-let selectedSongBoxIndex = null;
-let set = 0;
-let player1Wins = 0;
-let isPlayer1Ready = false;
-let isPlayer2Ready = false;
-let player1Actions = [];
-let player2Actions = [];
-let selectedSongs = [];
-let songsSelected = false;
+// 卡牌数据
+let cardData = [];
+// 当前局数
+let currentSet = 0;
+// 玩家手牌
+let player1Hand = [];
+let player2Hand = [];
+// 是否完成出卡
+let player1Done = false;
+let player2Done = false;
+// 是否已选歌
+let songSelected = false;
 
-async function loadCards() {
-    try {
-        const response = await fetch('card_test.json');
-        cards = await response.json();
-        totalProbability = cards.reduce((sum, card) => sum + card.probability, 0);
-        initGame();
-    } catch (error) {
-        console.error('加载卡片数据失败:', error);
-    }
-}
+// 初始化
+document.addEventListener('DOMContentLoaded', () => {
+    fetchCardData();
+    setupEventListeners();
+});
 
-async function loadSongs() {
-    try {
-        const response = await fetch('arcaea_online.json');
-        songs = await response.json();
-    } catch (error) {
-        console.error('加载歌曲数据失败:', error);
-    }
-}
-
-function initGame() {
-    document.getElementById("player1-draw").addEventListener("click", () => {
-        if (!songsSelected) {
-            alert("请先选择歌曲并开始本轮比赛！");
-            return;
-        }
-        drawCard("player1");
-    });
-
-    document.getElementById("player2-draw").addEventListener("click", () => {
-        if (!songsSelected) {
-            alert("请先选择歌曲并开始本轮比赛！");
-            return;
-        }
-        drawCard("player2");
-    });
-
-    document.getElementById("next-set").addEventListener("click", nextSet);
-
-    document.querySelectorAll(".judgment-button").forEach(button => {
-        button.addEventListener("click", function() {
-            const result = this.getAttribute("data-result");
-            handleJudgmentResult(result);
-        });
-    });
-
-    document.getElementById("back-to-game").addEventListener("click", backToGame);
-
-    document.getElementById('search-button').addEventListener('click', searchSongs);
-    document.getElementById('song-search-input').addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            searchSongs();
-        }
-    });
-
-    document.getElementById("player1-show-hand").addEventListener("click", () => {
-        if (!songsSelected) {
-            alert("请先选择歌曲并开始本轮比赛！");
-            return;
-        }
-        showHandDialog("player1");
-    });
-
-    document.getElementById("player2-show-hand").addEventListener("click", () => {
-        if (!songsSelected) {
-            alert("请先选择歌曲并开始本轮比赛！");
-            return;
-        }
-        showHandDialog("player2");
-    });
-
-    document.getElementById("start-round").addEventListener("click", startRound);
-
-    updateSet();
-    // 删除了 initializeSongSelection() 的调用
-}
-
-function updateSet() {
-    document.getElementById("set").textContent = set;
-    document.getElementById("player1-wins").textContent = `胜利次数: ${player1Wins}`;
-}
-
-function updateHandCount(playerId) {
-    const handCountElement = document.getElementById(`${playerId}-hand-count`);
-    const handCount = document.getElementById(`${playerId}-hand`).children.length;
-    handCountElement.textContent = `手牌数：${handCount}`;
-}
-
-function drawCard(playerId) {
-    const playerHandElement = document.getElementById(`${playerId}-hand`);
-    const randomValue = Math.random() * totalProbability;
-    let cumulativeProbability = 0;
-    let selectedCard = null;
-
-    for (const card of cards) {
-        cumulativeProbability += card.probability;
-        if (randomValue < cumulativeProbability) {
-            selectedCard = card;
-            break;
-        }
-    }
-
-    if (!selectedCard) {
-        selectedCard = cards[cards.length - 1];
-    }
-
-    const cardElement = document.createElement("div");
-    cardElement.className = `card ${selectedCard.rarity}`;
-    cardElement.innerHTML = `
-        <div class="card-name">${selectedCard.name}</div>
-    `;
-
-    const actionContainer = document.createElement("div");
-    actionContainer.className = "card-action";
-    actionContainer.innerHTML = `
-        <button class="play-button" data-action="1">出牌1</button>
-        <button class="play-button" data-action="2">出牌2</button>
-        <button class="play-button" data-action="3">出牌3</button>
-    `;
-
-    const playButtons = actionContainer.querySelectorAll('.play-button');
-    playButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            togglePlayCard(this, playerId, button.getAttribute("data-action"));
-        });
-    });
-
-    cardElement.appendChild(actionContainer);
-
-    playerHandElement.appendChild(cardElement);
-    updateHandCount(playerId);
-}
-
-function togglePlayCard(button, playerId, action) {
-    if (button.classList.contains('played')) {
-        button.classList.remove('played');
-        button.style.backgroundColor = '#4CAF50';
-        if (playerId === "player1") {
-            player1Actions = player1Actions.filter(act => act.action !== action);
-        } else if (playerId === "player2") {
-            player2Actions = player2Actions.filter(act => act.action !== action);
-        }
-        button.style.display = 'block';
-    } else {
-        button.classList.add('played');
-        button.style.backgroundColor = '#999';
-        const actionObj = {
-            playerId: playerId,
-            action: action
-        };
-        if (playerId === "player1") {
-            player1Actions.push(actionObj);
-        } else if (playerId === "player2") {
-            player2Actions.push(actionObj);
-        }
-        button.style.display = 'none';
-    }
-}
-
-function useCard(action) {
-    const { playerId, action: act } = action;
-
-    const playerHandElement = document.getElementById(`${playerId}-hand`);
-    const cardElements = playerHandElement.querySelectorAll(`.card`);
-    let cardFound = false;
-
-    cardElements.forEach(cardElement => {
-        if (!cardFound) {
-            if (cardElement.querySelector('.card-type').textContent === "buff") {
-                const playerBuffElement = document.getElementById(`${playerId}-buff${act}`);
-                playerBuffElement.appendChild(cardElement);
-            } else if (cardElement.querySelector('.card-type').textContent === "debuff") {
-                const opponentId = playerId === "player1" ? "player2" : "player1";
-                const opponentBuffElement = document.getElementById(`${opponentId}-buff${act}`);
-                opponentBuffElement.appendChild(cardElement);
-            } else if (cardElement.querySelector('.card-type').textContent === "global") {
-                const globalBuffElement = document.getElementById(`global-buff`);
-                globalBuffElement.appendChild(cardElement);
-            }
-            cardFound = true;
-        }
-    });
-
-    updateHandCount(playerId);
-}
-
-function nextSet() {
-    showSongSelectionDialog();
-}
-
-function showJudgmentDialog() {
-    document.getElementById("judgment-dialog").style.display = "flex";
-    disableAllButtons(true);
-}
-
-function disableAllButtons(disabled) {
-    document.getElementById("player1-draw").disabled = disabled;
-    document.getElementById("player2-draw").disabled = disabled;
-    document.getElementById("next-set").disabled = disabled;
-}
-
-function showResultDialog(result) {
-    document.getElementById("judgment-dialog").style.display = "none";
-    document.getElementById("result-title").textContent = result === "player1" ? "擂主守擂成功" : "挑战者挑战成功";
-    document.getElementById("result-dialog").style.display = "flex";
-}
-
-function backToGame() {
-    document.getElementById("result-dialog").style.display = "none";
-    disableAllButtons(false);
-    set = 0;
-    updateSet();
-    songsSelected = false;
-    const songSelection = document.getElementById('song-selection');
-    songSelection.innerHTML = '';
-    initializeSongSelection();
-}
-
-function handleJudgmentResult(result) {
-    if (result === "player1") {
-        player1Wins++;
-        clearLoserAreas("player2");
-        showResultDialog("player1");
-    } else if (result === "player2") {
-        clearLoserAreas("player1");
-        moveWinnerAreas("player2", "player1");
-        showResultDialog("player2");
-    }
-}
-
-function clearLoserAreas(playerId) {
-    document.getElementById(`${playerId}-hand`).innerHTML = "";
-    document.getElementById(`${playerId}-buff1`).innerHTML = "";
-    document.getElementById(`${playerId}-buff2`).innerHTML = "";
-    document.getElementById(`${playerId}-buff3`).innerHTML = "";
-    updateHandCount(playerId);
-}
-
-function moveWinnerAreas(fromPlayerId, toPlayerId) {
-    const fromHand = document.getElementById(`${fromPlayerId}-hand`);
-    const toHand = document.getElementById(`${toPlayerId}-hand`);
-    
-    Array.from(fromHand.children).forEach(card => {
-        toHand.appendChild(card);
-        const playButtons = card.querySelectorAll('.play-button');
-        playButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const action = button.getAttribute("data-action");
-                togglePlayCard(this, toPlayerId, action);
-            });
-        });
-    });
-    
-    fromHand.innerHTML = "";
-    
-    const fromBuff1 = document.getElementById(`${fromPlayerId}-buff1`);
-    const toBuff1 = document.getElementById(`${toPlayerId}-buff1`);
-    Array.from(fromBuff1.children).forEach(card => {
-        toBuff1.appendChild(card);
-    });
-    fromBuff1.innerHTML = "";
-    
-    const fromBuff2 = document.getElementById(`${fromPlayerId}-buff2`);
-    const toBuff2 = document.getElementById(`${toPlayerId}-buff2`);
-    Array.from(fromBuff2.children).forEach(card => {
-        toBuff2.appendChild(card);
-    });
-    fromBuff2.innerHTML = "";
-    
-    const fromBuff3 = document.getElementById(`${fromPlayerId}-buff3`);
-    const toBuff3 = document.getElementById(`${toPlayerId}-buff3`);
-    Array.from(fromBuff3.children).forEach(card => {
-        toBuff3.appendChild(card);
-    });
-    fromBuff3.innerHTML = "";
-    
-    updateHandCount(toPlayerId);
-    updateHandCount(fromPlayerId); 
-}
-
-function clearAllBuffs() {
-    const allBuffDisplays = [
-        document.getElementById("player1-buff1"),
-        document.getElementById("player1-buff2"),
-        document.getElementById("player1-buff3"),
-        document.getElementById("player2-buff1"),
-        document.getElementById("player2-buff2"),
-        document.getElementById("player2-buff3"),
-        document.getElementById("global-buff")
+// 获取卡牌数据
+function fetchCardData() {
+    // 这里应该是从card_test.json获取数据的代码
+    // 为了示例，我们直接定义一些测试数据
+    cardData = [
+        { name: "难度自选", type: "buff", probability: 5, description: "可选择歌曲任意难度" },
+        { name: "节奏干扰", type: "debuff", probability: 3, description: "对手节奏识别难度增加" },
+        { name: "全局加速", type: "global", probability: 2, description: "所有玩家速度加快20%" }
     ];
+}
+
+// 设置事件监听器
+function setupEventListeners() {
+    // 下一局按钮
+    document.getElementById('next-set').addEventListener('click', handleNextSet);
     
-    allBuffDisplays.forEach(display => {
-        display.innerHTML = "";
+    // 玩家抽卡按钮
+    document.getElementById('player1-draw').addEventListener('click', () => drawCard('player1'));
+    document.getElementById('player2-draw').addEventListener('click', () => drawCard('player2'));
+    
+    // 玩家显示手牌按钮
+    document.getElementById('player1-show-hand').addEventListener('click', () => showHandDialog('player1'));
+    document.getElementById('player2-show-hand').addEventListener('click', () => showHandDialog('player2'));
+    
+    // 选歌区域点击事件
+    document.getElementById('song-selection').addEventListener('click', showSongSelectionDialog);
+    
+    // 选歌弹窗的开始比赛按钮
+    document.getElementById('start-round').addEventListener('click', startRound);
+    
+    // 判定弹窗的按钮
+    document.querySelectorAll('.judgment-button').forEach(button => {
+        button.addEventListener('click', () => handleJudgment(button.dataset.result));
+    });
+    
+    // 返回游戏按钮
+    document.getElementById('back-to-game').addEventListener('click', hideResultDialog);
+    
+    // 手牌区完成按钮
+    document.querySelectorAll('.hand-dialog-close').forEach(button => {
+        button.addEventListener('click', () => hideHandDialog(button.dataset.player));
     });
 }
 
-function initializeSongSelection() {
-    const songSelection = document.getElementById('song-selection');
-    songSelection.innerHTML = '';
-    
-    for (let i = 0; i < 3; i++) {
-        const songBox = document.createElement('div');
-        songBox.className = 'song-card';
-        songBox.dataset.index = i;
-        songBox.addEventListener('click', () => showSongSearchDialog(i));
-        
-        const placeholder = document.createElement('div');
-        placeholder.className = 'song-card-placeholder';
-        placeholder.textContent = '点击区域选歌';
-        
-        const innerBox = document.createElement('div');
-        innerBox.className = 'song-card-inner';
-        
-        const content = document.createElement('div');
-        content.className = 'song-card-content';
-        content.textContent = '歌曲名称';
-        
-        songBox.appendChild(placeholder);
-        songBox.appendChild(innerBox);
-        songBox.appendChild(content);
-        
-        songSelection.appendChild(songBox);
-    }
-}
-
-function showSongSearchDialog(boxIndex) {
-    selectedSongBoxIndex = boxIndex;
-    document.getElementById('song-search-dialog').style.display = 'flex';
-    document.getElementById('song-search-input').value = '';
-    document.getElementById('song-results').innerHTML = '';
-}
-
-function searchSongs() {
-    const searchTerm = document.getElementById('song-search-input').value.toLowerCase();
-    const filteredSongs = songs.filter(song => 
-        song.song_name.toLowerCase().startsWith(searchTerm)
-    );
-    displaySongSearchResults(filteredSongs);
-}
-
-function displaySongSearchResults(songList) {
-    const songResults = document.getElementById('song-results');
-    songResults.innerHTML = '';
-    
-    songList.forEach(song => {
-        const songResult = document.createElement('div');
-        songResult.className = 'song-result';
-        songResult.textContent = song.song_name;
-        songResult.addEventListener('click', () => selectSongForBox(song));
-        songResults.appendChild(songResult);
-    });
-}
-
-function selectSongForBox(song) {
-    const songBox = document.querySelector(`.song-card[data-index="${selectedSongBoxIndex}"]`);
-    songBox.className = 'song-card selected';
-    
-    const placeholder = songBox.querySelector('.song-card-placeholder');
-    placeholder.style.display = 'none';
-    
-    const innerBox = songBox.querySelector('.song-card-inner');
-    innerBox.style.backgroundImage = `url('${song.image_url}')`;
-    innerBox.style.backgroundSize = 'cover';
-    
-    const content = songBox.querySelector('.song-card-content');
-    content.textContent = song.song_name;
-    
-    document.getElementById('song-search-dialog').style.display = 'none';
-}
-
-function showSongSelectionDialog() {
-    document.getElementById('song-selection-dialog').style.display = 'flex';
-}
-
-function startRound() {
-    const songAreas = document.querySelectorAll('.song-area');
-    let allSelected = true;
-    songAreas.forEach(area => {
-        const songCard = area.querySelector('.song-card');
-        if (!songCard.classList.contains('selected')) {
-            allSelected = false;
-        }
-    });
-    
-    if (allSelected) {
-        document.getElementById('song-selection-dialog').style.display = 'none';
-        // 将选中的歌曲添加到右上角的挑战歌曲区域
-        const songAreas = document.querySelectorAll('.song-area');
-        songAreas.forEach(area => {
-            const songCard = area.querySelector('.song-card');
-            const clonedSongCard = songCard.cloneNode(true);
-            clonedSongCard.style.backgroundColor = '#ffc0cb'; // 恢复初始背景色
-            clonedSongCard.querySelector('.song-card-inner').style.backgroundImage = 'none'; // 清除图片
-            clonedSongCard.querySelector('.song-card-placeholder').style.display = 'block'; // 显示问号
-            clonedSongCard.querySelector('.song-card-content').textContent = '歌曲名称'; // 恢复默认文本
-            document.getElementById('song-selection').appendChild(clonedSongCard);
-        });
-        // 开始新局
-        set++;
-        updateSet();
-        songsSelected = true;
-        // 清空选歌区域
-        document.getElementById('song-selection').innerHTML = '';
-        // 重新初始化选歌区域
-        initializeSongSelection();
-    } else {
-        alert("请先选择所有歌曲！");
-    }
-}
-
-function showHandDialog(playerId) {
-    if (!songsSelected) {
-        alert("请先选择歌曲并开始本轮比赛！");
+// 处理下一局
+function handleNextSet() {
+    if (!songSelected) {
+        alert('请先选歌！');
         return;
     }
-    const handDialog = document.getElementById(`${playerId}-hand-dialog`);
-    handDialog.style.display = "flex";
-}
-
-function hideHandDialog(playerId) {
-    const handDialog = document.getElementById(`${playerId}-hand-dialog`);
-    handDialog.style.display = "none";
-    finishRound(playerId);
-}
-
-function finishRound(playerId) {
-    if (playerId === "player1") {
-        isPlayer1Ready = true;
-    } else if (playerId === "player2") {
-        isPlayer2Ready = true;
+    if (!player1Done || !player2Done) {
+        alert('请先完成出卡！');
+        return;
     }
+    
+    showJudgmentDialog();
+}
 
-    if (isPlayer1Ready && isPlayer2Ready) {
-        executeRecordedActions();
-        showCardsOnField();
+// 显示判定弹窗
+function showJudgmentDialog() {
+    document.getElementById('judgment-dialog').style.display = 'block';
+}
+
+// 处理判定结果
+function handleJudgment(result) {
+    document.getElementById('judgment-dialog').style.display = 'none';
+    
+    if (result === 'player1') {
+        document.getElementById('result-title').textContent = '擂主守擂成功';
+        player2Hand = []; // 清除挑战者手牌
+    } else {
+        document.getElementById('result-title').textContent = '挑战者挑战成功';
+        player1Hand = player2Hand; // 将挑战者手牌移动到擂主手牌
+        player2Hand = [];
+    }
+    
+    // 清除全局buff区和1、2、3区域的卡牌
+    clearGlobalBuff();
+    clearBuffAreas();
+    
+    // 重置选歌区域
+    resetSongSelection();
+    
+    // 显示结果弹窗
+    document.getElementById('result-dialog').style.display = 'block';
+}
+
+// 隐藏结果弹窗
+function hideResultDialog() {
+    document.getElementById('result-dialog').style.display = 'none';
+}
+
+// 抽卡
+function drawCard(player) {
+    const hand = player === 'player1' ? player1Hand : player2Hand;
+    const card = getRandomCard();
+    hand.push(card);
+    updateHandCount(player, hand.length);
+}
+
+// 获取随机卡牌
+function getRandomCard() {
+    const totalProbability = cardData.reduce((sum, card) => sum + card.probability, 0);
+    const random = Math.random() * totalProbability;
+    
+    let cumulative = 0;
+    for (const card of cardData) {
+        cumulative += card.probability;
+        if (random < cumulative) {
+            return { ...card };
+        }
+    }
+    return null;
+}
+
+// 显示手牌弹窗
+function showHandDialog(player) {
+    const dialog = document.getElementById(`${player}-hand-dialog`);
+    dialog.style.display = 'block';
+    renderHand(player);
+}
+
+// 隐藏手牌弹窗
+function hideHandDialog(player) {
+    document.getElementById(`${player}-hand-dialog`).style.display = 'none';
+}
+
+// 渲染手牌
+function renderHand(player) {
+    const hand = player === 'player1' ? player1Hand : player2Hand;
+    const container = document.getElementById(`${player}-hand`);
+    container.innerHTML = '';
+    
+    hand.forEach((card, index) => {
+        const cardElement = createCardElement(card, index);
+        container.appendChild(cardElement);
+    });
+}
+
+// 创建卡牌元素
+function createCardElement(card, index) {
+    const cardElement = document.createElement('div');
+    cardElement.className = 'card';
+    cardElement.style.backgroundColor = getCardColor(card.type);
+    
+    cardElement.innerHTML = `
+        <div class="card-content">
+            <div class="card-name">${card.name}</div>
+            <div class="card-description">${card.description}</div>
+        </div>
+    `;
+    
+    return cardElement;
+}
+
+// 获取卡牌颜色
+function getCardColor(type) {
+    switch (type) {
+        case 'buff': return '#FFD700'; // 金色
+        case 'debuff': return '#FF6347'; // 红色
+        case 'global': return '#FFFFFF'; // 白色
+        default: return '#FFFFFF';
     }
 }
 
-function executeRecordedActions() {
-    player1Actions.forEach(action => {
-        useCard(action);
-    });
-
-    player2Actions.forEach(action => {
-        useCard(action);
-    });
+// 更新手牌数量显示
+function updateHandCount(player, count) {
+    document.getElementById(`${player}-hand-count`).textContent = `手牌数 : ${count}`;
 }
 
-function showCardsOnField() {
-    const player1Hand = document.getElementById("player1-hand");
-    const player1Buff1 = document.getElementById("player1-buff1");
-    const player1Buff2 = document.getElementById("player1-buff2");
-    const player1Buff3 = document.getElementById("player1-buff3");
-    Array.from(player1Hand.children).forEach(card => {
-        const playButtons = card.querySelectorAll('.play-button');
-        playButtons.forEach(button => {
-            if (button.classList.contains('played')) {
-                const action = button.getAttribute("data-action");
-                const actionObj = {
-                    playerId: "player1",
-                    action: action
-                };
-                useCard(actionObj);
-            }
-        });
-    });
-    updateHandCount("player1");
-
-    const player2Hand = document.getElementById("player2-hand");
-    const player2Buff1 = document.getElementById("player2-buff1");
-    const player2Buff2 = document.getElementById("player2-buff2");
-    const player2Buff3 = document.getElementById("player2-buff3");
-    Array.from(player2Hand.children).forEach(card => {
-        const playButtons = card.querySelectorAll('.play-button');
-        playButtons.forEach(button => {
-            if (button.classList.contains('played')) {
-                const action = button.getAttribute("data-action");
-                const actionObj = {
-                    playerId: "player2",
-                    action: action
-                };
-                useCard(actionObj);
-            }
-        });
-    });
-    updateHandCount("player2");
+// 显示选歌弹窗
+function showSongSelectionDialog() {
+    document.getElementById('song-selection-dialog').style.display = 'block';
 }
 
-window.onload = () => {
-    loadCards();
-    loadSongs();
-};
+// 开始本轮比赛
+function startRound() {
+    songSelected = true;
+    document.getElementById('song-selection-dialog').style.display = 'none';
+    updateSongSelection();
+}
+
+// 更新选歌区域
+function updateSongSelection() {
+    const songSelection = document.getElementById('song-selection');
+    songSelection.innerHTML = '';
+    
+    // 这里应该是从选歌弹窗获取选中的歌曲并渲染
+    // 为了示例，我们直接创建三个示例歌曲卡片
+    for (let i = 0; i < 3; i++) {
+        const songCard = document.createElement('div');
+        songCard.className = 'song-card';
+        songCard.innerHTML = `
+            <div class="song-card-inner"></div>
+            <div class="song-card-content">歌曲名称 ${i + 1}</div>
+        `;
+        songSelection.appendChild(songCard);
+    }
+}
+
+// 重置选歌区域
+function resetSongSelection() {
+    const songSelection = document.getElementById('song-selection');
+    songSelection.innerHTML = '<div class="song-placeholder">点击区域选择歌曲</div>';
+    songSelected = false;
+}
+
+// 清除全局buff区
+function clearGlobalBuff() {
+    document.getElementById('global-buff').innerHTML = '';
+}
+
+// 清除1、2、3区域的卡牌
+function clearBuffAreas() {
+    document.getElementById('player1-buff1').innerHTML = '';
+    document.getElementById('player1-buff2').innerHTML = '';
+    document.getElementById('player1-buff3').innerHTML = '';
+    document.getElementById('player2-buff1').innerHTML = '';
+    document.getElementById('player2-buff2').innerHTML = '';
+    document.getElementById('player2-buff3').innerHTML = '';
+}
+
+// 隐藏结果弹窗
+function hideResultDialog() {
+    document.getElementById('result-dialog').style.display = 'none';
+}
