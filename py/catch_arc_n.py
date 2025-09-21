@@ -2,51 +2,61 @@ import re
 import json
 from bs4 import BeautifulSoup
 import requests
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 BASE_WIKI_URL = "https://arcwiki.mcd.blue/"
 
 def get_real_image_url(file_name):
-    """
-    通过 MediaWiki API 获取文件原图 URL
-    file_name: "Songs_ignotus.jpg"
-    """
+    """通过 MediaWiki API 获取文件原图 URL"""
     if not file_name:
         return None
-    api_url = BASE_WIKI_URL + "api.php"
-    params = {
-        "action": "query",
-        "titles": f"File:{file_name}",
-        "prop": "imageinfo",
-        "iiprop": "url",
-        "format": "json"
-    }
-    resp = requests.get(api_url, params=params)
-    resp.raise_for_status()
-    data = resp.json()
-    pages = data.get("query", {}).get("pages", {})
-    for page in pages.values():
-        imageinfo = page.get("imageinfo")
-        if imageinfo:
-            return imageinfo[0].get("url")
+    try:
+        api_url = BASE_WIKI_URL + "api.php"
+        params = {
+            "action": "query",
+            "titles": f"File:{file_name}",
+            "prop": "imageinfo",
+            "iiprop": "url",
+            "format": "json"
+        }
+        resp = requests.get(api_url, params=params, timeout=5)
+        resp.raise_for_status()
+        data = resp.json()
+        pages = data.get("query", {}).get("pages", {})
+        for page in pages.values():
+            imageinfo = page.get("imageinfo")
+            if imageinfo:
+                return imageinfo[0].get("url")
+    except requests.RequestException as e:
+        print(f"⚠️ 获取图片失败 {file_name}: {e}")
     return None
 
+def fetch_cover_urls(file_list, max_workers=10):
+    """多线程批量获取封面 URL"""
+    results = {}
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_file = {executor.submit(get_real_image_url, f): f for f in file_list}
+        for future in as_completed(future_to_file):
+            file_name = future_to_file[future]
+            try:
+                url = future.result()
+                results[file_name] = url
+            except Exception as e:
+                print(f"⚠️ 线程获取失败 {file_name}: {e}")
+                results[file_name] = None
+    return results
+
 def get_table_rows(table):
-    """
-    处理 rowspan / colspan，返回完整行列列表
-    每行都是 td/th 标签列表
-    """
+    """处理 rowspan / colspan，返回完整行列列表"""
     rows = []
-    spans = {}  # key=(row_index,col_index), value=(tag,剩余行数)
-    
+    spans = {}
     trs = table.find_all("tr")
     for r, tr in enumerate(trs):
         cols = []
         c_index = 0
         tds = tr.find_all(["td", "th"])
         td_iter = iter(tds)
-        
         while True:
-            # 填充上一行 rowspan 的占位
             while (r, c_index) in spans:
                 tag, remaining = spans[(r, c_index)]
                 cols.append(tag)
@@ -54,15 +64,12 @@ def get_table_rows(table):
                     spans[(r+1, c_index)] = (tag, remaining-1)
                 del spans[(r, c_index)]
                 c_index += 1
-            
             try:
                 td = next(td_iter)
             except StopIteration:
                 break
-            
             colspan = int(td.get("colspan", 1))
             rowspan = int(td.get("rowspan", 1))
-            
             for _ in range(colspan):
                 cols.append(td)
                 if rowspan > 1:
@@ -85,19 +92,17 @@ def parse_songlist(html_path, song_json_path, pack_json_path):
     songs = []
 
     rows = get_table_rows(table)
-    for cols in rows[1:]:  # 跳过表头
+    cover_files_set = set()  # 用于批量请求封面
+    cover_file_map = {}      # 存储列索引到文件名映射
+
+    for cols in rows[1:]:
         if len(cols) < 6:
             continue
-
-        # 歌名
         title = cols[2].get_text(strip=True)
-
-        # 曲包
         music_pack = cols[4].get_text(strip=True)
         if music_pack:
             music_packs_set.add(music_pack)
 
-        # 曲绘文件名：从 <a href> 获取 MediaWiki 文件名
         cover_file = None
         a_tag = cols[1].find("a", href=True)
         if a_tag:
@@ -105,11 +110,11 @@ def parse_songlist(html_path, song_json_path, pack_json_path):
             m = re.search(r'/File:([^/]+)$', href)
             if m:
                 cover_file = m.group(1)
+                cover_files_set.add(cover_file)
 
-        # 获取真实原图 URL
-        cover_url = get_real_image_url(cover_file) if cover_file else None
+        # 保存到临时 map 等待批量请求
+        cover_file_map[title] = cover_file
 
-        # 难度
         difficulties = {}
         for i, diff in enumerate(diff_names, start=8):
             val = "/"
@@ -122,11 +127,21 @@ def parse_songlist(html_path, song_json_path, pack_json_path):
 
         songs.append({
             "songName": title,
-            "coverUrl": cover_url,
+            "coverFile": cover_file,  # 先保存文件名
+            "coverUrl": None,         # 后续填充
             "musicPack": music_pack,
             "difficulties": difficulties
         })
-        # print(f"处理成功: {title}")
+
+    # 批量获取封面 URL
+    print(f"正在批量请求 {len(cover_files_set)} 个封面...")
+    cover_url_map = fetch_cover_urls(list(cover_files_set), max_workers=10)
+
+    # 填充真实封面 URL
+    for song in songs:
+        file_name = song["coverFile"]
+        song["coverUrl"] = cover_url_map.get(file_name)
+        del song["coverFile"]  # 删除临时字段
 
     # 保存歌曲 JSON
     with open(song_json_path, "w", encoding="utf-8") as f:
@@ -141,7 +156,9 @@ def parse_songlist(html_path, song_json_path, pack_json_path):
 
     return songs, music_packs
 
+# ===========================
 # 使用示例
+# ===========================
 if __name__ == "__main__":
     html_file = "./rff/曲目列表 - Arcaea中文维基.html"
     song_json_file = "./rff/arc_songs.json"

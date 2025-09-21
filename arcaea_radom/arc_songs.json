@@ -1,0 +1,5894 @@
+[
+  {
+    "songName": "Sayonara Hatsukoi",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/fd/Songs_sayonarahatsukoi.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "1",
+      "PRS": "4",
+      "FTR": "7",
+      "ETR": "8",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Fairytale",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/8f/Songs_fairytale.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "1",
+      "PRS": "3",
+      "FTR": "7",
+      "ETR": "/",
+      "BYD": "9"
+    }
+  },
+  {
+    "songName": "Vexaria",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/ef/Songs_vexaria.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "7",
+      "ETR": "/",
+      "BYD": "9"
+    }
+  },
+  {
+    "songName": "Rise",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a4/Songs_rise.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "4",
+      "FTR": "7+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Lucifer",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/04/Songs_lucifer.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Snow White",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/8d/Songs_snowwhite.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "9+"
+    }
+  },
+  {
+    "songName": "Shades of Light in a Transcendent Realm",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/9a/Songs_shadesoflight.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "9"
+    }
+  },
+  {
+    "songName": "Babaroque",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b7/Songs_babaroque.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Lost Civilization",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b4/Songs_lostcivilization.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "9+"
+    }
+  },
+  {
+    "songName": "GOODTEK (Arcaea Edit)",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/53/Songs_goodtek.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "9+"
+    }
+  },
+  {
+    "songName": "qualia -ideaesthesia-",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/97/Songs_qualia.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "9+"
+    }
+  },
+  {
+    "songName": "Dandelion",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/96/Songs_dandelion.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Dement ~after legend~",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/58/Songs_dement.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "7+",
+      "ETR": "/",
+      "BYD": "9+"
+    }
+  },
+  {
+    "songName": "Infinity Heaven",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/41/Songs_infinityheaven.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "1",
+      "PRS": "5",
+      "FTR": "7+",
+      "ETR": "/",
+      "BYD": "9"
+    }
+  },
+  {
+    "songName": "AnökumeneAnokumene",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b6/Songs_anokumene.jpg",
+    "musicPack": "Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "9+"
+    }
+  },
+  {
+    "songName": "Brand new world",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/1b/Songs_brandnewworld.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "4",
+      "FTR": "7+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Chronostasis",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/04/Songs_chronostasis.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Kanagawa Cyber Culvert神奈川電脳暗渠",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a7/Songs_kanagawa.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "1",
+      "PRS": "5",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "9+"
+    }
+  },
+  {
+    "songName": "Clotho and the stargazerクロートーと星の観測者",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/56/Songs_clotho.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "7+",
+      "ETR": "8+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Ignotus",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/0a/Songs_ignotus.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Ignotus Afterburn",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/ee/Songs_ignotusafterburn.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "/",
+      "PRS": "/",
+      "FTR": "/",
+      "ETR": "/",
+      "BYD": "9+"
+    }
+  },
+  {
+    "songName": "Harutopia ~Utopia of Spring~ハルトピア ~Utopia of Spring~",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/78/Songs_harutopia.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "1",
+      "PRS": "4",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Rabbit In The Black Room",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/1c/Songs_rabbitintheblackroom.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "One Last Drive",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a2/Songs_onelastdrive.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Dreamin' Attraction!!",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/15/Songs_dreaminattraction.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Red and Blue",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/ac/Songs_redandblue.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Red and Blue and Green",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c9/Songs_redandblueandgreen.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "/",
+      "PRS": "/",
+      "FTR": "/",
+      "ETR": "/",
+      "BYD": "10"
+    }
+  },
+  {
+    "songName": "Reinvent",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/8b/Songs_reinvent.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Syro",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/2b/Songs_syro.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Blaster",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/51/Songs_blaster.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Cybernecia Catharsis",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/4f/Songs_cyberneciacatharsis.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "9+"
+    }
+  },
+  {
+    "songName": "inkar-usi",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d8/Songs_inkarusi.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "4",
+      "FTR": "7+",
+      "ETR": "/",
+      "BYD": "9"
+    }
+  },
+  {
+    "songName": "Suomi",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a0/Songs_suomi.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "7+",
+      "ETR": "8+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Bookmaker (2D Version)",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/67/Songs_bookmaker.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "10"
+    }
+  },
+  {
+    "songName": "Illegal Paradise堕楽の園",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/1c/Songs_darakunosono.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Nhelv",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/27/Songs_nhelv.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "10+"
+    }
+  },
+  {
+    "songName": "LunarOrbit -believe in the Espebranch road-白道、多希望羊と信じありく。",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/6c/Songs_espebranch.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Purgatorium",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c2/Songs_purgatorium.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "9"
+    }
+  },
+  {
+    "songName": "Rugie",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/01/Songs_rugie.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Grimheart",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b6/Songs_grimheart.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "ReviXy",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/50/Songs_revixy.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "VECTOЯ",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b7/Songs_vector.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "SUPERNOVA",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/99/Songs_supernova.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Diode",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b7/Songs_diode.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "FREEF4LL",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/39/Songs_freefall.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "9+"
+    }
+  },
+  {
+    "songName": "Monochrome Princess",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/65/Songs_monochromeprincess.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Senkyou",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/7d/Songs_senkyou.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "5",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "world.execute(me);",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/06/Songs_worldexecuteme.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Oblivia",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a3/Songs_oblivia.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "9+"
+    }
+  },
+  {
+    "songName": "Ävril -Flicka i krans-",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/2b/Songs_avril.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Sakura Fubuki",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d3/Songs_sakurafubuki.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "NULCTRL",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/66/Songs_nulctrl.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "DDD",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/ce/Songs_ddd.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Dancin' on a Cat's Pawネコノテ・カリタガール",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/37/Songs_nekonote.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "san skia",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/79/Songs_sanskia.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Altair (feat. *spiLa*)",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d2/Songs_altair.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Redraw the Colorless World無機質世界に彩を",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d5/Songs_mukishitsu.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Trap Crow",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/bd/Songs_trapcrow.jpg",
+    "musicPack": "Arcaea--Arcaea",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Dialnoteだいあるのーと",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/ff/Songs_dialnote.jpg",
+    "musicPack": "Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Remind the Souls (Short Version)",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/00/Songs_remindthesouls.jpg",
+    "musicPack": "Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "The Formula",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/0a/Songs_theformula.jpg",
+    "musicPack": "Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Jingle",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/4f/Songs_jingle.jpg",
+    "musicPack": "Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "7+",
+      "ETR": "9",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Hidden Rainbows of Epicurusエピクロスの虹はもう見えない",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c1/Songs_epicurus.jpg",
+    "musicPack": "Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "7",
+      "ETR": "8+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "SATISFACTION",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/59/Songs_satisfaction.jpg",
+    "musicPack": "Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "9",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Dematerialized",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/ae/Songs_dematerialized.jpg",
+    "musicPack": "Arcaea",
+    "difficulties": {
+      "PST": "1",
+      "PRS": "4",
+      "FTR": "7",
+      "ETR": "8",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "HELLOHELL",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/ec/Songs_hellohell.jpg",
+    "musicPack": "World Extend 3",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "7",
+      "ETR": "9",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "〇、",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c7/Songs_ichirin.jpg",
+    "musicPack": "World Extend 3",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Awaken In Ruins",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/49/Songs_awakeninruins.jpg",
+    "musicPack": "World Extend 3",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "MORNINGLOOM",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/68/Songs_morningloom.jpg",
+    "musicPack": "World Extend 3",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "9+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Lethal Voltage",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/30/Songs_lethalvoltage.jpg",
+    "musicPack": "World Extend 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Leave All Behind",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/42/Songs_leaveallbehind.jpg",
+    "musicPack": "World Extend 3",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Old School Salvage",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/45/Songs_oldschoolsalvage.jpg",
+    "musicPack": "World Extend 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Distortion Humanディストーション・ニンゲン",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/05/Songs_distortionhuman.jpg",
+    "musicPack": "World Extend 3",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "epitaxy",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/67/Songs_epitaxy.jpg",
+    "musicPack": "World Extend 3",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "9",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Hailstone",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/ea/Songs_hailstone.jpg",
+    "musicPack": "World Extend 3",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "FURETE-MITAIフレテミタイ",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/2f/Songs_furetemitai.jpg",
+    "musicPack": "World Extend 3",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "9",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Prayerプレヤ",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/42/Songs_prayer.jpg",
+    "musicPack": "World Extend 3",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "9",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "astral.exe",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/11/Songs_astralexe.jpg",
+    "musicPack": "World Extend 3",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Black Mirror on the Wall",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d9/Songs_blackmirror.jpg",
+    "musicPack": "World Extend 3",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "9+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "TRPNO",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/cf/Songs_trpno.jpg",
+    "musicPack": "World Extend 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "τ (tau)",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/e0/Songs_tau.jpg",
+    "musicPack": "World Extend 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Won't Back Down",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/75/Songs_wontbackdown.jpg",
+    "musicPack": "World Extend 3",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Someday",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/31/Songs_someday.jpg",
+    "musicPack": "World Extend 3",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "disintegration",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d0/Songs_disintegration.jpg",
+    "musicPack": "World Extend 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "9+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Tsuki ni Murakumo, Hana ni Kaze月に叢雲華に風",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c7/Songs_tsukinimurakumo.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "MANTIS (Arcaea Ultra-Bloodrush VIP)",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b5/Songs_mantis.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "World Fragments III(radio edit)",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/8d/Songs_worldfragments.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Astra walkthrough",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/4e/Songs_astrawalkthrough.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Chronicle",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/7f/Songs_chronicle.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Let's Rock (Arcaea mix)",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c9/Songs_letsrock.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Lost Emotion feat. nomico",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a1/Songs_lostemotion.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "GIMMICK",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a5/Songs_gimmick.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Lawless Point無法地点",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/72/Songs_lawlesspoint.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Hybris (The one who shattered)ヒュブリスの頂に聳えるのは",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/2f/Songs_hybris.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Ultimate taste",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c5/Songs_ultimatetaste.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "RGB",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/09/Songs_rgb.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Kanjou no Matenrou ～Arr.Demetori感情の摩天楼 ～Arr.Demetori",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/53/Songs_matenrou.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Dynitikós",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/f8/Songs_dynitikos.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Amekagura雨神楽",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/5c/Songs_amekagura.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "FANTA5Y",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/0e/Songs_fantasy.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Alone & Lornアローンアンドローン",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a2/Songs_aloneandlorn.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "felys final remix",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/cc/Songs_felys.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "On And On!! feat. Jenga",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/66/Songs_onandon.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Aleph-0",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a2/Songs_alephzero.jpg",
+    "musicPack": "Extend Archive 2",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Vivid Theory",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/33/Songs_vividtheory.jpg",
+    "musicPack": "Extend Archive 1--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "1F√",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/df/Songs_onefr.jpg",
+    "musicPack": "Extend Archive 1--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Gekka (Short Version)",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/42/Songs_gekka.jpg",
+    "musicPack": "Extend Archive 1--Arcaea",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Give Me a Nightmare",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/47/Songs_givemeanightmare.jpg",
+    "musicPack": "Extend Archive 1--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "5",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Black Lotus",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/3a/Songs_blacklotus.jpg",
+    "musicPack": "Extend Archive 1--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Faint Light (Arcaea Edit)",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/9b/Songs_faintlight.jpg",
+    "musicPack": "Extend Archive 1--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "CROSS†OVER",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c2/Songs_crossover.jpg",
+    "musicPack": "Extend Archive 1--Arcaea",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Lapis",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/ea/Songs_lapis.jpg",
+    "musicPack": "Extend Archive 1--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Purple Verse",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/f3/Songs_purpleverse.jpg",
+    "musicPack": "Extend Archive 1--Arcaea",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "10"
+    }
+  },
+  {
+    "songName": "Glow",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/0c/Songs_glow.jpg",
+    "musicPack": "Extend Archive 1--Arcaea",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "enchanted love",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/af/Songs_enchantedlove.jpg",
+    "musicPack": "Extend Archive 1--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "4",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Bamboo竹",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/26/Songs_take.jpg",
+    "musicPack": "Extend Archive 1--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Life is PIANO",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/f4/Songs_lifeispiano.jpg",
+    "musicPack": "Extend Archive 1--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Vandalism",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a6/Songs_vandalism.jpg",
+    "musicPack": "Extend Archive 1--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Turbocharger",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/0f/Songs_turbocharger.jpg",
+    "musicPack": "Extend Archive 1--Arcaea",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "False Embellishment狂言綺語",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/24/Songs_kyogenkigo.jpg",
+    "musicPack": "Extend Archive 1--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "HIVEMIND",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a7/Songs_hivemind.jpg",
+    "musicPack": "Extend Archive 1--Arcaea",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "blue comet",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/7a/Songs_bluecomet.jpg",
+    "musicPack": "Extend Archive 1--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "ENERGY SYNERGY MATRIX",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a5/Songs_energysynergymatrix.jpg",
+    "musicPack": "Extend Archive 1--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "10"
+    }
+  },
+  {
+    "songName": "G e n g a o z o",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a7/Songs_gengaozo.jpg",
+    "musicPack": "Extend Archive 1--Memory Archive Append 2",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Swan Song",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/13/Songs_swansong.jpg",
+    "musicPack": "Lucent Historia",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Renegade",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/cd/Songs_renegade.jpg",
+    "musicPack": "Lucent Historia",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "10"
+    }
+  },
+  {
+    "songName": "Rays of Remnant",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c3/Songs_raysofremnant.jpg",
+    "musicPack": "Lucent Historia",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "10"
+    }
+  },
+  {
+    "songName": "Breach of Faith",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/6c/Songs_breachoffaith.jpg",
+    "musicPack": "Lucent Historia",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "10+"
+    }
+  },
+  {
+    "songName": "Lament Rain",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/83/Songs_lamentrain.jpg",
+    "musicPack": "Lucent Historia",
+    "difficulties": {
+      "PST": "6",
+      "PRS": "8+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "11"
+    }
+  },
+  {
+    "songName": "Designant.",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/ef/Songs_designant.jpg",
+    "musicPack": "Lucent Historia",
+    "difficulties": {
+      "PST": "7",
+      "PRS": "9",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "11+"
+    }
+  },
+  {
+    "songName": "Astral Quantization",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/37/Songs_astralquant.jpg",
+    "musicPack": "Lucent Historia",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "In Vain",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c9/Songs_invain.jpg",
+    "musicPack": "Absolute Nihil",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Hypnotize",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/95/Songs_hypnotize.jpg",
+    "musicPack": "Absolute Nihil",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "8+",
+      "ETR": "9+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Ashen 6oundary",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/f9/Songs_ashenboundary.jpg",
+    "musicPack": "Absolute Nihil",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Judgement",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/1d/Songs_judgement.jpg",
+    "musicPack": "Absolute Nihil",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "ALTER EGO",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b1/Songs_alterego.jpg",
+    "musicPack": "Absolute Nihil",
+    "difficulties": {
+      "PST": "6",
+      "PRS": "9",
+      "FTR": "10",
+      "ETR": "11",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "WAIT FOR DAWN",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/50/Songs_waitfordawn.jpg",
+    "musicPack": "Lasting Eden",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "7+",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Raven's Prideレイヴンズ・プライド",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/e9/Songs_ravenspride.jpg",
+    "musicPack": "Lasting Eden",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Rise of the World",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/61/Songs_riseoftheworld.jpg",
+    "musicPack": "Lasting Eden",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "UNKNOWN LEVELS",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/e6/Songs_unknownlevels.jpg",
+    "musicPack": "Lasting Eden",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Abstruse Dilemma",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/5a/Songs_abstrusedilemma.jpg",
+    "musicPack": "Lasting Eden",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8+",
+      "FTR": "11",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Primeval Texture",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/f2/Songs_primevaltexture.jpg",
+    "musicPack": "Lasting Eden Chapter 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Technicolour",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c7/Songs_technicolour.jpg",
+    "musicPack": "Lasting Eden Chapter 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Logos",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/6e/Songs_logos.jpg",
+    "musicPack": "Lasting Eden Chapter 2",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Ego Eimi",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/e8/Songs_egoeimi.jpg",
+    "musicPack": "Lasting Eden Chapter 2",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Arghena",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/62/Songs_arghena.jpg",
+    "musicPack": "Lasting Eden Chapter 2",
+    "difficulties": {
+      "PST": "7",
+      "PRS": "9",
+      "FTR": "11",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Transient Space",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/8a/Songs_transientspace.jpg",
+    "musicPack": "Shifting Veil",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Nameless Passion",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/f7/Songs_namelesspassion.jpg",
+    "musicPack": "Shifting Veil",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "TeraVolt",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/45/Songs_teravolt.jpg",
+    "musicPack": "Shifting Veil",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8+",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Loveless Dress",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/2b/Songs_lovelessdress.jpg",
+    "musicPack": "Silent Answer",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Last",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a2/Songs_last.jpg",
+    "musicPack": "Silent Answer",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Last | Moment",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/1e/Songs_last_byd.jpg",
+    "musicPack": "Silent Answer",
+    "difficulties": {
+      "PST": "/",
+      "PRS": "/",
+      "FTR": "/",
+      "ETR": "/",
+      "BYD": "9"
+    }
+  },
+  {
+    "songName": "Last | Eternity",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/92/Songs_lasteternity.jpg",
+    "musicPack": "Silent Answer",
+    "difficulties": {
+      "PST": "/",
+      "PRS": "/",
+      "FTR": "/",
+      "ETR": "/",
+      "BYD": "9+"
+    }
+  },
+  {
+    "songName": "Callima Karma",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b3/Songs_callimakarma.jpg",
+    "musicPack": "Silent Answer",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Defection",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/6b/Songs_defection.jpg",
+    "musicPack": "Final Verdict",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Infinite Strife,",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d5/Songs_infinitestrife.jpg",
+    "musicPack": "Final Verdict",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "10+"
+    }
+  },
+  {
+    "songName": "World Ender魔王",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/43/Songs_worldender.jpg",
+    "musicPack": "Final Verdict",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "11"
+    }
+  },
+  {
+    "songName": "Pentiment",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/2d/Songs_pentiment.jpg",
+    "musicPack": "Final Verdict",
+    "difficulties": {
+      "PST": "7",
+      "PRS": "8+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "11"
+    }
+  },
+  {
+    "songName": "Arcana Eden",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/5a/Songs_arcanaeden.jpg",
+    "musicPack": "Final Verdict",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "11"
+    }
+  },
+  {
+    "songName": "Testify",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/22/Songs_testify.jpg",
+    "musicPack": "Final Verdict",
+    "difficulties": {
+      "PST": "7+",
+      "PRS": "9",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "12"
+    }
+  },
+  {
+    "songName": "Equilibrium",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b9/Songs_equilibrium.jpg",
+    "musicPack": "Black Fate",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Antagonism",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/e5/Songs_antagonism.jpg",
+    "musicPack": "Black Fate",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Lost Desire",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/5b/Songs_lostdesire.jpg",
+    "musicPack": "Black Fate",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Dantalion",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/89/Songs_dantalion.jpg",
+    "musicPack": "Black Fate",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "#1f1e33",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/be/Songs_ifi.jpg",
+    "musicPack": "Black Fate",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "9",
+      "FTR": "11",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Tempestissimo",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c8/Songs_tempestissimo.jpg",
+    "musicPack": "Black Fate",
+    "difficulties": {
+      "PST": "7",
+      "PRS": "9",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "11"
+    }
+  },
+  {
+    "songName": "Arcahv",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b3/Songs_arcahv.jpg",
+    "musicPack": "Black Fate",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Vindication",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/4d/Songs_vindication.jpg",
+    "musicPack": "Adverse Prelude",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Heavensdoor",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/7e/Songs_heavensdoor.jpg",
+    "musicPack": "Adverse Prelude",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "10+"
+    }
+  },
+  {
+    "songName": "Ringed Genesis",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/bd/Songs_ringedgenesis.jpg",
+    "musicPack": "Adverse Prelude",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "BLRINK",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/e8/Songs_blrink.jpg",
+    "musicPack": "Adverse Prelude",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Saint or Sinner",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/df/Songs_saintorsinner.jpg",
+    "musicPack": "Adverse Prelude",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Maze No.9九番目の迷路",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/44/Songs_mazenine.jpg",
+    "musicPack": "Luminous Sky",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "3",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "The Message",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/35/Songs_themessage.jpg",
+    "musicPack": "Luminous Sky",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Sulfur",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/00/Songs_sulfur.jpg",
+    "musicPack": "Luminous Sky",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Halcyon",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/ba/Songs_halcyon.jpg",
+    "musicPack": "Luminous Sky",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Ether Strike",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b2/Songs_etherstrike.jpg",
+    "musicPack": "Luminous Sky",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Fracture Ray",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/1a/Songs_fractureray.jpg",
+    "musicPack": "Luminous Sky",
+    "difficulties": {
+      "PST": "6",
+      "PRS": "9",
+      "FTR": "11",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Iconoclast",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/76/Songs_iconoclast.jpg",
+    "musicPack": "Vicious Labyrinth",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "SOUNDWiTCH",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/4b/Songs_soundwitch.jpg",
+    "musicPack": "Vicious Labyrinth",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "trappola bewitching妖艶魔女 -trappola bewitching-",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a2/Songs_trappola.jpg",
+    "musicPack": "Vicious Labyrinth",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "10"
+    }
+  },
+  {
+    "songName": "conflict",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/4e/Songs_conflict.jpg",
+    "musicPack": "Vicious Labyrinth",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Axium Crisis",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/f3/Songs_axiumcrisis.jpg",
+    "musicPack": "Vicious Labyrinth",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Grievous Lady",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/7b/Songs_grievouslady.jpg",
+    "musicPack": "Vicious Labyrinth",
+    "difficulties": {
+      "PST": "6",
+      "PRS": "9",
+      "FTR": "11",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "cry of viyella",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/00/Songs_viyella.jpg",
+    "musicPack": "Eternal Core",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "I've heard it said",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a3/Songs_hearditsaid.jpg",
+    "musicPack": "Eternal Core",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "memoryfactory.lzh",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/59/Songs_memoryfactory.jpg",
+    "musicPack": "Eternal Core",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Relentless",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/fe/Songs_relentless.jpg",
+    "musicPack": "Eternal Core",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Lumia",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c9/Songs_lumia.jpg",
+    "musicPack": "Eternal Core",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "9"
+    }
+  },
+  {
+    "songName": "Essence of Twilight",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/77/Songs_essenceoftwilight.jpg",
+    "musicPack": "Eternal Core",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "PRAGMATISM",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/24/Songs_pragmatism.jpg",
+    "musicPack": "Eternal Core",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "PRAGMATISM -RESURRECTION-",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/4e/Songs_pragmatism_byd.jpg",
+    "musicPack": "Eternal Core",
+    "difficulties": {
+      "PST": "/",
+      "PRS": "/",
+      "FTR": "/",
+      "ETR": "/",
+      "BYD": "11"
+    }
+  },
+  {
+    "songName": "Sheriruth",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/0f/Songs_sheriruth.jpg",
+    "musicPack": "Eternal Core",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Solitary Dream虚空の夢",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d8/Songs_solitarydream.jpg",
+    "musicPack": "Eternal Core",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "See the Lights!",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/62/Songs_seethelights.jpg",
+    "musicPack": "Extant Anima",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "9",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Scarlet Lunar Empress朱月ノ姫",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/33/Songs_scarletlunar.jpg",
+    "musicPack": "Extant Anima",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Dual Dependency",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/89/Songs_dualdependency.jpg",
+    "musicPack": "Extant Anima",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9",
+      "ETR": "10",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Lilly",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/15/Songs_lilly.jpg",
+    "musicPack": "Extant Anima",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "9+",
+      "ETR": "10+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Extradimensional Cosmic Phenomenon多次元宇宙融合論",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/89/Songs_extradimensional.jpg",
+    "musicPack": "Extant Anima",
+    "difficulties": {
+      "PST": "6",
+      "PRS": "8+",
+      "FTR": "10",
+      "ETR": "11",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Factorder",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/e3/Songs_factorder.jpg",
+    "musicPack": "Chapter Experientia",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "9",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "incomplete the one",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/07/Songs_incompleteone.jpg",
+    "musicPack": "Chapter Experientia",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "8+",
+      "ETR": "9+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "CHAOSBLAST",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/51/Songs_chaosblast.jpg",
+    "musicPack": "Chapter Experientia",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9",
+      "ETR": "10",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Welcome, Queen of Fiction.",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/cb/Songs_welcomequeen.jpg",
+    "musicPack": "Chapter Experientia",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "10+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "AlterGate",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/8a/Songs_altergate.jpg",
+    "musicPack": "Chapter Experientia",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8+",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Paper Witch",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/5c/Songs_paperwitch.jpg",
+    "musicPack": "Esoteric Order",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Crystal Gravity",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/71/Songs_crystalgravity.jpg",
+    "musicPack": "Esoteric Order",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Far Away Light",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/01/Songs_farawaylight.jpg",
+    "musicPack": "Esoteric Order",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Löschen",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/0b/Songs_loschen.jpg",
+    "musicPack": "Esoteric Order",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Aegleseeker",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/5a/Songs_aegleseeker.jpg",
+    "musicPack": "Esoteric Order",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "9",
+      "FTR": "11",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Seclusion",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/79/Songs_seclusion.jpg",
+    "musicPack": "Esoteric Order--Light of Salvation",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Coastal Highway",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/04/Songs_coastalhighway.jpg",
+    "musicPack": "Pale Tapestry--Esoteric Order",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "ΟΔΥΣΣΕΙΑ",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b1/Songs_odysseia.jpg",
+    "musicPack": "Pale Tapestry--Esoteric Order",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Overwhelm",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/2a/Songs_overwhelm.jpg",
+    "musicPack": "Pale Tapestry--Esoteric Order",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Small Cloud Sugar Candy",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d3/Songs_smallcloud.jpg",
+    "musicPack": "Light of Salvation",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "AlterAle",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b3/Songs_alterale.jpg",
+    "musicPack": "Light of Salvation",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Divine Light of Myriad光速神授説 - Divine Light of Myriad -",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/17/Songs_divinelight.jpg",
+    "musicPack": "Light of Salvation",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "First Snow",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/3a/Songs_firstsnow.jpg",
+    "musicPack": "Divided Heart",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "4",
+      "FTR": "7+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Blue Rose",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/8c/Songs_bluerose.jpg",
+    "musicPack": "Divided Heart",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Blocked Library",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/60/Songs_blockedlibrary.jpg",
+    "musicPack": "Divided Heart",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "nέο κόsmoneo kosmo",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/cf/Songs_neokosmo.jpg",
+    "musicPack": "Divided Heart",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Lightning Screw",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/31/Songs_lightningscrew.jpg",
+    "musicPack": "Divided Heart",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Alice à la mode",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/2b/Songs_alicealamode.jpg",
+    "musicPack": "Ephemeral Page",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Eccentric Tale",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/69/Songs_eccentrictale.jpg",
+    "musicPack": "Ephemeral Page",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Alice's Suitcase",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a8/Songs_alicessuitcase.jpg",
+    "musicPack": "Ephemeral Page",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Jump",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/42/Songs_jump.jpg",
+    "musicPack": "Ephemeral Page",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Felis",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/4b/Songs_felis.jpg",
+    "musicPack": "Ephemeral Page",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Beside You",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/ed/Songs_besideyou.jpg",
+    "musicPack": "The Journey Onwards--Ephemeral Page",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Heart Jackin'",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/22/Songs_heartjackin.jpg",
+    "musicPack": "The Journey Onwards--Ephemeral Page",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "5",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "To: Alice Liddellアリス・リデルに捧ぐ",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a8/Songs_toaliceliddell.jpg",
+    "musicPack": "The Journey Onwards--Ephemeral Page",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Chelsea",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/f4/Songs_chelsea.jpg",
+    "musicPack": "Sunset Radiance",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "AI[UE]OON",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a4/Songs_aiueoon.jpg",
+    "musicPack": "Sunset Radiance",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "A Wandering Melody of Love迷える音色は恋の唄",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b4/Songs_melodyoflove.jpg",
+    "musicPack": "Sunset Radiance",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Tie me down gently",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/fa/Songs_tiemedowngently.jpg",
+    "musicPack": "Sunset Radiance",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Valhalla:0",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/95/Songs_valhallazero.jpg",
+    "musicPack": "Sunset Radiance",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Hotarubi no Yuki蛍火の雪",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/08/Songs_hotarubinoyuki.jpg",
+    "musicPack": "Sunset Radiance",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Antithese",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/18/Songs_antithese.jpg",
+    "musicPack": "Absolute Reason",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "9"
+    }
+  },
+  {
+    "songName": "Black Territory",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/9d/Songs_blackterritory.jpg",
+    "musicPack": "Absolute Reason",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Corruption",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/18/Songs_corruption.jpg",
+    "musicPack": "Absolute Reason",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Vicious Heroism",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/e9/Songs_viciousheroism.jpg",
+    "musicPack": "Absolute Reason",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Vicious [ANTi] Heroism",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a8/Songs_viciousheroism_byd.jpg",
+    "musicPack": "Absolute Reason",
+    "difficulties": {
+      "PST": "/",
+      "PRS": "/",
+      "FTR": "/",
+      "ETR": "/",
+      "BYD": "11"
+    }
+  },
+  {
+    "songName": "Cyaegha",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/93/Songs_cyaegha.jpg",
+    "musicPack": "Absolute Reason",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "next to you",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/f4/Songs_nexttoyou.jpg",
+    "musicPack": "Binary Enfold",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "9"
+    }
+  },
+  {
+    "songName": "Silent Rush",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c0/Songs_silentrush.jpg",
+    "musicPack": "Binary Enfold",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Strongholds",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/e7/Songs_strongholds.jpg",
+    "musicPack": "Binary Enfold",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Memory Forest",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/21/Songs_memoryforest.jpg",
+    "musicPack": "Binary Enfold",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Singularity",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/29/Songs_singularity.jpg",
+    "musicPack": "Binary Enfold",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Singularity VVVIP",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/70/Songs_singularityvvvip.jpg",
+    "musicPack": "Binary Enfold",
+    "difficulties": {
+      "PST": "/",
+      "PRS": "/",
+      "FTR": "/",
+      "ETR": "/",
+      "BYD": "10"
+    }
+  },
+  {
+    "songName": "Cosmica",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/dc/Songs_cosmica.jpg",
+    "musicPack": "Shared Time",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Ascent",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/7b/Songs_ascent.jpg",
+    "musicPack": "Shared Time",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Live Fast Die Young",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b1/Songs_livefastdieyoung.jpg",
+    "musicPack": "Shared Time",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Blossoms",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/23/Songs_blossoms.jpg",
+    "musicPack": "Ambivalent Vision",
+    "difficulties": {
+      "PST": "1",
+      "PRS": "4",
+      "FTR": "7",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Romance Warsvsキミ戦争",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/94/Songs_romancewars.jpg",
+    "musicPack": "Ambivalent Vision",
+    "difficulties": {
+      "PST": "1",
+      "PRS": "4",
+      "FTR": "7+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Moonheart",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/12/Songs_moonheart.jpg",
+    "musicPack": "Ambivalent Vision",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "9+"
+    }
+  },
+  {
+    "songName": "Genesis",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/19/Songs_genesis.jpg",
+    "musicPack": "Ambivalent Vision",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Lethaeus",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/9e/Songs_lethaeus.jpg",
+    "musicPack": "Ambivalent Vision",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "corps-sans-organes",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b1/Songs_corpssansorganes.jpg",
+    "musicPack": "Ambivalent Vision",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Paradise",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b7/Songs_paradise.jpg",
+    "musicPack": "Crimson Solace",
+    "difficulties": {
+      "PST": "1",
+      "PRS": "4",
+      "FTR": "7+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Flashback",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/ee/Songs_flashback.jpg",
+    "musicPack": "Crimson Solace",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Flyburg and Endrollフライブルクとエンドロウル",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c0/Songs_flyburg.jpg",
+    "musicPack": "Crimson Solace",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Party Vinyl",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/4c/Songs_partyvinyl.jpg",
+    "musicPack": "Crimson Solace",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "10"
+    }
+  },
+  {
+    "songName": "Nirv lucE",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/31/Songs_nirvluce.jpg",
+    "musicPack": "Crimson Solace",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "GLORY：ROAD",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c2/Songs_gloryroad.jpg",
+    "musicPack": "Crimson Solace",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Ladymade Star",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/75/Songs_ladymadestar.jpg",
+    "musicPack": "DJMAX Collaboration",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "9",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "End of The Moonlight",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/49/Songs_endmoonlight.jpg",
+    "musicPack": "DJMAX Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "5",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "U.A.D",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/4f/Songs_uad.jpg",
+    "musicPack": "DJMAX Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "9+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "OBLIVION",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/f8/Songs_oblivion.jpg",
+    "musicPack": "DJMAX Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "10",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Nightmare",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/02/Songs_nightmare.jpg",
+    "musicPack": "DJMAX Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "10+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "I want You",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a4/Songs_iwantyou.jpg",
+    "musicPack": "DJMAX Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "9",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Syriana",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/32/Songs_syriana.jpg",
+    "musicPack": "DJMAX Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Liar",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/1d/Songs_liar.jpg",
+    "musicPack": "DJMAX Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "BlythE",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/92/Songs_blythe.jpg",
+    "musicPack": "DJMAX Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "10",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "We're All Gonna Die",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/66/Songs_wereallgonnadie.jpg",
+    "musicPack": "DJMAX Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "10+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Heartache心の痛み",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/8d/Songs_heartache.jpg",
+    "musicPack": "UNDERTALE Collaboration",
+    "difficulties": {
+      "PST": "1",
+      "PRS": "4",
+      "FTR": "7",
+      "ETR": "8+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Death By Glamour華麗なる死闘",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a4/Songs_deathbyglamour.jpg",
+    "musicPack": "UNDERTALE Collaboration",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "7+",
+      "ETR": "9",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Your Best Nightmare最高の悪夢",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a9/Songs_yourbestnightmare.jpg",
+    "musicPack": "UNDERTALE Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "10"
+    }
+  },
+  {
+    "songName": "Last Goodbyeこれでホントにサヨナラ",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/9a/Songs_lastgoodbye.jpg",
+    "musicPack": "UNDERTALE Collaboration",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "9+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "MEGALOVANIA",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/0c/Songs_megalovania.jpg",
+    "musicPack": "UNDERTALE Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "10",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Waltz for Lorelei",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/72/Songs_waltzforlorelei.jpg",
+    "musicPack": "Rotaeno Collaboration",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8+",
+      "ETR": "9+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Dual Doom Deathmatch",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/11/Songs_dualdoom.jpg",
+    "musicPack": "Rotaeno Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "10",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Inverted World",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/bb/Songs_invertedworld.jpg",
+    "musicPack": "Rotaeno Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "10+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "MVURBD",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/e0/Songs_mvurbd.jpg",
+    "musicPack": "Rotaeno Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Vulcānus",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/06/Songs_vulcanus.jpg",
+    "musicPack": "Rotaeno Collaboration",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Bullet Waiting for Me (James Landino remix)",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/42/Songs_bulletwaiting.jpg",
+    "musicPack": "Cytus II Collaboration",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "4",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Devillic Sphere",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/37/Songs_devillicsphere.jpg",
+    "musicPack": "Cytus II Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Lucid Traveler",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/ee/Songs_lucidtraveler.jpg",
+    "musicPack": "Cytus II Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "CHAOS",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/88/Songs_chaos.jpg",
+    "musicPack": "Cytus II Collaboration",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "7",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Used to be",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/08/Songs_usedtobe.jpg",
+    "musicPack": "Cytus II Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "syūten",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/5d/Songs_syuten.jpg",
+    "musicPack": "Cytus II Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "DRG",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/5c/Songs_drg.jpg",
+    "musicPack": "Cytus II Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "99 Glooms",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c9/Songs_nnglooms.jpg",
+    "musicPack": "Cytus II Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "͟͝͞Ⅱ́̕II",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/61/Songs_ii.jpg",
+    "musicPack": "Cytus II Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8+",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Magnolia",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/3e/Songs_magnolia.jpg",
+    "musicPack": "Cytus II Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Medusa",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/2b/Songs_medusa.jpg",
+    "musicPack": "Muse Dash Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Haze of Autumn秋の陽炎",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/0b/Songs_akinokagerou.jpg",
+    "musicPack": "Muse Dash Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Lights of Muse",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/00/Songs_lightsofmuse.jpg",
+    "musicPack": "Muse Dash Collaboration",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Final Step!",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/59/Songs_finalstep.jpg",
+    "musicPack": "Muse Dash Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Quon",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/61/Songs_quonwacca.jpg",
+    "musicPack": "WACCA Collaboration",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "10"
+    }
+  },
+  {
+    "songName": "with U",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b0/Songs_withu.jpg",
+    "musicPack": "WACCA Collaboration",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Let you DIVE! (nitro rmx)",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d1/Songs_letyoudivermx.jpg",
+    "musicPack": "WACCA Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Mazy Metroplex",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/ac/Songs_mazymetroplex.jpg",
+    "musicPack": "WACCA Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "GENOCIDER",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/42/Songs_genocider.jpg",
+    "musicPack": "WACCA Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8+",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Stratoliner",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b1/Songs_stratoliner.jpg",
+    "musicPack": "WACCA Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Ouvertüre",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/cb/Songs_ouverture.jpg",
+    "musicPack": "WACCA Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "XTREME",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/dc/Songs_xtreme.jpg",
+    "musicPack": "WACCA Collaboration Chapter 2--WACCA Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "eden",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/12/Songs_edenwacca.jpg",
+    "musicPack": "WACCA Collaboration Chapter 2--WACCA Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Meta-Mysteria",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/fc/Songs_metamysteria.jpg",
+    "musicPack": "WACCA Collaboration Chapter 2--WACCA Collaboration",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "7+",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "April showers四月の雨",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/8d/Songs_aprilshowers.jpg",
+    "musicPack": "maimai Collaboration",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "7thSense",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/fb/Songs_seventhsense.jpg",
+    "musicPack": "maimai Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Oshama Scramble!",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/f4/Songs_oshamascramble.jpg",
+    "musicPack": "maimai Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "AMAZING MIGHTYYYY!!!!",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/16/Songs_amazingmightyyyy.jpg",
+    "musicPack": "maimai Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "CYCLES",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d0/Songs_cycles.jpg",
+    "musicPack": "maimai Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "MAXRAGE",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b9/Songs_maxrage.jpg",
+    "musicPack": "maimai Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "[X]",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/90/Songs_infinity.jpg",
+    "musicPack": "maimai Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "TEmPTaTiON",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c5/Songs_temptation.jpg",
+    "musicPack": "maimai Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "BREaK! BREaK! BREaK!",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/10/Songs_breakbreak.jpg",
+    "musicPack": "maimai Collaboration Chapter 3",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "10",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Straight into the lights",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/88/Songs_straightintolights.jpg",
+    "musicPack": "maimai Collaboration Chapter 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "10",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "ViRTUS",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/ea/Songs_virtus.jpg",
+    "musicPack": "maimai Collaboration Chapter 3",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "9+",
+      "ETR": "10+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "yomibito_shirazuヨミビトシラズ",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/7f/Songs_yomibitoshirazu.jpg",
+    "musicPack": "maimai Collaboration Chapter 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Lazy Addiction",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b3/Songs_lazyaddiction.jpg",
+    "musicPack": "O.N.G.E.K.I. Collaboration",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Dazzle hop",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/61/Songs_dazzlehop.jpg",
+    "musicPack": "O.N.G.E.K.I. Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Viyella's Tears",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/8e/Songs_viyellastears.jpg",
+    "musicPack": "O.N.G.E.K.I. Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "ω4w4",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/af/Songs_omegafour.jpg",
+    "musicPack": "O.N.G.E.K.I. Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7+",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Heart心",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/df/Songs_kokoro.jpg",
+    "musicPack": "O.N.G.E.K.I. Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "1",
+      "PRS": "5",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Ai Drew",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/ee/Songs_aidrew.jpg",
+    "musicPack": "O.N.G.E.K.I. Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "FLUFFY FLASH",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/8a/Songs_fluffyflash.jpg",
+    "musicPack": "O.N.G.E.K.I. Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Good bye, Merry-Go-Round.",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/41/Songs_goodbyemerry.jpg",
+    "musicPack": "O.N.G.E.K.I. Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "LAMIA",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/86/Songs_lamia.jpg",
+    "musicPack": "O.N.G.E.K.I. Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "11",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "LiftOff",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/99/Songs_liftoff.jpg",
+    "musicPack": "O.N.G.E.K.I. Collaboration Chapter 3",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "9+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "SUPER AMBULANCE",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/49/Songs_superambulance.jpg",
+    "musicPack": "O.N.G.E.K.I. Collaboration Chapter 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Don't Fight The Music",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/bf/Songs_dontfightmusic.jpg",
+    "musicPack": "O.N.G.E.K.I. Collaboration Chapter 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9",
+      "ETR": "10+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "And Revive The Melody",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/eb/Songs_andrevivemelody.jpg",
+    "musicPack": "O.N.G.E.K.I. Collaboration Chapter 3",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Garakuta Doll Play",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b5/Songs_garakuta.jpg",
+    "musicPack": "CHUNITHM Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "6",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Ikazuchi怒槌",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/6d/Songs_ikazuchi.jpg",
+    "musicPack": "CHUNITHM Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "World Vanquisher",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c4/Songs_worldvanquisher.jpg",
+    "musicPack": "CHUNITHM Collaboration",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Climax",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b5/Songs_climax.jpg",
+    "musicPack": "CHUNITHM Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Last Celebration",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/92/Songs_lastcelebration.jpg",
+    "musicPack": "CHUNITHM Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Misdeed -la bonté de Dieu et l'origine du mal-業 -善なる神とこの世の悪について-",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/8d/Songs_gou.jpg",
+    "musicPack": "CHUNITHM Collaboration Chapter 2",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Cosmo Pop Funclubコスモポップファンクラブ",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/11/Songs_cosmopop.jpg",
+    "musicPack": "CHUNITHM Collaboration Chapter 3",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "IMPACT",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/6a/Songs_impact.jpg",
+    "musicPack": "CHUNITHM Collaboration Chapter 3",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7+",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "10"
+    }
+  },
+  {
+    "songName": "Genesis",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/cc/Songs_genesischunithm.jpg",
+    "musicPack": "CHUNITHM Collaboration Chapter 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Trrricksters!!",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/15/Songs_trrricksters.jpg",
+    "musicPack": "CHUNITHM Collaboration Chapter 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Spider's Thread蜘蛛の糸",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/39/Songs_spidersthread.jpg",
+    "musicPack": "CHUNITHM Collaboration Chapter 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Ignition",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/46/Songs_ignition.jpg",
+    "musicPack": "CHUNITHM Collaboration Chapter 4",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "BlazinG AIR",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/3a/Songs_blazingair.jpg",
+    "musicPack": "CHUNITHM Collaboration Chapter 4",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "10",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "8-EM",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b3/Songs_eightem.jpg",
+    "musicPack": "CHUNITHM Collaboration Chapter 4",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9",
+      "ETR": "10",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "DA'AT -The First Seeker of Souls-",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/dc/Songs_daat.jpg",
+    "musicPack": "CHUNITHM Collaboration Chapter 4",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Aether Crest: Astral",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/5c/Songs_aethercrest.jpg",
+    "musicPack": "CHUNITHM Collaboration Chapter 4",
+    "difficulties": {
+      "PST": "6",
+      "PRS": "8+",
+      "FTR": "10",
+      "ETR": "11",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "MERLIN",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/cb/Songs_merlin.jpg",
+    "musicPack": "Groove Coaster Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "5",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "9"
+    }
+  },
+  {
+    "songName": "DX Choseinou Full Metal ShojoDX超性能フルメタル少女",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/fb/Songs_dxfullmetal.jpg",
+    "musicPack": "Groove Coaster Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "OMAKENO Stroke",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/bd/Songs_omakeno.jpg",
+    "musicPack": "Groove Coaster Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "10"
+    }
+  },
+  {
+    "songName": "Scarlet Lance",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/e0/Songs_scarletlance.jpg",
+    "musicPack": "Groove Coaster Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "ouroboros -twin stroke of the end-",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/54/Songs_ouroboros.jpg",
+    "musicPack": "Groove Coaster Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Got hive of Ra",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/db/Songs_gothiveofra.jpg",
+    "musicPack": "Groove Coaster Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Sign of \"10.5km\"",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/42/Songs_signof.jpg",
+    "musicPack": "Groove Coaster Chapter 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "10pt8ion",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d4/Songs_temptationgc.jpg",
+    "musicPack": "Groove Coaster Chapter 2",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "10",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Black MInD",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/f0/Songs_blackmind.jpg",
+    "musicPack": "Groove Coaster Chapter 2",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Hikari光",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/17/Songs_hikari.jpg",
+    "musicPack": "Tone Sphere Collaboration",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Hall of Mirrors",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/e3/Songs_hallofmirrors.jpg",
+    "musicPack": "Tone Sphere Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "STAGER (ALL STAGE CLEAR)",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/de/Songs_stager.jpg",
+    "musicPack": "Tone Sphere Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Linear Accelerator",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/7f/Songs_linearaccelerator.jpg",
+    "musicPack": "Tone Sphere Collaboration",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Tiferet",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/f6/Songs_tiferet.jpg",
+    "musicPack": "Tone Sphere Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Dream goes on",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/90/Songs_dreamgoeson.jpg",
+    "musicPack": "Lanota Collaboration",
+    "difficulties": {
+      "PST": "1",
+      "PRS": "5",
+      "FTR": "7+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Specta",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/32/Songs_specta.jpg",
+    "musicPack": "Lanota Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Journey",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/5f/Songs_journey.jpg",
+    "musicPack": "Lanota Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Quon",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/4a/Songs_quon.jpg",
+    "musicPack": "Lanota Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "cyanine",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/3c/Songs_cyanine.jpg",
+    "musicPack": "Lanota Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Prism",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d0/Songs_prism.jpg",
+    "musicPack": "Lanota Collaboration Chapter 2--Lanota Collaboration",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Protoflicker",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/86/Songs_protoflicker.jpg",
+    "musicPack": "Lanota Collaboration Chapter 2--Lanota Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Stasis",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/dd/Songs_stasis.jpg",
+    "musicPack": "Lanota Collaboration Chapter 2--Lanota Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Moonlight of Sand Castle",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/8d/Songs_moonlightofsandcastle.jpg",
+    "musicPack": "Dynamix Collaboration",
+    "difficulties": {
+      "PST": "1",
+      "PRS": "5",
+      "FTR": "7+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "REconstruction",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/8d/Songs_reconstruction.jpg",
+    "musicPack": "Dynamix Collaboration",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Evoltex (poppi'n mix)",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/ad/Songs_evoltex.jpg",
+    "musicPack": "Dynamix Collaboration",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "7",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Oracle",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/69/Songs_oracle.jpg",
+    "musicPack": "Dynamix Collaboration",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "5",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "αterlβusaterlbus",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/cc/Songs_aterlbus.jpg",
+    "musicPack": "Dynamix Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "DataErr0r",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/79/Songs_dataerror.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "CROSS†SOUL",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/1d/Songs_crosssoul.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Your voice so... feat. Such",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/b8/Songs_yourvoiceso.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Impure Bird不浄な白い鳥",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/48/Songs_impurebird.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Auxesia",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/54/Songs_auxesia.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Modelista",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/7c/Songs_modelista.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Surrender",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/23/Songs_surrender.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Yosakura Fubuki夜桜吹雪",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/80/Songs_yozakurafubuki.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Metallic Punisher",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/41/Songs_metallicpunisher.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "carmine:scythe",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/1d/Songs_carminescythe.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "γuarδinaguardina",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d3/Songs_guardina.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Be There",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/4a/Songs_bethere.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Call My Name feat. Yukacco",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/cc/Songs_callmyname.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "dropdead",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/de/Songs_dropdead.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "1",
+      "PRS": "9",
+      "FTR": "8+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "overdead.",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d9/Songs_overdead.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "/",
+      "PRS": "/",
+      "FTR": "/",
+      "ETR": "/",
+      "BYD": "10"
+    }
+  },
+  {
+    "songName": "Fallensquare",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/e6/Songs_fallensquare.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Alexandrite",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/7f/Songs_alexandrite.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Astral tale",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/27/Songs_astraltale.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Phantasia",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/79/Songs_phantasia.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "5",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Empire of Winter",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/66/Songs_empireofwinter.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Libertas",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/ad/Songs_libertas.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "5",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "10"
+    }
+  },
+  {
+    "songName": "Dot to Dot feat. shully",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/2e/Songs_dottodot.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Dreadnought",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/18/Songs_dreadnought.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Mirzam",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a4/Songs_mirzam.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Heavenly caress",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/94/Songs_heavenlycaress.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Filament",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/2e/Songs_filament.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Avant Raze",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/19/Songs_avantraze.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "BATTLE NO.1",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/76/Songs_battlenoone.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "La'qryma of the Wasteland",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/43/Songs_laqryma.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "10"
+    }
+  },
+  {
+    "songName": "Einherjar Joker",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/ef/Songs_einherjar.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "10+"
+    }
+  },
+  {
+    "songName": "IZANA",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/41/Songs_izana.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "SAIKYO STRONGER最強STRONGER",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/7b/Songs_saikyostronger.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "9",
+      "FTR": "11",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "amygdata",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/15/Songs_amygdata.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Altale",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/73/Songs_altale.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "5",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "10"
+    }
+  },
+  {
+    "songName": "Feels So Right feat. Renko",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/52/Songs_feelssoright.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Scarlet Cage",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/15/Songs_scarletcage.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Teriqma",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/fc/Songs_teriqma.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "9+"
+    }
+  },
+  {
+    "songName": "MAHOROBA",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d1/Songs_mahoroba.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "BADTEK",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/95/Songs_badtek.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Malicious Mischance",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d6/Songs_maliciousmischance.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "BUCHiGiRE Berserker",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d7/Songs_buchigireberserker.jpg",
+    "musicPack": "Memory Archive--Groove Coaster Collaboration",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Galaxy Friends",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/59/Songs_galaxyfriends.jpg",
+    "musicPack": "Memory Archive--Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Xeraphinite",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/e9/Songs_xeraphinite.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Xanatos",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/f2/Songs_xanatos.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 1",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "AttraqtiA",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/02/Songs_attraqtia.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 1",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "GIMME DA BLOOD",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c9/Songs_gimmedablood.jpg",
+    "musicPack": "Memory Archive--Arcaea",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Can I Friend You on Bassbook? Lolベースラインやってる？ｗ",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/36/Songs_bassline.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "THE ULTIMACY",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/9f/Songs_theultimacy.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 1",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "REKKA RESONANCE烈華RESONANCE",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/cd/Songs_rekkaresonance.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 1",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8+",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Sheriruth (Laur Remix)",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/9b/Songs_sheriruthrmx.jpg",
+    "musicPack": "Memory Archive--WACCA Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Evening in Scarlet緋纏いの宵",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/19/Songs_eveninginscarlet.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "goldenslaughterer",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/75/Songs_goldenslaughterer.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "lastendconductor",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/25/Songs_lastendconductor.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 3",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "10"
+    }
+  },
+  {
+    "songName": "Redolent Shape",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/46/Songs_redolentshape.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Summer Fireworks of Love彩る夏の恋花火",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/19/Songs_summerfireworks.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 2",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "init()",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/e6/Songs_init.jpg",
+    "musicPack": "Memory Archive--Arcaea",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "INTERNET OVERDOSE",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/bb/Songs_internetoverdose.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 3",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Macrocosmic Modulation",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/3c/Songs_macromod.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Kissing Lucifer",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/41/Songs_kissinglucifer.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "NEO WINGS",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/34/Songs_neowings.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Aurgelmir",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/df/Songs_aurgelmir.jpg",
+    "musicPack": "Memory Archive--Groove Coaster Collaboration",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Head BONK ache",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/84/Songs_headbonkache.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "PICO-Pico-Translation!ピコPico*とらんすれーしょんっ！",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/23/Songs_picopicotranslation.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 3",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "μ",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/02/Songs_mu.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 3",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "PUPA",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/e2/Songs_pupa.jpg",
+    "musicPack": "Memory Archive--Memory Archive Append 3",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Free Myself",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/ba/Songs_freemyself.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "cocoro*cosmetic",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/dc/Songs_cocorocosmetic.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Capella",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/14/Songs_capella.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "NULL APOPHENIA",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/db/Songs_nullapophenia.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8+",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Crimson Throne",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/bf/Songs_crimsonthrone.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Manic Jeer",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/2b/Songs_manicjeer.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Hiiro Gekka, Kyoushou no Zetsu (nayuta 2017 ver.)緋色月下、狂咲ノ絶 (nayuta 2017 ver.)",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/2c/Songs_hiirogekka.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "PRIMITIVE LIGHTS",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/c2/Songs_primitivelights.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8+",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "The Survivor (Game Edit)",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/1c/Songs_thesurvivor.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "New York Back Raise",
+    "coverUrl": "https://arcwiki.mcd.blue/images/a/a3/Songs_newyorkbackraise.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Galactic Love",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/4b/Songs_galacticlove.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Lost in the Abyss",
+    "coverUrl": "https://arcwiki.mcd.blue/images/6/69/Songs_lostintheabyss.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "To the Milky Way",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/5d/Songs_tothemilkyway.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "INTERNET YAMERO",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/50/Songs_internetyamero.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "SACRIFICE feat. ayame",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/da/Songs_sacrifice.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "To the Furthest Dream彼方の夢へと",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/75/Songs_tothefurthestdream.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "B.B.K.K.B.K.K.",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/5f/Songs_bbkkbkk.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Wish Upon a Snow",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/5b/Songs_wishuponasnow.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Kanbu de Tomatte Sugu Tokeru患部で止まってすぐ溶ける　〜 狂気の優曇華院",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/da/Songs_overdrive.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "LIVHT MY WΔY",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d5/Songs_lightmyway.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Luna Rossa",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/e8/Songs_lunarossa.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Innocence",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/fb/Songs_innocence.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "9+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "IONOSTREAM",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/16/Songs_ionostream.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "9+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Masquerade Legion",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/75/Songs_masqueradelegion.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "KYOREN ROMANCE狂恋ROMANCE",
+    "coverUrl": "https://arcwiki.mcd.blue/images/5/50/Songs_kyorenromance.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Qovat",
+    "coverUrl": "https://arcwiki.mcd.blue/images/7/7c/Songs_qovat.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "MIRINAE",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/1d/Songs_mirinae.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "ultradiaxon-N3",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/cc/Songs_ultradiaxon.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Distorted Fate",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/0e/Songs_distortedfate.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9",
+      "ETR": "10+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Floating World",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/e0/Songs_floatingworld.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Chromafill",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/87/Songs_chromafill.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Désive",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/e4/Songs_desive.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "9+",
+      "ETR": "10+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Twilight Concerto黄昏の協奏曲",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/06/Songs_tasogare.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9",
+      "ETR": "10",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Beautiful Dreamer",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/8c/Songs_beautifuldreamer.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Back to Basics",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/fe/Songs_backtobasics.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "STARGATE EXTREME",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/3b/Songs_stargateextreme.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "6",
+      "FTR": "9",
+      "ETR": "9+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "HYPER VISION",
+    "coverUrl": "https://arcwiki.mcd.blue/images/c/ca/Songs_hypervision.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "shrink",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/28/Songs_shrink.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Rain of Conflict in a Radiant Abyss",
+    "coverUrl": "https://arcwiki.mcd.blue/images/9/9b/Songs_rainofconflict.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "7+",
+      "FTR": "9",
+      "ETR": "10",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Gensou no Satellite幻想のサテライト",
+    "coverUrl": "https://arcwiki.mcd.blue/images/0/0e/Songs_gensounosatellite.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "2",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "10",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Crimson Quartz",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/3b/Songs_crimsonquartz.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8+",
+      "ETR": "9+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Third Sun",
+    "coverUrl": "https://arcwiki.mcd.blue/images/8/8b/Songs_thirdsun.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "10",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Spirit of the Dauntless",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d7/Songs_spiritdauntless.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7+",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Dies irae",
+    "coverUrl": "https://arcwiki.mcd.blue/images/f/f7/Songs_diesirae.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "10",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "MEGALOVANIA (Camellia Remix)",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/4a/Songs_megalovaniarmx.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "9+",
+      "ETR": "10+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Placebo♥Battlerプラシイボ♥バトラー",
+    "coverUrl": "https://arcwiki.mcd.blue/images/3/32/Songs_placebobattler.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "5",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Shinchoku Doudesuka?進捗どうですか?",
+    "coverUrl": "https://arcwiki.mcd.blue/images/4/4c/Songs_shinchoku.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "8+",
+      "ETR": "9+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Dull Blade",
+    "coverUrl": "https://arcwiki.mcd.blue/images/2/21/Songs_dullblade.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "4",
+      "PRS": "8",
+      "FTR": "10",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Don't Die",
+    "coverUrl": "https://arcwiki.mcd.blue/images/e/ef/Songs_dontdie.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9",
+      "ETR": "10",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Tic! Tac! Toe!",
+    "coverUrl": "https://arcwiki.mcd.blue/images/d/d9/Songs_tictactoe.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "8+",
+      "ETR": "9+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Miles",
+    "coverUrl": "https://arcwiki.mcd.blue/images/b/bd/Songs_miles.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "6",
+      "FTR": "8",
+      "ETR": "9+",
+      "BYD": "/"
+    }
+  },
+  {
+    "songName": "Acheron",
+    "coverUrl": "https://arcwiki.mcd.blue/images/1/14/Songs_acheron.jpg",
+    "musicPack": "Memory Archive",
+    "difficulties": {
+      "PST": "3",
+      "PRS": "7",
+      "FTR": "9+",
+      "ETR": "/",
+      "BYD": "/"
+    }
+  }
+]
