@@ -93,7 +93,7 @@ button {
 let songs = [], packs = [], diffTypes = ["PST","PRS","FTR","ETR","BYD"], diffVals = [];
 
 async function loadData(){
-    songs = await (await fetch('arc_songs.json')).json();
+    songs = await (await fetch('arc_songs_mini.json')).json();
     packs = await (await fetch('arc_packs.json')).json();
     // 初始化难度值集合
     let valSet = new Set();
