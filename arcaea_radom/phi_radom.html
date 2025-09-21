@@ -93,7 +93,7 @@ button {
 let songs = [], packs = [], diffTypes = ["EZ","HD","IN","AT"], diffVals = [];
 
 async function loadData(){
-    songs = await (await fetch('phi_songs.json')).json();
+    songs = await (await fetch('phi_songs_git.json')).json();
     packs = await (await fetch('phi_packs.json')).json();
     // 初始化难度值集合
     let valSet = new Set();
@@ -209,7 +209,7 @@ function renderResults(list){
         card.className='song-card';
         
         const img = document.createElement('img');
-        img.src = s.coverUrl || '';
+        img.src = `../${s.coverUrl}` || '';
         card.appendChild(img);
 
         const title = document.createElement('div');

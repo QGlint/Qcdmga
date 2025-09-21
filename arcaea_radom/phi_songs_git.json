@@ -57,7 +57,7 @@
   {
     "songName": "光",
     "musicPack": "Chapter Legacy 过去的章节",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/光_Phigros.png",
     "difficulties": {
       "EZ": "2",
       "HD": "7",
@@ -90,7 +90,7 @@
   {
     "songName": "Cipher : /2&//<|0",
     "musicPack": "Chapter Legacy 过去的章节",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/Cipher_新_Phigros.JPG",
     "difficulties": {
       "EZ": "5",
       "HD": "10",
@@ -101,7 +101,7 @@
   {
     "songName": "FULi AUTO SHOOTER",
     "musicPack": "Chapter Legacy 过去的章节",
-    "coverUrl": "images/phigros/FULi_Phigros_2048%2A1080.png",
+    "coverUrl": "images/phigros/FULi_Phigros.png",
     "difficulties": {
       "EZ": "3",
       "HD": "9",
@@ -134,7 +134,7 @@
   {
     "songName": "Cereris",
     "musicPack": "Chapter Legacy 过去的章节",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/Cereris_Phigros_高清.png",
     "difficulties": {
       "EZ": "5",
       "HD": "10",
@@ -233,7 +233,7 @@
   {
     "songName": "JunXion Between Life And Death(VIP Mix)",
     "musicPack": "Chapter 5 霓虹灯牌",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/JunXion_新_Phigros.jpeg",
     "difficulties": {
       "EZ": "3",
       "HD": "8",
@@ -321,7 +321,7 @@
   {
     "songName": "重生",
     "musicPack": "Chapter 6 方舟蜃景",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/重生_Phigros.png",
     "difficulties": {
       "EZ": "4",
       "HD": "8",
@@ -420,7 +420,7 @@
   {
     "songName": "Rrhar'il",
     "musicPack": "Chapter 7 时钟链接",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/Rrhar’il_Phigros.jpeg",
     "difficulties": {
       "EZ": "7",
       "HD": "12",
@@ -497,7 +497,7 @@
   {
     "songName": "Ποσειδών",
     "musicPack": "Side Story 1 忘忧宫",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/Ποσειδών_Phigros.png",
     "difficulties": {
       "EZ": "6",
       "HD": "8",
@@ -662,7 +662,7 @@
   {
     "songName": "Re：End of a Dream",
     "musicPack": "Side Story 3 盗乐行",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/Re：End_of_a_Dream_Phigros.png",
     "difficulties": {
       "EZ": "7",
       "HD": "13",
@@ -673,7 +673,7 @@
   {
     "songName": "心の記憶",
     "musicPack": "Side Story 4 无相乡",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/心の記憶_Phigros.png",
     "difficulties": {
       "EZ": "3",
       "HD": "9",
@@ -739,7 +739,7 @@
   {
     "songName": "Another Me",
     "musicPack": "Chapter EX-Rising Sun Traxx 精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/Another_Me_新_Phigros.jpeg",
     "difficulties": {
       "EZ": "5",
       "HD": "9",
@@ -816,7 +816,7 @@
   {
     "songName": "CROSS†SOUL",
     "musicPack": "Chapter EX-HyuN 精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/PhigrosCROSS†SOUL.png",
     "difficulties": {
       "EZ": "7",
       "HD": "12",
@@ -893,7 +893,7 @@
   {
     "songName": "桜樹街道",
     "musicPack": "Chapter EX-WAVEAT 精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/桜樹街道_Phigros.png",
     "difficulties": {
       "EZ": "3",
       "HD": "8",
@@ -992,7 +992,7 @@
   {
     "songName": "Don't Never Around",
     "musicPack": "Chapter EX-KALPA 精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/Don't_Never_Around(Phigros).png",
     "difficulties": {
       "EZ": "5",
       "HD": "11",
@@ -1113,7 +1113,7 @@
   {
     "songName": "心之所向",
     "musicPack": "Chapter EX-姜米條 精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/心之所向_Phigros.png",
     "difficulties": {
       "EZ": "4",
       "HD": "8",
@@ -1135,7 +1135,7 @@
   {
     "songName": "盏茗",
     "musicPack": "Chapter EX-茶鸣拾贰律 精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/盏茗_Phigros.png",
     "difficulties": {
       "EZ": "1",
       "HD": "4",
@@ -1146,7 +1146,7 @@
   {
     "songName": "青芽",
     "musicPack": "Chapter EX-茶鸣拾贰律 精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/青芽_Phigros.png",
     "difficulties": {
       "EZ": "5",
       "HD": "10",
@@ -1157,7 +1157,7 @@
   {
     "songName": "瓷岁",
     "musicPack": "Chapter EX-茶鸣拾贰律 精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/瓷岁_Phigros.png",
     "difficulties": {
       "EZ": "2",
       "HD": "6",
@@ -1168,7 +1168,7 @@
   {
     "songName": "Feast远东之宴",
     "musicPack": "Chapter EX-茶鸣拾贰律 精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/Feast远东之宴_Phigros.png",
     "difficulties": {
       "EZ": "6",
       "HD": "12",
@@ -1179,7 +1179,7 @@
   {
     "songName": "神話",
     "musicPack": "Chapter EX-OverRapid 精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/神話_Phigros.png",
     "difficulties": {
       "EZ": "4",
       "HD": "8",
@@ -1289,7 +1289,7 @@
   {
     "songName": "+ERABY+E CONNEC+10N",
     "musicPack": "Extra Story Chapter 极星卫",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/+ERABY+E_CONNEC+10N_Phigros.png",
     "difficulties": {
       "EZ": "5",
       "HD": "11",
@@ -1333,7 +1333,7 @@
   {
     "songName": "ストレイソウル・アラウンド",
     "musicPack": "Chapter EX-Rotaeno 精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/ストレイソウル_アラウンド_Phigros.png",
     "difficulties": {
       "EZ": "6",
       "HD": "9",
@@ -1366,7 +1366,7 @@
   {
     "songName": "月詠に鳴る",
     "musicPack": "Chapter EX-CHUNITHM 精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/月詠に鳴る_Phigros.png",
     "difficulties": {
       "EZ": "6",
       "HD": "11",
@@ -1388,7 +1388,7 @@
   {
     "songName": "祈 -我ら神祖と共に歩む者なり-",
     "musicPack": "Chapter EX-CHUNITHM 精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/祈_-我ら神祖と共に歩む者なり-_Phigros.png",
     "difficulties": {
       "EZ": "7",
       "HD": "13",
@@ -1432,7 +1432,7 @@
   {
     "songName": "零號車輛",
     "musicPack": "Chapter EX-Paradigm:Reboot 精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/零號車輛_New_Phigros.png",
     "difficulties": {
       "EZ": "7",
       "HD": "11",
@@ -1443,7 +1443,7 @@
   {
     "songName": "幽世桔梗",
     "musicPack": "Chapter EX-SHINOBI SLASH 精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/幽世桔梗_Phigros.png",
     "difficulties": {
       "EZ": "4",
       "HD": "10",
@@ -1454,7 +1454,7 @@
   {
     "songName": "千紫万紅",
     "musicPack": "Chapter EX-SHINOBI SLASH精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/千紫万紅_Phigros.png",
     "difficulties": {
       "EZ": "4",
       "HD": "12",
@@ -1465,7 +1465,7 @@
   {
     "songName": "明鏡烈火",
     "musicPack": "Chapter EX-SHINOBI SLASH精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/明鏡烈火_Phigros.png",
     "difficulties": {
       "EZ": "6",
       "HD": "11",
@@ -1509,7 +1509,7 @@
   {
     "songName": "君往何处（Quo Vadis）",
     "musicPack": "节奏大师精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/君往何处（Quo_Vadis）_Phigros.png",
     "difficulties": {
       "EZ": "4",
       "HD": "8",
@@ -1520,7 +1520,7 @@
   {
     "songName": "暗夜苏醒（REANIMATE）",
     "musicPack": "节奏大师精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/暗夜苏醒（REANIMATE）_Phigros.png",
     "difficulties": {
       "EZ": "5",
       "HD": "12",
@@ -1531,7 +1531,7 @@
   {
     "songName": "黄金之城（GOLD TOWN）",
     "musicPack": "节奏大师精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/黄金之城_(GOLD_TOWN)_Phigros.png",
     "difficulties": {
       "EZ": "2",
       "HD": "10",
@@ -1542,7 +1542,7 @@
   {
     "songName": "双重间谍（Double Agent)",
     "musicPack": "节奏大师精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/双重间谍_(Double_Agent)_Phigros.png",
     "difficulties": {
       "EZ": "4",
       "HD": "11",
@@ -1553,7 +1553,7 @@
   {
     "songName": "幻影鬼魅（PLEASE）",
     "musicPack": "节奏大师精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/幻影鬼魅_(PLEASE)_Phigros.png",
     "difficulties": {
       "EZ": "5",
       "HD": "9",
@@ -1630,7 +1630,7 @@
   {
     "songName": "Aphrodite's Child(short ver.)",
     "musicPack": "Chapter EX-Immaculée Sekai精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/Aphrodite's_Child_Phigros.png",
     "difficulties": {
       "EZ": "3",
       "HD": "8",
@@ -1773,7 +1773,7 @@
   {
     "songName": "萤火虫の怨",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/萤火虫の怨_Phigros.png",
     "difficulties": {
       "EZ": "4",
       "HD": "9",
@@ -1795,7 +1795,7 @@
   {
     "songName": "风屿",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/风屿_Phigros.png",
     "difficulties": {
       "EZ": "5",
       "HD": "9",
@@ -1828,7 +1828,7 @@
   {
     "songName": "云女孩",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/云女孩_Phigros.png",
     "difficulties": {
       "EZ": "2",
       "HD": "8",
@@ -1872,7 +1872,7 @@
   {
     "songName": "开心病",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/开心病_Phigros_新.png",
     "difficulties": {
       "EZ": "7",
       "HD": "11",
@@ -1883,7 +1883,7 @@
   {
     "songName": "華灯爱",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/華灯爱_Phigros.png",
     "difficulties": {
       "EZ": "6",
       "HD": "10",
@@ -2048,7 +2048,7 @@
   {
     "songName": "Palescreen",
     "musicPack": "单曲精选集",
-    "coverUrl": "images/phigros/Palescreen_Phigros_2048%2A1080.png",
+    "coverUrl": "images/phigros/Palescreen_Phigros.png",
     "difficulties": {
       "EZ": "5",
       "HD": "12",
@@ -2169,7 +2169,7 @@
   {
     "songName": "雪降り、メリクリ",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/雪降りメリクリ_Phigros.png",
     "difficulties": {
       "EZ": "4",
       "HD": "10",
@@ -2213,7 +2213,7 @@
   {
     "songName": "大和撫子 -Wild Dances-",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/大和撫子_Wild_Dances_Phigros.png",
     "difficulties": {
       "EZ": "5",
       "HD": "11",
@@ -2279,7 +2279,7 @@
   {
     "songName": "游园地",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/游园地_Phigros.png",
     "difficulties": {
       "EZ": "2",
       "HD": "7",
@@ -2356,7 +2356,7 @@
   {
     "songName": "ジングルベル(Jingle Bell)",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/ジングルベル(Jingle_Bell)_Phigros.png",
     "difficulties": {
       "EZ": "4",
       "HD": "8",
@@ -2455,7 +2455,7 @@
   {
     "songName": "いざ、参ります",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/いざ、参ります_Phigros.png",
     "difficulties": {
       "EZ": "3",
       "HD": "9",
@@ -2466,7 +2466,7 @@
   {
     "songName": "月下缭乱",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/月下缭乱_Phigros_2.png",
     "difficulties": {
       "EZ": "4",
       "HD": "9",
@@ -2554,7 +2554,7 @@
   {
     "songName": "Break Over",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/Break_Over_Phigros_新.png",
     "difficulties": {
       "EZ": "5",
       "HD": "11",
@@ -2565,7 +2565,7 @@
   {
     "songName": "Believe Light (feat. 果丸哒呦)",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/Believe_Light_(feat.果丸哒呦)_Phigros.png",
     "difficulties": {
       "EZ": "2",
       "HD": "8",
@@ -2587,7 +2587,7 @@
   {
     "songName": "青丘",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/青丘_Phigros.png",
     "difficulties": {
       "EZ": "5",
       "HD": "10",
@@ -2598,7 +2598,7 @@
   {
     "songName": "インフェルノシティ",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/インフェルノシティ_Phigros_Illust.png",
     "difficulties": {
       "EZ": "4",
       "HD": "11",
@@ -2620,7 +2620,7 @@
   {
     "songName": "Poison AND÷OR Affection",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/Poison_AND÷OR_Affection_Phigros.png",
     "difficulties": {
       "EZ": "3",
       "HD": "9",
@@ -2686,7 +2686,7 @@
   {
     "songName": "ぱぴぷぴぷぴぱ",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/ぱぴぷぴぷぴぱ_2048_Phigros.png",
     "difficulties": {
       "EZ": "5",
       "HD": "12",
@@ -2697,7 +2697,7 @@
   {
     "songName": "Triumph & Regret",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/Triumph_&_Regret_Phigros.png",
     "difficulties": {
       "EZ": "5",
       "HD": "10",
@@ -2741,7 +2741,7 @@
   {
     "songName": "聖夜讃歌",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/圣夜赞歌.png",
     "difficulties": {
       "EZ": "4",
       "HD": "10",
@@ -3005,7 +3005,7 @@
   {
     "songName": "インマイマインド",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/インマイマインド_Phigros.png",
     "difficulties": {
       "EZ": "1",
       "HD": "9",
@@ -3016,7 +3016,7 @@
   {
     "songName": "ニライカナイ (NiraicA_ nai Mix)",
     "musicPack": "单曲精选集",
-    "coverUrl": null,
+    "coverUrl": "images/phigros/ニライカナイ_Phigros.png",
     "difficulties": {
       "EZ": "2",
       "HD": "8",

@@ -14,11 +14,12 @@ import requests
 from bs4 import BeautifulSoup
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import argparse
+import urllib.parse
 
 WIKI_API = "https://mzh.moegirl.org.cn/api.php"
-MAX_WORKERS = 10   # 降低并发
-DELAY = 0         # 每次请求延迟 1 秒
-RETRY = 1         # 重试次数
+MAX_WORKERS = 10    # 降低并发
+DELAY = 0           # 每次请求延迟 1 秒
+RETRY = 1           # 重试次数
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -32,13 +33,17 @@ def normalize_text(tag):
     return " ".join(tag.get_text(" ", strip=True).split())
 
 def get_cdn_url(file_name):
+    """
+    通过 API 获取 CDN URL。
+    传入的 file_name 保持 URL 编码状态。
+    """
     if not file_name:
         return None
     for attempt in range(RETRY):
         try:
             params = {
                 "action": "query",
-                "titles": f"File:{file_name}",
+                "titles": f"File:{urllib.parse.unquote(file_name)}",  # API 请求需要转译
                 "prop": "imageinfo",
                 "iiprop": "url",
                 "format": "json"
@@ -52,7 +57,9 @@ def get_cdn_url(file_name):
                 if iinfo and len(iinfo) > 0:
                     url = iinfo[0]["url"]
                     thumb_url = url.replace("/common/", "/common/thumb/")
-                    thumb_url += f"/304px-{file_name}"
+                    
+                    # 关键修改：拼接 /304px- 后使用未转译的文件名
+                    thumb_url +=  f"/304px-{file_name}"
                     return thumb_url
         except Exception as e:
             print(f"⚠️ 获取 CDN URL 失败 {file_name}, 尝试 {attempt+1}/{RETRY}: {e}")
@@ -80,8 +87,8 @@ def parse_song_table(table):
 
     name = normalize_text(rows[0])
     song = {
-        "songName": name, # 修改此处
-        "musicPack": None, # 修改此处
+        "songName": name,
+        "musicPack": None,
         "coverUrl": None,
         "difficulties": {}
     }
@@ -104,13 +111,14 @@ def parse_song_table(table):
         if file_name is None:
             a_tag = tr.find("a", href=True)
             if a_tag:
+                # 这里只获取文件名，不进行解码
                 m = re.search(r'/File:([^/]+)$', a_tag['href'])
                 if m:
                     file_name = m.group(1)
 
     for d in ["EZ", "HD", "IN", "AT"]:
         if d not in song["difficulties"]:
-            song["difficulties"][d] =  "/"
+            song["difficulties"][d] = "/"
 
     return song, song["musicPack"], file_name
 
