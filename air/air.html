@@ -1,0 +1,88 @@
+<div class="input-group">
+  <h3>第1组</h3>
+  PURE: <input type="number" name="group1_pure" value="881">
+  pure(early): <input type="number" name="group1_pure_early" value="20">
+  pure(late): <input type="number" name="group1_pure_late" value="21">
+  far(early): <input type="number" name="group1_far_early" value="0">
+  far(late): <input type="number" name="group1_far_late" value="0">
+  lost: <input type="number" name="group1_lost" value="3">
+</div>
+<div>
+  <button onclick="updateSum(1)">计算第1组总和</button>
+  <input type="text" id="output1" readonly placeholder="第1组总和">
+</div>
+<div class="input-group">
+  <h3>第2组</h3>
+  PURE: <input type="number" name="group2_pure" value = "840">
+  pure(early): <input type="number" name="group2_pure_early" value = "26">
+  pure(late): <input type="number" name="group2_pure_late" value = "42">
+  far(early): <input type="number" name="group2_far_early" value = "2">
+  far(late): <input type="number" name="group2_far_late" value = "9">
+  lost: <input type="number" name="group2_lost" value = "6">
+</div>
+<div>
+  <button onclick="updateSum(2)">计算第2组总和</button>
+  <input type="text" id="output2" readonly placeholder="第2组总和">
+</div>
+<div class="input-group">
+  <h3>第3组</h3>
+  PURE: <input type="number" name="group3_pure" value="925">
+  pure(early): <input type="number" name="group3_pure_early" value="0">
+  pure(late): <input type="number" name="group3_pure_late" value="0">
+  far(early): <input type="number" name="group3_far_early" value="0">
+  far(late): <input type="number" name="group3_far_late" value="0">
+  lost: <input type="number" name="group3_lost" value="0">
+</div>
+<div>
+  <button onclick="updateSum(3)">计算第3组总和</button>
+  <input type="text" id="output3" readonly placeholder="第3组总和">
+</div>
+<script>
+function updateSum(group) {
+  // 计算far_late
+  let far_early = parseInt(document.getElementsByName(`group${group}_far_early`)[0].value) || 0;
+  let far_late = parseInt(document.getElementsByName(`group${group}_far_late`)[0].value) || 0;
+  let far_diff = far_early - far_late;
+  let spin = "left";
+  if (far_diff < 0) {
+    far_diff = -far_diff;
+    spin = "right";
+  }
+  if (far_diff === 0) {
+    spin = "mid";
+  }
+  let damage_high = 1 + 0.1 * far_diff;
+  let damage_low = 1 - 0.05 * far_diff;
+
+  let pure = parseInt(document.getElementsByName(`group${group}_pure`)[0].value) || 0;
+  let far = far_early + far_late;
+  let lost = parseInt(document.getElementsByName(`group${group}_lost`)[0].value) || 0;
+
+  let heal = Math.log10(1 + 9 * pure / (pure + far + lost));
+
+  // 左一组pure_late（循环，1左为3，2左为1，3左为2）
+  let leftGroup = group - 1;
+  if (leftGroup < 1) leftGroup = 3;
+  let left_pure_late = parseInt(document.getElementsByName(`group${leftGroup}_pure_late`)[0].value) || 0;
+  // 右一组pure_early（循环，3右为1，2右为3，1右为2）
+  let rightGroup = group + 1;
+  if (rightGroup > 3) rightGroup = 1;
+  let right_pure_early = parseInt(document.getElementsByName(`group${rightGroup}_pure_early`)[0].value) || 0;
+
+  let sum = 0;
+  if (spin === "mid") {
+    sum = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) + parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) + left_pure_late * 5 + right_pure_early * 5;
+    sum = 11 * sum * (1 - heal) + lost * 10;
+  } else if (spin === "left") {
+    sum = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) + parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) + damage_low * left_pure_late * 5 + damage_high * right_pure_early * 5;
+    sum = 11 * sum * (1 - heal) + lost * 10;
+  } else if (spin === "right") {
+    sum = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) + parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) + damage_high * left_pure_late * 5 + damage_low * right_pure_early * 5;
+    sum = 11 * sum * (1 - heal) + lost * 10;
+  }
+
+  // 只输出sum
+  document.getElementById(`output${group}`).value = sum;
+}
+</script>
+</div>
