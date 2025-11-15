@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Phigros 抽取规则</title>
+<style>
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f8f8f8;
+}
+.header {
+    width:100%;
+    background:#f0f0f0;
+    border-bottom:1px solid #ccc;
+    padding:20px 0 10px 0;
+    text-align:center;
+    font-size:2em;
+    font-weight:bold;
+}
+#main {
+    margin:40px auto 0 auto;
+    max-width:500px;
+    background:#fff;
+    border-radius:8px;
+    box-shadow:0 2px 8px #0001;
+    padding:30px 20px 40px 20px;
+    text-align:center;
+}
+button {
+    margin:10px 0 20px 0;
+    padding:10px 30px;
+    font-size:1.2em;
+    border-radius:5px;
+    border:1px solid #aaa;
+    background:#e0e0ff;
+    cursor:pointer;
+    transition:background 0.2s;
+}
+button:hover {
+    background:#d0d0ff;
+}
+#result {
+    margin-top:20px;
+    font-size:1.3em;
+    color:#333;
+    min-height:40px;
+    padding:10px;
+    border-radius:5px;
+    background:#f5f5fa;
+    border:1px solid #eee;
+}
+</style>
+</head>
+<body>
+<div class="header">Phigros 抽取规则</div>
+<div id="main">
+    <button onclick="drawRule()">抽取规则</button>
+    <button onclick="clearHistory()" style="margin-left:10px;background:#ffe0e0;">清空</button>
+    <div id="result">请点击上方按钮抽取规则</div>
+    <div id="history" style="margin-top:30px;text-align:left;max-width:400px;margin-left:auto;margin-right:auto;"></div>
+</div>
+<script>
+// 你可以在这里自定义规则
+const rules = [
+    "强制镜像",
+    "攻擂者ban守擂者一根手指",
+    "游玩时静音，耳机里放别的歌",
+    "上隐20%",
+    "换主玩设备",
+    "全程用两根拇指黏在屏幕上（大拇指或小拇指都可以）",
+    "ban椅子",
+    "手持",
+    "调一半亮度",
+    "旋转60度且人不能离开椅子",
+    // ...你可以继续添加更多规则
+];
+
+
+let history = [];
+let availableRules = [...rules];
+
+function drawRule() {
+    if(availableRules.length === 0) {
+        document.getElementById('result').textContent = '所有规则已抽完';
+        return;
+    }
+    const idx = Math.floor(Math.random() * availableRules.length);
+    const rule = availableRules[idx];
+    document.getElementById('result').textContent = rule;
+    history.push(rule);
+    availableRules.splice(idx, 1);
+    renderHistory();
+}
+
+function renderHistory() {
+    const container = document.getElementById('history');
+    if(history.length === 0) {
+        container.innerHTML = '';
+        return;
+    }
+    container.innerHTML = '<b>已抽取规则：</b><ol style="padding-left:22px;">' +
+        history.map(r=>'<li>'+r+'</li>').join('') + '</ol>';
+}
+
+function clearHistory() {
+    history = [];
+    availableRules = [...rules];
+    renderHistory();
+    document.getElementById('result').textContent = '请点击上方按钮抽取规则';
+}
+</script>
+</body>
+</html>
