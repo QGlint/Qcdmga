@@ -1,4 +1,6 @@
 <div class="input-group">
+  <h3>当前定数</h3>
+  定数: <input type="number" id="current_constant" value="9.5" step="0.1">
   <h3>第1组</h3>
   PURE: <input type="number" name="group1_pure" value="881">
   pure(early): <input type="number" name="group1_pure_early" value="20">
@@ -38,6 +40,19 @@
   <input type="text" id="output3" readonly placeholder="第3组总和">
 </div>
 <script>
+function calculate_heal(x){
+  if (x < 940){
+    let tmp = 0.9 * x / 940;
+    return tmp;
+  }
+  else if (x < 995){
+    return 0.148 * (Math.exp(0.00173 * x) + 1);
+  }
+  else if (x < 1000){
+    return 0.002 * x - 1;
+  }
+  else return 1;
+}
 function updateSum(group) {
   // 计算far_late
   let far_early = parseInt(document.getElementsByName(`group${group}_far_early`)[0].value) || 0;
@@ -53,12 +68,19 @@ function updateSum(group) {
   }
   let damage_high = 1 + 0.1 * far_diff;
   let damage_low = 1 - 0.05 * far_diff;
+  let damage_pure = 60;
+  let rate = 0.7;
+  let lost_damage = 50;
 
   let pure = parseInt(document.getElementsByName(`group${group}_pure`)[0].value) || 0;
+  let pure_early = parseInt(document.getElementsByName(`group${group}_pure_early`)[0].value) || 0;
+  let pure_late = parseInt(document.getElementsByName(`group${group}_pure_late`)[0].value) || 0;
   let far = far_early + far_late;
   let lost = parseInt(document.getElementsByName(`group${group}_lost`)[0].value) || 0;
 
-  let heal = Math.log10(1 + 9 * pure / (pure + far + lost));
+  let x = pure / (pure + far + lost + pure_early + pure_late) * 1000;
+  let heal = calculate_heal(x);
+  let current_constant = parseFloat(document.getElementById("current_constant").value) || 9.5;
 
   // 左一组pure_late（循环，1左为3，2左为1，3左为2）
   let leftGroup = group - 1;
@@ -71,18 +93,18 @@ function updateSum(group) {
 
   let sum = 0;
   if (spin === "mid") {
-    sum = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) + parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) + left_pure_late * 5 + right_pure_early * 5;
-    sum = 11 * sum * (1 - heal) + lost * 10;
+    sum = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) + parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) * rate + left_pure_late * damage_pure + right_pure_early * damage_pure;
+    sum = sum * (1 - heal) + lost * lost_damage;
   } else if (spin === "left") {
-    sum = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) + parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) + damage_low * left_pure_late * 5 + damage_high * right_pure_early * 5;
-    sum = 11 * sum * (1 - heal) + lost * 10;
+    sum = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) + parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) * rate + damage_low * left_pure_late * damage_pure + damage_high * right_pure_early * damage_pure;
+    sum = sum * (1 - heal) + lost * lost_damage;
   } else if (spin === "right") {
-    sum = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) + parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) + damage_high * left_pure_late * 5 + damage_low * right_pure_early * 5;
-    sum = 11 * sum * (1 - heal) + lost * 10;
+    sum = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) + parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) * rate + damage_high * left_pure_late * damage_pure + damage_low * right_pure_early * damage_pure;
+    sum = sum * (1 - heal) + lost * lost_damage;
   }
 
   // 只输出sum
-  document.getElementById(`output${group}`).value = sum;
+  document.getElementById(`output${group}`).value = sum.toFixed(0);
 }
 </script>
 </div>
