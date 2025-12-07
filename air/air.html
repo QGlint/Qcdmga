@@ -93,18 +93,31 @@ function updateSum(group) {
 
   let sum = 0;
   if (spin === "mid") {
-    sum = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) + parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) * rate + left_pure_late * damage_pure + right_pure_early * damage_pure;
+    sum_left = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) * rate + damage_pure * left_pure_late;
+    sum_right = parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) * rate + damage_pure * right_pure_early;
+    sum = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) * rate + parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) * rate + left_pure_late * damage_pure + right_pure_early * damage_pure;
+    sum_left = (sum_left * (1 - heal)) * current_constant / 10;
+    sum_right = (sum_right * (1 - heal)) * current_constant / 10;
     sum = (sum * (1 - heal) + lost * lost_damage) * current_constant / 10;
   } else if (spin === "left") {
-    sum = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) + parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) * rate + damage_low * left_pure_late * damage_pure + damage_high * right_pure_early * damage_pure;
+    sum_left = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) * rate + damage_low * left_pure_late * damage_pure;
+    sum_right = parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) * rate + damage_high * right_pure_early * damage_pure;
+    sum = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) * rate + parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) * rate + damage_low * left_pure_late * damage_pure + damage_high * right_pure_early * damage_pure;
     sum = (sum * (1 - heal) + lost * lost_damage) * current_constant / 10;
+    sum_left = (sum_left * (1 - heal)) * current_constant / 10;
+    sum_right = (sum_right * (1 - heal)) * current_constant / 10;
   } else if (spin === "right") {
-    sum = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) + parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) * rate + damage_high * left_pure_late * damage_pure + damage_low * right_pure_early * damage_pure;
+    sum_left = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) * rate + damage_high * left_pure_late * damage_pure;
+    sum_right = parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) * rate + damage_low * right_pure_early * damage_pure;
+    sum = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) * rate + parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) * rate + damage_high * left_pure_late * damage_pure + damage_low * right_pure_early * damage_pure;
     sum = (sum * (1 - heal) + lost * lost_damage) * current_constant / 10;
+    sum_left = (sum_left * (1 - heal)) * current_constant / 10;
+    sum_right = (sum_right * (1 - heal)) * current_constant / 10;
+
   }
 
   // 只输出sum
-  document.getElementById(`output${group}`).value = sum.toFixed(0);
+  document.getElementById(`output${group}`).value = 'left:' + sum_left.toFixed(0) + ',' + 'right:' + sum_right.toFixed(0) + ',';
 }
 </script>
 </div>
