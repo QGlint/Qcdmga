@@ -94,13 +94,13 @@ function updateSum(group) {
   let sum = 0;
   if (spin === "mid") {
     sum = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) + parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) * rate + left_pure_late * damage_pure + right_pure_early * damage_pure;
-    sum = sum * (1 - heal) + lost * lost_damage;
+    sum = (sum * (1 - heal) + lost * lost_damage) * current_constant / 10;
   } else if (spin === "left") {
     sum = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) + parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) * rate + damage_low * left_pure_late * damage_pure + damage_high * right_pure_early * damage_pure;
-    sum = sum * (1 - heal) + lost * lost_damage;
+    sum = (sum * (1 - heal) + lost * lost_damage) * current_constant / 10;
   } else if (spin === "right") {
     sum = parseInt(document.getElementsByName(`group${leftGroup}_pure`)[0].value) + parseInt(document.getElementsByName(`group${rightGroup}_pure`)[0].value) * rate + damage_high * left_pure_late * damage_pure + damage_low * right_pure_early * damage_pure;
-    sum = sum * (1 - heal) + lost * lost_damage;
+    sum = (sum * (1 - heal) + lost * lost_damage) * current_constant / 10;
   }
 
   // 只输出sum
